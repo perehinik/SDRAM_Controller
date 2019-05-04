@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Xilinx/XProject/SDRAM_Controller/SDRAM_Testbench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="SDRAM_Testbench" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="group44" type="group">
+      <obj_property name="label">READ/WRITE flag</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="group47" type="group">
+      <obj_property name="label">Controller_Interface</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/RD_DATA" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">RD_DATA[15:0]</obj_property>
+         <obj_property name="ObjectShortName">RD_DATA[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/RD_ADR" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">RD_ADR[23:0]</obj_property>
+         <obj_property name="ObjectShortName">RD_ADR[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/WT_ADR" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">WT_ADR[23:0]</obj_property>
+         <obj_property name="ObjectShortName">WT_ADR[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/WT_DATA" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">WT_DATA[15:0]</obj_property>
+         <obj_property name="ObjectShortName">WT_DATA[15:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group48" type="group">
+      <obj_property name="label">Init_Timer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/init_tim_flag" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">init_tim_flag</obj_property>
+         <obj_property name="ObjectShortName">init_tim_flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/initTimer/timer_reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">timer_reset</obj_property>
+         <obj_property name="ObjectShortName">timer_reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/initTimer/count" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">count[15:0]</obj_property>
+         <obj_property name="ObjectShortName">count[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/initTimer/period" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">period[15:0]</obj_property>
+         <obj_property name="ObjectShortName">period[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group49" type="group">
+      <obj_property name="label">REF Timer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/refresh_tim_reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">refresh_tim_reset</obj_property>
+         <obj_property name="ObjectShortName">refresh_tim_reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/refresh_tim_flag" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">refresh_tim_flag</obj_property>
+         <obj_property name="ObjectShortName">refresh_tim_flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/refreshTimer/timer_reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">timer_reset</obj_property>
+         <obj_property name="ObjectShortName">timer_reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/refreshTimer/count" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">count[23:0]</obj_property>
+         <obj_property name="ObjectShortName">count[23:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/refreshTimer/period" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">period[23:0]</obj_property>
+         <obj_property name="ObjectShortName">period[23:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group52" type="group">
+      <obj_property name="label">Delay Timer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/delay_tim_period" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">delay_tim_period[3:0]</obj_property>
+         <obj_property name="ObjectShortName">delay_tim_period[3:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/delay_tim_reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">delay_tim_reset</obj_property>
+         <obj_property name="ObjectShortName">delay_tim_reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/delay_tim_flag" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">delay_tim_flag</obj_property>
+         <obj_property name="ObjectShortName">delay_tim_flag</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group50" type="group">
+      <obj_property name="label">ARBITR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/arb_delay" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">arb_delay[2:0]</obj_property>
+         <obj_property name="ObjectShortName">arb_delay[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/arb_reload" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">arb_reload</obj_property>
+         <obj_property name="ObjectShortName">arb_reload</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/bank_en" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">bank_en</obj_property>
+         <obj_property name="ObjectShortName">bank_en</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group46" type="group">
+      <obj_property name="label">SDRAM PINS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/SD_P_nRAS" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">SD_P_nRAS</obj_property>
+         <obj_property name="ObjectShortName">SD_P_nRAS</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/SD_P_nCAS" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">SD_P_nCAS</obj_property>
+         <obj_property name="ObjectShortName">SD_P_nCAS</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/SD_P_nWE" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">SD_P_nWE</obj_property>
+         <obj_property name="ObjectShortName">SD_P_nWE</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/SD_P_CKE" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">SD_P_CKE</obj_property>
+         <obj_property name="ObjectShortName">SD_P_CKE</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/SD_P_nCS" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">SD_P_nCS</obj_property>
+         <obj_property name="ObjectShortName">SD_P_nCS</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/SD_P_CLK" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">SD_P_CLK</obj_property>
+         <obj_property name="ObjectShortName">SD_P_CLK</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/SD_P_DQM" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">SD_P_DQM[1:0]</obj_property>
+         <obj_property name="ObjectShortName">SD_P_DQM[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/SD_P_BA" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">SD_P_BA[1:0]</obj_property>
+         <obj_property name="ObjectShortName">SD_P_BA[1:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/SD_P_ADR" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">SD_P_ADR[12:0]</obj_property>
+         <obj_property name="ObjectShortName">SD_P_ADR[12:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/SD_P_DATA" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">SD_P_DATA[15:0]</obj_property>
+         <obj_property name="ObjectShortName">SD_P_DATA[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group51" type="group">
+      <obj_property name="label">Step Repeat Timer</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/repeat_tim_reset" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">repeat_tim_reset</obj_property>
+         <obj_property name="ObjectShortName">repeat_tim_reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/repeat_tim_period" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">repeat_tim_period[13:0]</obj_property>
+         <obj_property name="ObjectShortName">repeat_tim_period[13:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/repeat_tim_flag" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">repeat_tim_flag</obj_property>
+         <obj_property name="ObjectShortName">repeat_tim_flag</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/init_done" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">init_done</obj_property>
+      <obj_property name="ObjectShortName">init_done</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Testbench/But1" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">But1</obj_property>
+      <obj_property name="ObjectShortName">But1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Testbench/But2" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">But2</obj_property>
+      <obj_property name="ObjectShortName">But2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/rd_wt_operation" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rd_wt_operation[1:0]</obj_property>
+      <obj_property name="ObjectShortName">rd_wt_operation[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/SD_ADR_TEMP" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SD_ADR_TEMP[23:0]</obj_property>
+      <obj_property name="ObjectShortName">SD_ADR_TEMP[23:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/SD_DATA_TEMP" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">SD_DATA_TEMP[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SD_DATA_TEMP[15:0]</obj_property>
+      <obj_property name="label">SD_DATA_TEMP[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Testbench/uut/sdramController1/next_state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">next_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>
