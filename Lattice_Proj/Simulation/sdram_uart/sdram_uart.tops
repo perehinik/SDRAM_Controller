@@ -1,0 +1,2 @@
+sdram_uart_testbench,/,C:/lscc/sd_ram_uart/src/all_mod_testbench.v
+Clock_DCMA,/,C:/lscc/sd_ram_uart/Implementation/Clock_DCMA.v

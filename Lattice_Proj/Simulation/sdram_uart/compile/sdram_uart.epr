@@ -1,0 +1,8 @@
+"../../../src/sdram_to_uart.v"	1
+"../../../src/SDRAM_Controller.v"	1
+"../../../src/uart_to_sdram.v"	1
+"../../../src/fifo.v"	1
+"../../../src/all_mod_testbench.v"	2
+"../../../src/Timer.v"	1
+"../../../Implementation/Clock_DCMA.v"	1
+"../../../src/all_modules.v"	1

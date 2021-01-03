@@ -1,0 +1,9 @@
+[Files List]
+C:\lscc\diamond\3.10_x64\active-hdl\vlib\std/src/standard.vhd=S
+C:\lscc\sd_ram_uart/src/SDRAM_Controller.v=S
+C:\lscc\sd_ram_uart/src/Timer.v=S
+C:\lscc\sd_ram_uart/src/fifo.v=S
+C:\lscc\sd_ram_uart/src/sdram_to_uart.v=S
+C:\lscc\sd_ram_uart/src/uart_to_sdram.v=S
+C:\lscc\sd_ram_uart/src/all_modules.v=S
+C:\lscc\sd_ram_uart/src/all_mod_testbench.v=S

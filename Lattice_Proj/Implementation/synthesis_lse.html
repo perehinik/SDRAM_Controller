@@ -1,0 +1,543 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.10.0.111.2
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
+Thu May 30 23:01:55 2019
+
+
+Command Line:  synthesis -f sdram_uart_Implementation_lattice.synproj -gui -msgset C:/lscc/sd_ram_uart/promote.xml 
+
+Synthesis options:
+The -a option is MachXO2.
+The -s option is 6.
+The -t option is TQFP144.
+The -d option is LCMXO2-7000HC.
+Using package TQFP144.
+Using performance grade 6.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO2
+
+### Device  : LCMXO2-7000HC
+
+### Package : TQFP144
+
+### Speed   : 6
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+Top-level module name = sdram_uart_top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/lscc/sd_ram_uart (searchpath added)
+-p C:/lscc/diamond/3.10_x64/ispfpga/xo2c00/data (searchpath added)
+-p C:/lscc/sd_ram_uart/Implementation (searchpath added)
+-p C:/lscc/sd_ram_uart (searchpath added)
+Verilog design file = C:/lscc/sd_ram_uart/src/all_modules.v
+Verilog design file = C:/lscc/sd_ram_uart/src/fifo.v
+Verilog design file = C:/lscc/sd_ram_uart/src/SDRAM_Controller.v
+Verilog design file = C:/lscc/sd_ram_uart/src/sdram_to_uart.v
+Verilog design file = C:/lscc/sd_ram_uart/src/Timer.v
+Verilog design file = C:/lscc/sd_ram_uart/src/top_module.v
+Verilog design file = C:/lscc/sd_ram_uart/src/uart_rx.v
+Verilog design file = C:/lscc/sd_ram_uart/src/uart_to_sdram.v
+Verilog design file = C:/lscc/sd_ram_uart/src/uart_tx.v
+Verilog design file = C:/lscc/sd_ram_uart/Implementation/Clock_DCMA.v
+NGD file = sdram_uart_Implementation.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file C:/lscc/diamond/3.10_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/lscc/sd_ram_uart/src/all_modules.v. VERI-1482
+Analyzing Verilog file c:/lscc/sd_ram_uart/src/fifo.v. VERI-1482
+Analyzing Verilog file c:/lscc/sd_ram_uart/src/sdram_controller.v. VERI-1482
+Analyzing Verilog file c:/lscc/sd_ram_uart/src/sdram_to_uart.v. VERI-1482
+Analyzing Verilog file c:/lscc/sd_ram_uart/src/timer.v. VERI-1482
+Analyzing Verilog file c:/lscc/sd_ram_uart/src/top_module.v. VERI-1482
+Analyzing Verilog file c:/lscc/sd_ram_uart/src/uart_rx.v. VERI-1482
+Analyzing Verilog file c:/lscc/sd_ram_uart/src/uart_to_sdram.v. VERI-1482
+Analyzing Verilog file c:/lscc/sd_ram_uart/src/uart_tx.v. VERI-1482
+Analyzing Verilog file c:/lscc/sd_ram_uart/implementation/clock_dcma.v. VERI-1482
+Analyzing Verilog file C:/lscc/diamond/3.10_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Top module name (Verilog): sdram_uart_top
+INFO - synthesis: c:/lscc/sd_ram_uart/src/top_module.v(3): compiling module sdram_uart_top. VERI-1018
+INFO - synthesis: c:/lscc/sd_ram_uart/implementation/clock_dcma.v(8): compiling module Clock_DCMA. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.10_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1124): compiling module VLO. VERI-1018
+INFO - synthesis: C:/lscc/diamond/3.10_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/machxo2.v(1730): compiling module EHXPLLJ(CLKI_DIV=3,CLKFB_DIV=8,CLKOP_DIV=4,CLKOS_DIV=1,CLKOS2_DIV=1,CLKOS3_DIV=1,CLKOS_ENABLE="DISABLED",CLKOS2_ENABLE="DISABLED",CLKOS3_ENABLE="DISABLED",CLKOP_CPHASE=3,CLKOS_TRIM_POL="FALLING"). VERI-1018
+INFO - synthesis: c:/lscc/sd_ram_uart/src/uart_rx.v(21): compiling module uart_rx. VERI-1018
+WARNING - synthesis: c:/lscc/sd_ram_uart/src/uart_rx.v(72): expression size 32 truncated to fit in target size 11. VERI-1209
+INFO - synthesis: c:/lscc/sd_ram_uart/src/all_modules.v(1): compiling module all_modules. VERI-1018
+INFO - synthesis: c:/lscc/sd_ram_uart/src/fifo.v(1): compiling module fifo(length=256). VERI-1018
+WARNING - synthesis: c:/lscc/sd_ram_uart/src/fifo.v(25): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/lscc/sd_ram_uart/src/fifo.v(37): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/lscc/sd_ram_uart/src/fifo.v(54): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO - synthesis: c:/lscc/sd_ram_uart/src/uart_to_sdram.v(1): compiling module uart_to_sdram. VERI-1018
+WARNING - synthesis: c:/lscc/sd_ram_uart/src/uart_to_sdram.v(63): expression size 32 truncated to fit in target size 24. VERI-1209
+INFO - synthesis: c:/lscc/sd_ram_uart/src/timer.v(33): compiling module Timer1. VERI-1018
+INFO - synthesis: c:/lscc/sd_ram_uart/src/sdram_controller.v(11): compiling module SDRAM_Controller. VERI-1018
+INFO - synthesis: c:/lscc/sd_ram_uart/src/timer.v(10): compiling module Timer. VERI-1018
+INFO - synthesis: c:/lscc/sd_ram_uart/src/timer.v(10): compiling module Timer(SIZE=24). VERI-1018
+INFO - synthesis: c:/lscc/sd_ram_uart/src/timer.v(10): compiling module Timer(SIZE=4). VERI-1018
+INFO - synthesis: c:/lscc/sd_ram_uart/src/timer.v(10): compiling module Timer(SIZE=14). VERI-1018
+INFO - synthesis: c:/lscc/sd_ram_uart/src/sdram_controller.v(353): compiling module bankArbiter. VERI-1018
+WARNING - synthesis: c:/lscc/sd_ram_uart/src/sdram_controller.v(341): expression size 32 truncated to fit in target size 14. VERI-1209
+INFO - synthesis: c:/lscc/sd_ram_uart/src/sdram_to_uart.v(1): compiling module sdram_to_uart. VERI-1018
+INFO - synthesis: c:/lscc/sd_ram_uart/src/uart_tx.v(1): compiling module uart_tx. VERI-1018
+WARNING - synthesis: c:/lscc/sd_ram_uart/src/uart_tx.v(44): expression size 32 truncated to fit in target size 11. VERI-1209
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo2c7000.nph' in environment: C:/lscc/diamond/3.10_x64/ispfpga.
+Package Status:                     Final          Version 1.39.
+Top-level module name = sdram_uart_top.
+INFO - synthesis: Extracted state machine for register '\all_modules1/uart_to_sdram1/state' with one-hot encoding
+State machine has 11 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+ 0011 
+
+ 0100 
+
+ 0101 
+
+ 0110 
+
+ 0111 
+
+ 1000 
+
+ 1001 
+
+ 1010 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 00000000001
+
+ 0001 -> 00000000010
+
+ 0010 -> 00000000100
+
+ 0011 -> 00000001000
+
+ 0100 -> 00000010000
+
+ 0101 -> 00000100000
+
+ 0110 -> 00001000000
+
+ 0111 -> 00010000000
+
+ 1000 -> 00100000000
+
+ 1001 -> 01000000000
+
+ 1010 -> 10000000000
+
+INFO - synthesis: Extracted state machine for register '\all_modules1/sdram_controller1/state' with one-hot encoding
+State machine has 13 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+ 0011 
+
+ 0100 
+
+ 0101 
+
+ 0110 
+
+ 0111 
+
+ 1000 
+
+ 1001 
+
+ 1010 
+
+ 1011 
+
+ 1100 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 0000000000001
+
+ 0001 -> 0000000000010
+
+ 0010 -> 0000000000100
+
+ 0011 -> 0000000001000
+
+ 0100 -> 0000000010000
+
+ 0101 -> 0000000100000
+
+ 0110 -> 0000001000000
+
+ 0111 -> 0000010000000
+
+ 1000 -> 0000100000000
+
+ 1001 -> 0001000000000
+
+ 1010 -> 0010000000000
+
+ 1011 -> 0100000000000
+
+ 1100 -> 1000000000000
+
+INFO - synthesis: Extracted state machine for register '\all_modules1/sdram_to_uart1/state' with gray encoding
+State machine has 3 reachable states with original encodings of:
+
+ 00 
+
+ 01 
+
+ 10 
+
+original encoding -> new encoding (gray encoding)
+
+ 00 -> 00
+
+ 01 -> 01
+
+ 10 -> 11
+
+INFO - synthesis: Extracted state machine for register '\uart1/FSM' with one-hot encoding
+State machine has 12 reachable states with original encodings of:
+
+ 00000000 
+
+ 00001010 
+
+ 00001011 
+
+ 00001100 
+
+ 00001101 
+
+ 00001110 
+
+ 00001111 
+
+ 00010000 
+
+ 00010001 
+
+ 00010010 
+
+ 00010011 
+
+ 00010100 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 00000000 -> 000000000001
+
+ 00001010 -> 000000000010
+
+ 00001011 -> 000000000100
+
+ 00001100 -> 000000001000
+
+ 00001101 -> 000000010000
+
+ 00001110 -> 000000100000
+
+ 00001111 -> 000001000000
+
+ 00010000 -> 000010000000
+
+ 00010001 -> 000100000000
+
+ 00010010 -> 001000000000
+
+ 00010011 -> 010000000000
+
+ 00010100 -> 100000000000
+
+INFO - synthesis: Extracted state machine for register '\uart_tx1/FSM' with one-hot encoding
+State machine has 13 reachable states with original encodings of:
+
+ 00000000 
+
+ 00001010 
+
+ 00011110 
+
+ 00101000 
+
+ 00101001 
+
+ 00101010 
+
+ 00101011 
+
+ 00101100 
+
+ 00101101 
+
+ 00101110 
+
+ 00101111 
+
+ 00110000 
+
+ 00110001 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 00000000 -> 0000000000001
+
+ 00001010 -> 0000000000010
+
+ 00011110 -> 0000000000100
+
+ 00101000 -> 0000000001000
+
+ 00101001 -> 0000000010000
+
+ 00101010 -> 0000000100000
+
+ 00101011 -> 0000001000000
+
+ 00101100 -> 0000010000000
+
+ 00101101 -> 0000100000000
+
+ 00101110 -> 0001000000000
+
+ 00101111 -> 0010000000000
+
+ 00110000 -> 0100000000000
+
+ 00110001 -> 1000000000000
+
+
+
+
+WARNING - synthesis: Bit 0 of Register \all_modules1/uart_to_sdram1/state_FSM is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \all_modules1/uart_to_sdram1/state_FSM is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \all_modules1/uart_to_sdram1/state_FSM is stuck at Zero
+WARNING - synthesis: Bit 3 of Register \all_modules1/uart_to_sdram1/state_FSM is stuck at Zero
+WARNING - synthesis: Bit 4 of Register \all_modules1/uart_to_sdram1/state_FSM is stuck at Zero
+WARNING - synthesis: Bit 0 of Register \all_modules1/sdram_controller1/state_FSM is stuck at Zero
+WARNING - synthesis: Bit 1 of Register \all_modules1/sdram_controller1/state_FSM is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \all_modules1/sdram_controller1/state_FSM is stuck at Zero
+######## Found 2 RTL RAMs in the design.
+######## Mapping RTL RAM \all_modules1/fifo1/m_RAM to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
+
+######## Mapping RTL RAM \all_modules1/fifo2/m_RAM to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
+
+GSR instance connected to net nreset_c.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in sdram_uart_top_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.10_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file sdram_uart_Implementation.ngd.
+
+################### Begin Area Report (sdram_uart_top)######################
+Number of register bits => 373 of 7209 (5 % )
+BB => 16
+CCU2D => 120
+DP8KC => 2
+EHXPLLJ => 1
+FD1P3AX => 189
+FD1P3DX => 31
+FD1P3IX => 80
+FD1S3AX => 39
+FD1S3AY => 4
+FD1S3DX => 1
+FD1S3IX => 22
+FD1S3JX => 7
+GSR => 1
+IB => 3
+L6MUX21 => 1
+LUT4 => 240
+OB => 28
+PFUMX => 8
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 4
+  Net : clk_multiply/SD_CLK_c, loads : 349
+  Net : all_modules1/uart_to_sdram1/data_count_clk, loads : 21
+  Net : all_modules1/sdram_controller1/delayTimer/count_2_derived_14, loads : 30
+  Net : clk_c, loads : 1
+Clock Enable Nets
+Number of Clock Enables: 33
+Top 10 highest fanout Clock Enables:
+  Net : all_modules1/sdram_controller1/SD_CLK_c_enable_213, loads : 41
+  Net : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/SD_CLK_c_enable_197, loads : 16
+  Net : all_modules1/sdram_to_uart1/SD_CLK_c_enable_146, loads : 16
+  Net : all_modules1/sdram_controller1/SD_CLK_c_enable_46, loads : 16
+  Net : all_modules1/sdram_controller1/init_done_N_558, loads : 15
+  Net : all_modules1/sdram_controller1/initTimer/SD_CLK_c_enable_125, loads : 15
+  Net : all_modules1/uart_to_sdram1/SD_CLK_c_enable_79, loads : 13
+  Net : uart1/SMPL, loads : 12
+  Net : uart_tx1/SMPL, loads : 12
+  Net : all_modules1/uart_to_sdram1/SD_CLK_c_enable_63, loads : 10
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : all_modules1/sdram_controller1/SD_CLK_c_enable_213, loads : 41
+  Net : all_modules1/uart_to_sdram1/o_stb_rd_N_367, loads : 32
+  Net : all_modules1/sdram_controller1/refresh_tim_reset, loads : 28
+  Net : SD_CLK_c_enable_128, loads : 25
+  Net : all_modules1/sdram_controller1/n400, loads : 24
+  Net : all_modules1/n1734, loads : 23
+  Net : all_modules1/fifo2/o_stb_N_212, loads : 20
+  Net : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/SD_CLK_c_enable_197, loads : 19
+  Net : all_modules1/fifo1/o_stb_N_212, loads : 18
+  Net : all_modules1/uart_to_sdram1/data_count_clk_enable_16, loads : 17
+################### End Clock Report ##################
+
+<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets count[2]_derived_14]     |  200.000 MHz|  163.132 MHz|     8 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets                          |             |             |
+\all_modules1/data_count_clk]           |  200.000 MHz|  154.250 MHz|    11 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets SD_CLK_c]                |  200.000 MHz|   97.666 MHz|     9 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+3 constraints not met.
+
+
+Peak Memory Usage: 70.184  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 2.137  secs
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

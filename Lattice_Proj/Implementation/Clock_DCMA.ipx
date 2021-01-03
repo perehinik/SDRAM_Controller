@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="Clock_DCMA" module="PLL" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2019 05 18 20:54:36.193" version="5.8" type="Module" synthesis="lse" source_format="Verilog">
+  <Package>
+		<File name="Clock_DCMA.lpc" type="lpc" modified="2019 05 18 20:54:32.720"/>
+		<File name="Clock_DCMA.v" type="top_level_verilog" modified="2019 05 18 20:54:32.788"/>
+		<File name="Clock_DCMA_tmpl.v" type="template_verilog" modified="2019 05 18 20:54:32.791"/>
+  </Package>
+</DiamondModule>

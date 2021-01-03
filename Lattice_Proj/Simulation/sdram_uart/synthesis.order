@@ -1,0 +1,16 @@
+i<>.\fifo.v
+i<>.\sdram_to_uart.v
+i<>.\Timer.v
+i<>.\SDRAM_Controller.v
+i<>.\uart_to_sdram.v
+i<>.\all_modules.v
+i<>.\all_mod_testbench.v
+i<>.\Clock_DCMA.v
+i<>.\..\..\src\fifo.v
+i<>.\..\..\src\sdram_to_uart.v
+i<>.\..\..\src\Timer.v
+i<>.\..\..\src\SDRAM_Controller.v
+i<>.\..\..\src\uart_to_sdram.v
+i<>.\..\..\src\all_modules.v
+i<>.\..\..\src\all_mod_testbench.v
+i<>.\..\..\Implementation\Clock_DCMA.v

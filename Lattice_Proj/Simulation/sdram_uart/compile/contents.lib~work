@@ -1,0 +1,23 @@
+9
+~M 0 "" 0 $root
+~A 1 "" 0 $root
+~M 3 "./../../../Implementation/Clock_DCMA.v" 8 Clock_DCMA
+~A 1 "./../../../Implementation/Clock_DCMA.v" 8 Clock_DCMA
+~M 1 "./../../../src/SDRAM_Controller.v" 11 SDRAM_Controller
+~A 1 "./../../../src/SDRAM_Controller.v" 11 SDRAM_Controller
+~M 1 "./../../../src/Timer.v" 10 Timer
+~A 1 "./../../../src/Timer.v" 10 Timer
+~M 1 "./../../../src/Timer.v" 33 Timer1
+~A 1 "./../../../src/Timer.v" 33 Timer1
+~M 1 "./../../../src/all_modules.v" 1 all_modules
+~A 1 "./../../../src/all_modules.v" 1 all_modules
+~M 1 "./../../../src/SDRAM_Controller.v" 353 bankArbiter
+~A 1 "./../../../src/SDRAM_Controller.v" 353 bankArbiter
+~M 1 "./../../../src/fifo.v" 1 fifo
+~A 1 "./../../../src/fifo.v" 1 fifo
+~M 1 "./../../../src/sdram_to_uart.v" 1 sdram_to_uart
+~A 1 "./../../../src/sdram_to_uart.v" 1 sdram_to_uart
+~M 3 "./../../../src/all_mod_testbench.v" 3 sdram_uart_testbench
+~A 1 "./../../../src/all_mod_testbench.v" 3 sdram_uart_testbench
+~M 1 "./../../../src/uart_to_sdram.v" 1 uart_to_sdram
+~A 1 "./../../../src/uart_to_sdram.v" 1 uart_to_sdram

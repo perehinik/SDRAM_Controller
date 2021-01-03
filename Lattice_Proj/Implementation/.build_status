@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BuildStatus>
+    <Strategy name="Strategy1">
+        <Milestone name="Export" build_result="0" build_time="0">
+            <Task name="IBIS" build_result="0" update_result="2" update_time="1558548075"/>
+            <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="1558548077"/>
+            <Task name="TimingSimFileVHD" build_result="0" update_result="2" update_time="1558548078"/>
+            <Task name="Bitgen" build_result="0" update_result="2" update_time="1558548082"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1559250146"/>
+        </Milestone>
+        <Milestone name="Map" build_result="2" build_time="1559250119">
+            <Task name="Map" build_result="2" update_result="0" update_time="1559250119"/>
+            <Task name="MapTrace" build_result="2" update_result="0" update_time="1559250120"/>
+            <Task name="MapVerilogSimFile" build_result="2" update_result="0" update_time="1559250122"/>
+            <Task name="MapVHDLSimFile" build_result="2" update_result="0" update_time="1559250124"/>
+        </Milestone>
+        <Milestone name="PAR" build_result="2" build_time="1559250139">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1559250139"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1559250140"/>
+            <Task name="IOTiming" build_result="2" update_result="0" update_time="1559250142"/>
+        </Milestone>
+        <Milestone name="Synthesis" build_result="2" build_time="1559250118">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1559250118"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1559250146"/>
+        </Milestone>
+        <Milestone name="TOOL_Report" build_result="0" build_time="0">
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1559250108"/>
+            <Task name="BKM" build_result="0" update_result="2" update_time="0"/>
+            <Task name="SSO" build_result="0" update_result="2" update_time="0"/>
+            <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
+            <Task name="DEC" build_result="0" update_result="2" update_time="0"/>
+        </Milestone>
+        <Report name=".vdbs/sdram_uart_Implementation_map.vdb" last_build_time="1559250119" last_build_size="184418"/>
+        <Report name="IBIS/sdram_uart_Implementation.ibs" last_build_time="1558548075" last_build_size="66633"/>
+        <Report name="sdram_uart_Implementation.bgn" last_build_time="1559250146" last_build_size="4269"/>
+        <Report name="sdram_uart_Implementation.bit" last_build_time="1558548081" last_build_size="29969"/>
+        <Report name="sdram_uart_Implementation.ior" last_build_time="1559250142" last_build_size="4650"/>
+        <Report name="sdram_uart_Implementation.jed" last_build_time="1559250146" last_build_size="1465845"/>
+        <Report name="sdram_uart_Implementation.lsedata" last_build_time="1559250116" last_build_size="973834"/>
+        <Report name="sdram_uart_Implementation.ncd" last_build_time="1559250139" last_build_size="581971"/>
+        <Report name="sdram_uart_Implementation.ngd" last_build_time="1559250118" last_build_size="500036"/>
+        <Report name="sdram_uart_Implementation.tw1" last_build_time="1559250120" last_build_size="18623"/>
+        <Report name="sdram_uart_Implementation.twr" last_build_time="1559250140" last_build_size="81146"/>
+        <Report name="sdram_uart_Implementation_map.ncd" last_build_time="1559250119" last_build_size="417389"/>
+        <Report name="sdram_uart_Implementation_mapvho.sdf" last_build_time="1559250124" last_build_size="508242"/>
+        <Report name="sdram_uart_Implementation_mapvho.vho" last_build_time="1559250124" last_build_size="3281517"/>
+        <Report name="sdram_uart_Implementation_mapvo.sdf" last_build_time="1559250122" last_build_size="511944"/>
+        <Report name="sdram_uart_Implementation_mapvo.vo" last_build_time="1559250122" last_build_size="571189"/>
+        <Report name="sdram_uart_Implementation_vho.sdf" last_build_time="1558548078" last_build_size="461379"/>
+        <Report name="sdram_uart_Implementation_vho.vho" last_build_time="1558548078" last_build_size="2709757"/>
+        <Report name="sdram_uart_Implementation_vo.sdf" last_build_time="1558548077" last_build_size="463887"/>
+        <Report name="sdram_uart_Implementation_vo.vo" last_build_time="1558548077" last_build_size="449264"/>
+    </Strategy>
+</BuildStatus>

@@ -1,0 +1,7 @@
+#Start recording tcl command: 5/20/2019 19:18:40
+#Project Location: C:/lscc/sd_ram_uart; Project name: sdram_uart
+prj_project open "C:/lscc/sd_ram_uart/sdram_uart.ldf"
+prj_src syn_sim -src "C:/lscc/sd_ram_uart/src/all_mod_testbench.v" SynthesisAndSimulate
+prj_src syn_sim -src "C:/lscc/sd_ram_uart/src/all_mod_testbench.v" SimulateOnly
+prj_src syn_sim -src "C:/lscc/sd_ram_uart/src/all_mod_testbench.v" SynthesisAndSimulate
+#Stop recording: 5/20/2019 23:00:44

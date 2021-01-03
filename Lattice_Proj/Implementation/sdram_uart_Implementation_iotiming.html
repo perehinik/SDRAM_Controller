@@ -1,0 +1,161 @@
+<HTML>
+<HEAD><TITLE>I/O Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Top"></A><B><U><big>I/O Timing Report</big></U></B>
+Loading design for application iotiming from file sdram_uart_implementation.ncd.
+Design name: sdram_uart_top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LCMXO2-7000HC
+Package:     TQFP144
+Performance: M
+Package Status:                     Final          Version 1.39.
+Performance Hardware Data Status:   Final          Version 34.4.
+// Design: sdram_uart_top
+// Package: TQFP144
+// ncd File: sdram_uart_implementation.ncd
+// Version: Diamond (64-bit) 3.10.0.111.2
+// Written on Thu May 30 23:02:22 2019
+// M: Minimum Performance Grade
+// iotiming sdram_uart_Implementation.ncd sdram_uart_Implementation.prf -gui -msgset C:/lscc/sd_ram_uart/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 6):
+
+// Input Setup and Hold Times
+
+Port    Clock Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+DB[0]   clk   R     1.640      6      -0.431     M
+DB[10]  clk   R     1.714      6      -0.449     M
+DB[11]  clk   R     2.056      6      -0.554     M
+DB[12]  clk   R     2.404      6      -0.700     M
+DB[13]  clk   R     2.440      6      -0.694     M
+DB[14]  clk   R     2.746      6      -0.806     M
+DB[15]  clk   R     2.746      6      -0.806     M
+DB[1]   clk   R     1.640      6      -0.431     M
+DB[2]   clk   R     1.838      6      -0.469     M
+DB[3]   clk   R     1.812      6      -0.470     M
+DB[4]   clk   R     1.621      6      -0.424     M
+DB[5]   clk   R     1.621      6      -0.424     M
+DB[6]   clk   R     2.611      6      -0.746     M
+DB[7]   clk   R     2.239      6      -0.630     M
+DB[8]   clk   R     2.288      6      -0.648     M
+DB[9]   clk   R     2.373      6      -0.641     M
+nreset  clk   R    10.579      6      -0.819     M
+uart_rx clk   R     2.548      6      -0.725     M
+
+
+// Clock to Output Delay
+
+Port    Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+ADR[0]  clk   R    14.621         6        3.044          M
+ADR[10] clk   R    14.163         6        2.726          M
+ADR[11] clk   R     9.552         6        2.593          M
+ADR[1]  clk   R    14.228         6        2.847          M
+ADR[2]  clk   R    15.008         6        2.926          M
+ADR[3]  clk   R    13.797         6        2.809          M
+ADR[4]  clk   R    14.423         6        2.891          M
+ADR[5]  clk   R    14.328         6        2.726          M
+ADR[6]  clk   R    14.334         6        2.688          M
+ADR[7]  clk   R    14.114         6        2.688          M
+ADR[8]  clk   R    14.563         6        2.794          M
+ADR[9]  clk   R     9.562         6        2.604          M
+BA[0]   clk   R    10.636         6        2.829          M
+BA[1]   clk   R    10.643         6        2.821          M
+DB[0]   clk   R    12.203         6        2.579          M
+DB[10]  clk   R    11.571         6        2.671          M
+DB[11]  clk   R    11.571         6        2.573          M
+DB[12]  clk   R    11.218         6        2.460          M
+DB[13]  clk   R    11.218         6        2.471          M
+DB[14]  clk   R    10.865         6        2.614          M
+DB[15]  clk   R    10.865         6        2.576          M
+DB[1]   clk   R    12.203         6        2.559          M
+DB[2]   clk   R    12.658         6        2.326          M
+DB[3]   clk   R    12.658         6        2.331          M
+DB[4]   clk   R    12.658         6        2.438          M
+DB[5]   clk   R    12.653         6        2.307          M
+DB[6]   clk   R    12.653         6        2.573          M
+DB[7]   clk   R    12.655         6        2.483          M
+DB[8]   clk   R    11.855         6        2.594          M
+DB[9]   clk   R    11.855         6        2.621          M
+DQM[0]  clk   R     9.815         6        2.924          M
+DQM[1]  clk   R    10.367         6        3.103          M
+LED[0]  clk   R     8.674         6        2.892          M
+LED[1]  clk   R     8.380         6        2.790          M
+LED[2]  clk   R     8.674         6        2.892          M
+LED[3]  clk   R     8.681         6        2.895          M
+nCAS    clk   R    10.655         6        3.069          M
+nRAS    clk   R    13.411         6        3.006          M
+nWE     clk   R    10.820         6        3.079          M
+uart_tx clk   R     8.465         6        2.784          M
+
+
+// Internal_Clock to Input
+
+Port    Internal_Clock
+--------------------------------------------------------
+nreset  all_modules1/u
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

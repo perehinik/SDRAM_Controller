@@ -1,0 +1,14 @@
+<BaliSimProject version="1.3" path="Simulation" stage="0" language="-1" name="sdram_uart" simType="Active-HDL">
+    <Source worklib="work" path="src/fifo.v" type="VERILOG" include="none"/>
+    <Source worklib="work" path="src/sdram_to_uart.v" type="VERILOG" include="none"/>
+    <Source worklib="work" path="src/Timer.v" type="VERILOG" include="none"/>
+    <Source worklib="work" path="src/SDRAM_Controller.v" type="VERILOG" include="none"/>
+    <Source worklib="work" path="src/uart_to_sdram.v" type="VERILOG" include="none"/>
+    <Source worklib="work" path="src/all_modules.v" type="VERILOG" include="none"/>
+    <Source worklib="work" path="src/all_mod_testbench.v" type="VERILOG" include="none"/>
+    <Source worklib="work" path="Implementation/Clock_DCMA.v" type="VERILOG" include="none"/>
+    <SimLib value="pmi_work ovi_machxo2"/>
+    <GlbInc value=""/>
+    <Macro value=""/>
+    <TopModule instance="" language="VERILOG" name="sdram_uart_testbench"/>
+</BaliSimProject>

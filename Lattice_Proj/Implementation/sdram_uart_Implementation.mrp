@@ -1,0 +1,1062 @@
+
+        Lattice Mapping Report File for Design Module 'sdram_uart_top'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO2 -p LCMXO2-7000HC -t TQFP144 -s 6 -oc Commercial
+     sdram_uart_Implementation.ngd -o sdram_uart_Implementation_map.ncd -pr
+     sdram_uart_Implementation.prf -mp sdram_uart_Implementation.mrp -lpf
+     C:/lscc/sd_ram_uart/Implementation/sdram_uart_Implementation.lpf -lpf
+     C:/lscc/sd_ram_uart/sdram_uart.lpf -c 0 -gui -msgset
+     C:/lscc/sd_ram_uart/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-7000HCTQFP144
+Target Performance:   6
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.10.0.111.2
+Mapped on:  05/30/19  23:01:58
+
+Design Summary
+--------------
+
+   Number of registers:    373 out of  7209 (5%)
+      PFU registers:          373 out of  6864 (5%)
+      PIO registers:            0 out of   345 (0%)
+   Number of SLICEs:       243 out of  3432 (7%)
+      SLICEs as Logic/ROM:    243 out of  3432 (7%)
+      SLICEs as RAM:            0 out of  2574 (0%)
+      SLICEs as Carry:        120 out of  3432 (3%)
+   Number of LUT4s:        482 out of  6864 (7%)
+      Number used as logic LUTs:        242
+      Number used as distributed RAM:     0
+      Number used as ripple logic:      240
+      Number used as shift registers:     0
+   Number of PIO sites used: 47 + 4(JTAG) out of 115 (44%)
+   Number of block RAMs:  2 out of 26 (8%)
+   Number of GSRs:  1 out of 1 (100%)
+   EFB used :       No
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   POR :            On
+   Bandgap :        On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 2 (50%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  4
+     Net SD_CLK_c: 207 loads, 207 rising, 0 falling (Driver:
+     clk_multiply/PLLInst_0 )
+
+                                    Page 1
+
+
+
+
+Design:  sdram_uart_top                                Date:  05/30/19  23:01:58
+
+Design Summary (cont)
+---------------------
+     Net all_modules1/uart_to_sdram1/data_count_clk: 9 loads, 9 rising, 0
+     falling (Driver: all_modules1/uart_to_sdram1/state_FSM_i8 )
+     Net all_modules1/sdram_controller1/delayTimer/count[2]_derived_14: 8 loads,
+     8 rising, 0 falling (Driver:
+     all_modules1/sdram_controller1/delayTimer/period_3__I_0_i8_4_lut_rep_48 )
+     Net clk_c: 1 loads, 1 rising, 0 falling (Driver: PIO clk )
+   Number of Clock Enables:  33
+     Net all_modules1/tx_stb1: 2 loads, 2 LSLICEs
+     Net all_modules1/SD_CLK_c_enable_213: 22 loads, 22 LSLICEs
+     Net nreset_c: 2 loads, 2 LSLICEs
+     Net all_modules1/uart_to_sdram1/data_tim_reset: 1 loads, 1 LSLICEs
+     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_102: 4 loads, 4 LSLICEs
+     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_79: 4 loads, 4 LSLICEs
+     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_63: 4 loads, 4 LSLICEs
+     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_55: 4 loads, 4 LSLICEs
+     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_197: 8 loads, 8 LSLICEs
+     Net all_modules1/rx_stb1: 3 loads, 3 LSLICEs
+     Net all_modules1/uart_to_sdram1/data_tim_flag: 9 loads, 9 LSLICEs
+     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_72: 4 loads, 4 LSLICEs
+     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_87: 4 loads, 4 LSLICEs
+     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_95: 4 loads, 4 LSLICEs
+     Net all_modules1/sdram_to_uart1/SD_CLK_c_enable_146: 8 loads, 8 LSLICEs
+     Net all_modules1/sdram_to_uart1/SD_CLK_c_enable_147: 1 loads, 1 LSLICEs
+     Net all_modules1/tx_ack1: 5 loads, 5 LSLICEs
+     Net all_modules1/sdram_controller1/init_done_N_558: 1 loads, 1 LSLICEs
+     Net all_modules1/sdram_controller1/SD_CLK_c_enable_46: 8 loads, 8 LSLICEs
+     Net all_modules1/sdram_controller1/count_2_derived_14_enable_14: 8 loads, 8
+     LSLICEs
+     Net all_modules1/sdram_controller1/SD_CLK_c_enable_125: 8 loads, 8 LSLICEs
+     Net SD_CLK_c_enable_128: 13 loads, 13 LSLICEs
+     Net all_modules1/sdram_controller1/initTimer/SD_CLK_c_enable_110: 1 loads,
+     1 LSLICEs
+     Net SD_CLK_c_enable_131: 2 loads, 2 LSLICEs
+     Net all_modules1/fifo2/o_stb_N_212: 6 loads, 5 LSLICEs
+     Net DAT_7__N_993: 1 loads, 0 LSLICEs
+     Net all_modules1/fifo2/SD_CLK_c_enable_23: 1 loads, 1 LSLICEs
+     Net SD_CLK_c_enable_109: 5 loads, 5 LSLICEs
+     Net all_modules1/fifo1/o_stb_N_212: 6 loads, 5 LSLICEs
+     Net uart1/SMPL: 5 loads, 5 LSLICEs
+     Net uart1/SD_CLK_c_enable_154: 4 loads, 4 LSLICEs
+     Net uart1/FSM_7__N_59: 4 loads, 4 LSLICEs
+     Net uart_tx1/SMPL: 5 loads, 5 LSLICEs
+   Number of LSRs:  16
+     Net all_modules1/n1734: 12 loads, 12 LSLICEs
+     Net all_modules1/repeat_tim_period_13: 1 loads, 1 LSLICEs
+     Net all_modules1/uart_to_sdram1/timout_tim_flag_N_370: 9 loads, 9 LSLICEs
+     Net all_modules1/uart_to_sdram1/data_tim_flag_N_369: 9 loads, 9 LSLICEs
+     Net all_modules1/sdram_to_uart1/state_0: 1 loads, 1 LSLICEs
+     Net all_modules1/sdram_controller1/n393: 1 loads, 1 LSLICEs
+     Net all_modules1/sdram_controller1/n1737: 8 loads, 8 LSLICEs
+     Net all_modules1/sdram_controller1/n5382: 8 loads, 8 LSLICEs
+     Net delay_tim_reset: 3 loads, 3 LSLICEs
+     Net refresh_tim_reset: 13 loads, 13 LSLICEs
+     Net all_modules1/sdram_controller1/n5383: 1 loads, 1 LSLICEs
+     Net all_modules1/sdram_controller1/delay_tim_flag_N_589: 1 loads, 1 LSLICEs
+     
+
+                                    Page 2
+
+
+
+
+Design:  sdram_uart_top                                Date:  05/30/19  23:01:58
+
+Design Summary (cont)
+---------------------
+     Net uart1/PS_10__N_48: 3 loads, 3 LSLICEs
+     Net uart1/n2114: 5 loads, 5 LSLICEs
+     Net uart_tx1/PS_10__N_882: 6 loads, 6 LSLICEs
+     Net uart_tx1/n4789: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net all_modules1/o_stb_rd_N_367: 33 loads
+     Net all_modules1/sdram_controller1/n400: 24 loads
+     Net all_modules1/SD_CLK_c_enable_213: 23 loads
+     Net all_modules1/sdram_controller1/arb_delay_2: 19 loads
+     Net refresh_tim_reset: 19 loads
+     Net all_modules1/sdram_controller1/n394: 16 loads
+     Net SD_P_DATA_15__N_423: 16 loads
+     Net uart1/RXDc: 16 loads
+     Net all_modules1/sdram_controller1/init_done_N_558: 15 loads
+     Net all_modules1/rx_stb1: 13 loads
+
+
+
+
+   Number of warnings:  0
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+   No errors or warnings present.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| DB[14]              | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DB[15]              | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DB[13]              | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DB[12]              | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DB[11]              | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DB[10]              | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DB[9]               | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DB[8]               | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DB[7]               | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DB[6]               | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 3
+
+
+
+
+Design:  sdram_uart_top                                Date:  05/30/19  23:01:58
+
+IO (PIO) Attributes (cont)
+--------------------------
+| DB[5]               | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DB[4]               | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DB[3]               | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DB[2]               | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DB[1]               | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DB[0]               | BIDIR     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| uart_tx             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ADR[12]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ADR[11]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ADR[10]             | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ADR[9]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ADR[8]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ADR[7]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ADR[6]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ADR[5]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ADR[4]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ADR[3]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ADR[2]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ADR[1]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| ADR[0]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| BA[1]               | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| BA[0]               | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DQM[1]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| DQM[0]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| nCAS                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| CKE                 | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| nRAS                | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| nWE                 | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+                                    Page 4
+
+
+
+
+Design:  sdram_uart_top                                Date:  05/30/19  23:01:58
+
+IO (PIO) Attributes (cont)
+--------------------------
+| nCS                 | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| SD_CLK              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LED[3]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LED[2]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LED[1]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| LED[0]              | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| clk                 | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| nreset              | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| uart_rx             | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Signal uart1/SD_CLK_c_enable_183 was merged into signal uart1/FSM_7__N_59
+Signal all_modules1/sdram_controller1/n3006 was merged into signal
+     all_modules1/sdram_controller1/n393
+Signal all_modules1/sdram_to_uart1/n3704 was merged into signal
+     all_modules1/sdram_to_uart1/state_0
+Signal all_modules1/uart_to_sdram1/data_count_clk_enable_16 was merged into
+     signal all_modules1/uart_to_sdram1/data_tim_flag
+Signal uart_tx1/add_596_1/S0 undriven or does not drive anything - clipped.
+Signal uart_tx1/add_596_1/CI undriven or does not drive anything - clipped.
+Signal uart_tx1/add_596_11/CO undriven or does not drive anything - clipped.
+Signal uart1/sub_7_add_2_1/S0 undriven or does not drive anything - clipped.
+Signal uart1/sub_7_add_2_1/CI undriven or does not drive anything - clipped.
+Signal uart1/sub_7_add_2_11/CO undriven or does not drive anything - clipped.
+Signal all_modules1/fifo1/i_addr_7__I_0_8/S0 undriven or does not drive anything
+     - clipped.
+Signal all_modules1/fifo1/i_addr_7__I_0_8/CO undriven or does not drive anything
+     - clipped.
+Signal all_modules1/fifo1/i_addr_1_7__I_0_7/S1 undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo1/i_addr_1_7__I_0_7/S0 undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo1/i_addr_1_7__I_0_8/S0 undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo1/i_addr_1_7__I_0_8/CO undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo1/i_addr_1_7__I_0_0/S1 undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo1/i_addr_1_7__I_0_0/S0 undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo1/i_addr_1_7__I_0_0/CI undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo1/add_38_1/S0 undriven or does not drive anything -
+     clipped.
+Signal all_modules1/fifo1/add_38_1/CI undriven or does not drive anything -
+
+                                    Page 5
+
+
+
+
+Design:  sdram_uart_top                                Date:  05/30/19  23:01:58
+
+Removed logic (cont)
+--------------------
+     clipped.
+Signal all_modules1/fifo1/add_38_9/S1 undriven or does not drive anything -
+     clipped.
+Signal all_modules1/fifo1/add_38_9/CO undriven or does not drive anything -
+     clipped.
+Signal all_modules1/fifo1/i_addr_7__I_0_7/S1 undriven or does not drive anything
+     - clipped.
+Signal all_modules1/fifo1/i_addr_7__I_0_7/S0 undriven or does not drive anything
+     - clipped.
+Signal all_modules1/fifo1/o_addr_811_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo1/o_addr_811_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo1/o_addr_811_add_4_9/S1 undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo1/o_addr_811_add_4_9/CO undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo1/i_addr_7__I_0_0/S1 undriven or does not drive anything
+     - clipped.
+Signal all_modules1/fifo1/i_addr_7__I_0_0/S0 undriven or does not drive anything
+     - clipped.
+Signal all_modules1/fifo1/i_addr_7__I_0_0/CI undriven or does not drive anything
+     - clipped.
+Signal all_modules1/fifo2/add_38_1/S0 undriven or does not drive anything -
+     clipped.
+Signal all_modules1/fifo2/add_38_1/CI undriven or does not drive anything -
+     clipped.
+Signal all_modules1/fifo2/o_addr_812_add_4_1/S0 undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo2/o_addr_812_add_4_1/CI undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo2/i_addr_7__I_0_8/S0 undriven or does not drive anything
+     - clipped.
+Signal all_modules1/fifo2/i_addr_7__I_0_8/CO undriven or does not drive anything
+     - clipped.
+Signal all_modules1/fifo2/o_addr_812_add_4_9/S1 undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo2/o_addr_812_add_4_9/CO undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo2/i_addr_1_7__I_0_0/S1 undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo2/i_addr_1_7__I_0_0/S0 undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo2/i_addr_1_7__I_0_0/CI undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo2/i_addr_1_7__I_0_7/S1 undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo2/i_addr_1_7__I_0_7/S0 undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo2/i_addr_7__I_0_0/S1 undriven or does not drive anything
+     - clipped.
+Signal all_modules1/fifo2/i_addr_7__I_0_0/S0 undriven or does not drive anything
+     - clipped.
+Signal all_modules1/fifo2/i_addr_7__I_0_0/CI undriven or does not drive anything
+     - clipped.
+Signal all_modules1/fifo2/i_addr_1_7__I_0_8/S0 undriven or does not drive
+
+                                    Page 6
+
+
+
+
+Design:  sdram_uart_top                                Date:  05/30/19  23:01:58
+
+Removed logic (cont)
+--------------------
+     anything - clipped.
+Signal all_modules1/fifo2/i_addr_1_7__I_0_8/CO undriven or does not drive
+     anything - clipped.
+Signal all_modules1/fifo2/i_addr_7__I_0_7/S1 undriven or does not drive anything
+     - clipped.
+Signal all_modules1/fifo2/i_addr_7__I_0_7/S0 undriven or does not drive anything
+     - clipped.
+Signal all_modules1/fifo2/add_38_9/S1 undriven or does not drive anything -
+     clipped.
+Signal all_modules1/fifo2/add_38_9/CO undriven or does not drive anything -
+     clipped.
+Signal all_modules1/sdram_controller1/initTimer/count_815_add_4_1/S0 undriven or
+     does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/initTimer/count_815_add_4_1/CI undriven or
+     does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/initTimer/count_815_add_4_17/S1 undriven
+     or does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/initTimer/count_815_add_4_17/CO undriven
+     or does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/refreshTimer/add_6_1/S0 undriven or does
+     not drive anything - clipped.
+Signal all_modules1/sdram_controller1/refreshTimer/add_6_1/CI undriven or does
+     not drive anything - clipped.
+Signal all_modules1/sdram_controller1/refreshTimer/add_6_25/S1 undriven or does
+     not drive anything - clipped.
+Signal all_modules1/sdram_controller1/refreshTimer/add_6_25/CO undriven or does
+     not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_12/S0 undriven
+     or does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_12/CO undriven
+     or does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/add_6_1/S0 undriven or does
+     not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/add_6_1/CI undriven or does
+     not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_2/S1 undriven or
+     does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_2/S0 undriven or
+     does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_2/CI undriven or
+     does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_4/S1 undriven or
+     does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_4/S0 undriven or
+     does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_6/S1 undriven or
+     does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_6/S0 undriven or
+     does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_8/S1 undriven or
+     does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_8/S0 undriven or
+     does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_10/S1 undriven
+     or does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_10/S0 undriven
+
+                                    Page 7
+
+
+
+
+Design:  sdram_uart_top                                Date:  05/30/19  23:01:58
+
+Removed logic (cont)
+--------------------
+     or does not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/add_6_15/S1 undriven or does
+     not drive anything - clipped.
+Signal all_modules1/sdram_controller1/repeatTimer/add_6_15/CO undriven or does
+     not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813_add_4_1/S0
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813_add_4_1/CI
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_1/S1 undriven
+     or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_1/S0 undriven
+     or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_1/CI undriven
+     or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_3/S1 undriven
+     or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_3/S0 undriven
+     or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_5/S1 undriven
+     or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_5/S0 undriven
+     or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_7/S1 undriven
+     or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_7/S0 undriven
+     or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_9/S1 undriven
+     or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_9/S0 undriven
+     or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_11/S1
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_11/S0
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_13/S1
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_13/S0
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_15/S1
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_15/S0
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_17/S0
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_17/CO
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813_add_4_17/S1
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813_add_4_17/CO
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814_add_4_1/S0
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814_add_4_1/CI
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814_add_4_17/S1
+
+                                    Page 8
+
+
+
+
+Design:  sdram_uart_top                                Date:  05/30/19  23:01:58
+
+Removed logic (cont)
+--------------------
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814_add_4_17/CO
+     undriven or does not drive anything - clipped.
+Signal all_modules1/uart_to_sdram1/add_91_1/S1 undriven or does not drive
+     anything - clipped.
+Signal all_modules1/uart_to_sdram1/add_91_1/S0 undriven or does not drive
+     anything - clipped.
+Signal all_modules1/uart_to_sdram1/add_91_1/CI undriven or does not drive
+     anything - clipped.
+Signal all_modules1/uart_to_sdram1/add_91_25/CO undriven or does not drive
+     anything - clipped.
+Block uart1/i1907_1_lut was optimized away.
+Block all_modules1/sdram_controller1/i1992_1_lut was optimized away.
+Block all_modules1/sdram_to_uart1/i2_1_lut was optimized away.
+Block all_modules1/uart_to_sdram1/i59_1_lut_rep_41 was optimized away.
+
+Memory Usage
+------------
+
+/all_modules1/fifo1:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 11
+    PFU Registers: 17
+    -Contains EBR m_RAM0:  TYPE= DP8KC,  Width_B= 8,  Depth_A= 256,  Depth_B=
+         256,  REGMODE_A= NOREG,  REGMODE_B= NOREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= READBEFOREWRITE,  WRITEMODE_B=
+         READBEFOREWRITE,  GSR= DISABLED
+/all_modules1/fifo2:
+    EBRs: 1
+    RAM SLICEs: 0
+    Logic SLICEs: 14
+    PFU Registers: 17
+    -Contains EBR m_RAM0:  TYPE= DP8KC,  Width_B= 8,  Depth_A= 256,  Depth_B=
+         256,  REGMODE_A= NOREG,  REGMODE_B= OUTREG,  RESETMODE= SYNC,
+         ASYNC_RESET_RELEASE= SYNC,  WRITEMODE_A= READBEFOREWRITE,  WRITEMODE_B=
+         READBEFOREWRITE,  GSR= DISABLED
+
+     
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                clk_multiply/PLLInst_0
+  PLL Type:                                         EHXPLLJ
+  Input Clock:                             PIN      clk_c
+  Output Clock(P):                         PIN,NODE SD_CLK_c
+  Output Clock(S):                                  NONE
+  Output Clock(S2):                                 NONE
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     SD_CLK_c
+  Reset Signal:                                     NONE
+  M Divider Reset Signal:                           NONE
+  C Divider Reset Signal:                           NONE
+  D Divider Reset Signal:                           NONE
+
+                                    Page 9
+
+
+
+
+Design:  sdram_uart_top                                Date:  05/30/19  23:01:58
+
+PLL/DLL Summary (cont)
+----------------------
+  Standby Signal:                                   NONE
+  PLL LOCK signal:                                  NONE
+  PLL Data bus CLK Signal:                          NONE
+  PLL Data bus Strobe Signal:                       NONE
+  PLL Data bus Reset Signal:                        NONE
+  PLL Data bus Write Enable Signal:                 NONE
+  PLL Data bus Address0:                            NONE
+  PLL Data bus Address1:                            NONE
+  PLL Data bus Address2:                            NONE
+  PLL Data bus Address3:                            NONE
+  PLL Data bus Address4:                            NONE
+  PLL Data In bus Data0:                            NONE
+  PLL Data In bus Data1:                            NONE
+  PLL Data In bus Data2:                            NONE
+  PLL Data In bus Data3:                            NONE
+  PLL Data In bus Data4:                            NONE
+  PLL Data In bus Data5:                            NONE
+  PLL Data In bus Data6:                            NONE
+  PLL Data In bus Data7:                            NONE
+  PLL Data bus Acknowledge:                         NONE
+  PLL Data Out bus Data0:                           NONE
+  PLL Data Out bus Data1:                           NONE
+  PLL Data Out bus Data2:                           NONE
+  PLL Data Out bus Data3:                           NONE
+  PLL Data Out bus Data4:                           NONE
+  PLL Data Out bus Data5:                           NONE
+  PLL Data Out bus Data6:                           NONE
+  PLL Data Out bus Data7:                           NONE
+  Input Clock Frequency (MHz):                      50.0000
+  Output Clock(P) Frequency (MHz):                  133.3333
+  Output Clock(S) Frequency (MHz):                  NA
+  Output Clock(S2) Frequency (MHz):                 NA
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              VCO_PHASE
+  Pre Divider B Input:                              VCO_PHASE
+  Pre Divider C Input:                              VCO_PHASE
+  Pre Divider D Input:                              VCO_PHASE
+  VCO Bypass A Input:                               VCO_PHASE
+  VCO Bypass B Input:                               VCO_PHASE
+  VCO Bypass C Input:                               VCO_PHASE
+  VCO Bypass D Input:                               VCO_PHASE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     3
+  CLKFB Divider:                                    8
+  CLKOP Divider:                                    4
+  CLKOS Divider:                                    1
+  CLKOS2 Divider:                                   1
+  CLKOS3 Divider:                                   1
+  Fractional N Divider:                             0
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 RISING
+  CLKOP Trim Option Delay:                          0
+
+                                   Page 10
+
+
+
+
+Design:  sdram_uart_top                                Date:  05/30/19  23:01:58
+
+PLL/DLL Summary (cont)
+----------------------
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS3 Desired Phase Shift(degree):               0
+
+ASIC Components
+---------------
+
+Instance Name: all_modules1/fifo2/m_RAM0
+         Type: DP8KC
+Instance Name: all_modules1/fifo1/m_RAM0
+         Type: DP8KC
+Instance Name: clk_multiply/PLLInst_0
+         Type: EHXPLLJ
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'nreset_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'nreset_c' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 181 
+   DP8KC = 2
+
+     Type and instance name of component: 
+   Register : all_modules1/uart_to_sdram1/rd_wt_operation_i0_i0
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i0
+   Register : all_modules1/uart_to_sdram1/sd_data_i0
+   Register : all_modules1/uart_to_sdram1/data_array_len_i0
+   Register : all_modules1/uart_to_sdram1/data_array_len_i15
+   Register : all_modules1/uart_to_sdram1/data_array_len_i14
+   Register : all_modules1/uart_to_sdram1/data_array_len_i13
+   Register : all_modules1/uart_to_sdram1/data_array_len_i12
+   Register : all_modules1/uart_to_sdram1/data_array_len_i11
+   Register : all_modules1/uart_to_sdram1/data_array_len_i10
+   Register : all_modules1/uart_to_sdram1/data_array_len_i9
+   Register : all_modules1/uart_to_sdram1/data_array_len_i8
+   Register : all_modules1/uart_to_sdram1/data_array_len_i7
+   Register : all_modules1/uart_to_sdram1/data_array_len_i6
+   Register : all_modules1/uart_to_sdram1/data_array_len_i5
+
+                                   Page 11
+
+
+
+
+Design:  sdram_uart_top                                Date:  05/30/19  23:01:58
+
+GSR Usage (cont)
+----------------
+   Register : all_modules1/uart_to_sdram1/data_array_len_i4
+   Register : all_modules1/uart_to_sdram1/data_array_len_i3
+   Register : all_modules1/uart_to_sdram1/data_array_len_i2
+   Register : all_modules1/uart_to_sdram1/data_array_len_i1
+   Register : all_modules1/uart_to_sdram1/sd_data_i15
+   Register : all_modules1/uart_to_sdram1/sd_data_i14
+   Register : all_modules1/uart_to_sdram1/sd_data_i13
+   Register : all_modules1/uart_to_sdram1/sd_data_i12
+   Register : all_modules1/uart_to_sdram1/sd_data_i11
+   Register : all_modules1/uart_to_sdram1/sd_data_i10
+   Register : all_modules1/uart_to_sdram1/sd_data_i9
+   Register : all_modules1/uart_to_sdram1/sd_data_i8
+   Register : all_modules1/uart_to_sdram1/sd_data_i7
+   Register : all_modules1/uart_to_sdram1/sd_data_i6
+   Register : all_modules1/uart_to_sdram1/sd_data_i5
+   Register : all_modules1/uart_to_sdram1/sd_data_i4
+   Register : all_modules1/uart_to_sdram1/sd_data_i3
+   Register : all_modules1/uart_to_sdram1/sd_data_i2
+   Register : all_modules1/uart_to_sdram1/sd_data_i1
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i23
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i22
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i21
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i20
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i19
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i18
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i17
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i16
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i15
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i14
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i13
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i12
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i11
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i10
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i9
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i8
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i7
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i6
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i5
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i4
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i3
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i2
+   Register : all_modules1/uart_to_sdram1/sd_adr_i0_i1
+   Register : all_modules1/uart_to_sdram1/rd_wt_operation_i0_i1
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i0
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i1
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i2
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i3
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i4
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i5
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i6
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i7
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i8
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i9
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i10
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i11
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i12
+
+                                   Page 12
+
+
+
+
+Design:  sdram_uart_top                                Date:  05/30/19  23:01:58
+
+GSR Usage (cont)
+----------------
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i13
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i14
+   Register : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814__i15
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i0
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i1
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i2
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i3
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i4
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i5
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i6
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i7
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i8
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i9
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i10
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i11
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i12
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i13
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i14
+   Register : all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813__i15
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i0
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i1
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i2
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i3
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i4
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i5
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i6
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i7
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i8
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i9
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i10
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i11
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i12
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i13
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i14
+   Register : all_modules1/sdram_to_uart1/sd_data_temp_i15
+   Register : all_modules1/sdram_to_uart1/rd_wt_operation_i1
+   Register : all_modules1/sdram_controller1/rd_wt_operation_i0_i0
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i0
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i15
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i14
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i13
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i12
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i11
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i10
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i9
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i8
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i0
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i7
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i6
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i5
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i4
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i3
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i2
+   Register : all_modules1/sdram_controller1/RD_DATA_i0_i1
+   Register : all_modules1/sdram_controller1/rd_o_stb_148
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i0
+
+                                   Page 13
+
+
+
+
+Design:  sdram_uart_top                                Date:  05/30/19  23:01:58
+
+GSR Usage (cont)
+----------------
+   Register : all_modules1/sdram_controller1/wt_o_stb_147
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i1
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i2
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i3
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i4
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i5
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i6
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i7
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i8
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i10
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i11
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i12
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i13
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i14
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i15
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i16
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i17
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i18
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i19
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i20
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i21
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i22
+   Register : all_modules1/sdram_controller1/SD_ADR_TEMP__i23
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i1
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i2
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i3
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i4
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i5
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i6
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i7
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i8
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i9
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i10
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i11
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i12
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i13
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i14
+   Register : all_modules1/sdram_controller1/SD_DATA_TEMP__i15
+   Register : all_modules1/sdram_controller1/rd_wt_operation_i0_i1
+   Register : all_modules1/sdram_controller1/arbBank/delay_0__i1
+   Register : all_modules1/sdram_controller1/arbBank/delay_0__i2
+   Register : all_modules1/sdram_controller1/arbBank/delay_0__i3
+   Register : all_modules1/sdram_controller1/arbBank/delay_0__i4
+   Register : all_modules1/sdram_controller1/arbBank/delay_0__i5
+   Register : all_modules1/sdram_controller1/arbBank/delay_0__i6
+   Register : all_modules1/sdram_controller1/arbBank/delay_0__i7
+   Register : all_modules1/sdram_controller1/arbBank/delay_0__i8
+   Register : all_modules1/sdram_controller1/arbBank/delay_0__i9
+   Register : all_modules1/sdram_controller1/arbBank/delay_0__i10
+   Register : all_modules1/sdram_controller1/arbBank/delay_0__i11
+   Register : all_modules1/sdram_controller1/arbBank/delay_0__i12
+   Register : uart1/RXDc_69
+   Register : uart1/RXDa_67
+   Register : uart1/RXDb_68
+   DP8KC : all_modules1/fifo2/m_RAM0
+   DP8KC : all_modules1/fifo1/m_RAM0
+
+                                   Page 14
+
+
+
+
+Design:  sdram_uart_top                                Date:  05/30/19  23:01:58
+
+GSR Usage (cont)
+----------------
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'nreset_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 70 
+
+     Type and instance name of component: 
+   Register : all_modules1/sdram_to_uart1/state_i1
+   Register : all_modules1/sdram_controller1/state_FSM_i2
+   Register : all_modules1/sdram_controller1/state_FSM_i6
+   Register : all_modules1/sdram_controller1/state_FSM_i13
+   Register : all_modules1/sdram_controller1/state_FSM_i10
+   Register : all_modules1/sdram_controller1/repeatTimer/count__i0
+   Register : all_modules1/sdram_controller1/repeatTimer/count__i1
+   Register : all_modules1/sdram_controller1/repeatTimer/count__i2
+   Register : all_modules1/sdram_controller1/repeatTimer/count__i3
+   Register : all_modules1/sdram_controller1/repeatTimer/count__i4
+   Register : all_modules1/sdram_controller1/repeatTimer/count__i5
+   Register : all_modules1/sdram_controller1/repeatTimer/count__i6
+   Register : all_modules1/sdram_controller1/repeatTimer/count__i7
+   Register : all_modules1/sdram_controller1/repeatTimer/count__i8
+   Register : all_modules1/sdram_controller1/repeatTimer/count__i9
+   Register : all_modules1/sdram_controller1/repeatTimer/count__i10
+   Register : all_modules1/sdram_controller1/repeatTimer/count__i11
+   Register : all_modules1/sdram_controller1/repeatTimer/count__i12
+   Register : all_modules1/sdram_controller1/repeatTimer/count__i13
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i6
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i5
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i4
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i3
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i0
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i20
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i2
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i1
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i19
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i18
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i17
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i16
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i15
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i14
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i13
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i12
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i11
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i10
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i9
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i8
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i7
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i21
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i22
+   Register : all_modules1/sdram_controller1/refreshTimer/count__i23
+
+                                   Page 15
+
+
+
+
+Design:  sdram_uart_top                                Date:  05/30/19  23:01:58
+
+GSR Usage (cont)
+----------------
+   Register : all_modules1/sdram_controller1/delayTimer/count__i0
+   Register : all_modules1/sdram_controller1/delayTimer/count__i1
+   Register : all_modules1/sdram_controller1/delayTimer/count__i2
+   Register : all_modules1/sdram_controller1/delayTimer/count__i3
+   Register : uart1/PS_i0
+   Register : uart1/PS_i10
+   Register : uart1/PS_i9
+   Register : uart1/PS_i8
+   Register : uart1/PS_i7
+   Register : uart1/PS_i6
+   Register : uart1/PS_i5
+   Register : uart1/PS_i4
+   Register : uart1/PS_i3
+   Register : uart1/PS_i2
+   Register : uart1/PS_i1
+   Register : uart_tx1/TXD_65
+   Register : uart_tx1/PS_i0
+   Register : uart_tx1/PS_i10
+   Register : uart_tx1/PS_i9
+   Register : uart_tx1/PS_i8
+   Register : uart_tx1/PS_i7
+   Register : uart_tx1/PS_i6
+   Register : uart_tx1/PS_i5
+   Register : uart_tx1/PS_i4
+   Register : uart_tx1/PS_i3
+   Register : uart_tx1/PS_i2
+   Register : uart_tx1/PS_i1
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 60 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 16
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights
+     reserved.

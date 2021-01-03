@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "sdram_uart_Implementation.log"
+-o "sdram_uart_Implementation.csv"
+-pr "sdram_uart_Implementation.prf"

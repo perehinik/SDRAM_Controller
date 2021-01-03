@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliProject version="3.2" title="sdram_uart" device="LCMXO2-7000HC-6TG144C" default_implementation="Implementation">
+    <Options/>
+    <Implementation title="Implementation" dir="Implementation" description="Implementation" synthesis="lse" default_strategy="Strategy1">
+        <Options def_top="sdram_uart_top"/>
+        <Source name="src/all_mod_testbench.v" type="Verilog" type_short="Verilog" syn_sim="SimOnly">
+            <Options/>
+        </Source>
+        <Source name="src/all_modules.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/fifo.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/SDRAM_Controller.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/sdram_to_uart.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/Timer.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/top_module.v" type="Verilog" type_short="Verilog" syn_sim="SynOnly">
+            <Options top_module="sdram_uart_top"/>
+        </Source>
+        <Source name="src/uart_rx.v" type="Verilog" type_short="Verilog" syn_sim="SynOnly">
+            <Options/>
+        </Source>
+        <Source name="src/uart_to_sdram.v" type="Verilog" type_short="Verilog">
+            <Options/>
+        </Source>
+        <Source name="src/uart_tx.v" type="Verilog" type_short="Verilog" syn_sim="SynOnly">
+            <Options/>
+        </Source>
+        <Source name="Implementation/Clock_DCMA.ipx" type="IPX_Module" type_short="IPX">
+            <Options/>
+        </Source>
+        <Source name="Implementation/Implementation.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+        <Source name="sdram_uart.lpf" type="Logic Preference" type_short="LPF">
+            <Options/>
+        </Source>
+        <Source name="Simulation/sdram_uart/sdram_uart.spf" type="Simulation Project File" type_short="SPF">
+            <Options/>
+        </Source>
+    </Implementation>
+    <Strategy name="Strategy1" file="sdram_uart1.sty"/>
+</BaliProject>

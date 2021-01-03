@@ -1,0 +1,54 @@
+MESSAGE "Pass 1. Scanning modules hierarchy."
+MESSAGE_SP VCP2113 "Module \$root found in current working library."
+BEGINPROGRESS Compiling...
+UPDATEPROGRESS 4
+UPDATEPROGRESS 8
+UPDATEPROGRESS 13
+UPDATEPROGRESS 17
+UPDATEPROGRESS 21
+UPDATEPROGRESS 26
+UPDATEPROGRESS 30
+UPDATEPROGRESS 35
+MESSAGE "Pass 2. Processing instantiations."
+UPDATEPROGRESS 40
+UPDATEPROGRESS 45
+WARNING VCP2597 "Some unconnected ports remain at instance: test_all. Module all_modules has unconnected  port(s) : status." "C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/all_mod_testbench.v" 28  1
+MESSAGE "Pass 3. Processing behavioral statements."
+UPDATEPROGRESS 52
+UPDATEPROGRESS 59
+UPDATEPROGRESS 66
+UPDATEPROGRESS 73
+UPDATEPROGRESS 80
+MESSAGE "Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/sdram_to_uart.v, ln 38)."
+MESSAGE "Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/sdram_to_uart.v, ln 55)."
+MESSAGE "Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/sdram_to_uart.v, ln 66)."
+MESSAGE "Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/SDRAM_Controller.v, ln 104)."
+MESSAGE "Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/SDRAM_Controller.v, ln 138)."
+MESSAGE "Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/SDRAM_Controller.v, ln 223)."
+MESSAGE "Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/uart_to_sdram.v, ln 52)."
+MESSAGE "Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/uart_to_sdram.v, ln 90)."
+MESSAGE "Parameters in case labels, will not check for overlapping labels (C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/all_mod_testbench.v, ln 74)."
+MESSAGE "Running Optimizer."
+MESSAGE "ELB/DAG code generating."
+MESSAGE_SP VCP2113 "Module \$root found in current working library."
+UPDATEPROGRESS 81
+UPDATEPROGRESS 82
+UPDATEPROGRESS 83
+UPDATEPROGRESS 85
+UPDATEPROGRESS 86
+UPDATEPROGRESS 87
+UPDATEPROGRESS 88
+UPDATEPROGRESS 90
+UPDATEPROGRESS 91
+UPDATEPROGRESS 92
+UPDATEPROGRESS 93
+UPDATEPROGRESS 95
+UPDATEPROGRESS 96
+UPDATEPROGRESS 97
+MESSAGE "Unit top modules: sdram_uart_testbench Clock_DCMA."
+MESSAGE "$root top modules: sdram_uart_testbench Clock_DCMA."
+UPDATEPROGRESS 100
+ENDPROGRESS Compiling...
+SUCCESS "Compile success 0 Errors 1 Warnings  Analysis time: 0[s]."
+WARNING ALOG: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "done"

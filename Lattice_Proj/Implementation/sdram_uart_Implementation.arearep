@@ -1,0 +1,238 @@
+----------------------------------------------------------------------
+Report for cell sdram_uart_top.TECH
+Register bits:  373 of 7209 (5.174%)
+I/O cells:      47
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                 BB        16          100.0
+                              CCU2D       120          100.0
+                              DP8KC         2          100.0
+                            EHXPLLJ         1          100.0
+                            FD1P3AX       189          100.0
+                            FD1P3DX        31          100.0
+                            FD1P3IX        80          100.0
+                            FD1S3AX        39          100.0
+                            FD1S3AY         4          100.0
+                            FD1S3DX         1          100.0
+                            FD1S3IX        22          100.0
+                            FD1S3JX         7          100.0
+                                GSR         1          100.0
+                                 IB         3          100.0
+                            L6MUX21         1          100.0
+                               LUT4       240          100.0
+                                 OB        28          100.0
+                              PFUMX         8          100.0
+SUB MODULES
+                         Clock_DCMA         1
+                   SDRAM_Controller         1
+                              Timer         1
+                     Timer(SIZE=14)         1
+                     Timer(SIZE=24)         1
+                      Timer(SIZE=4)         1
+                             Timer1         1
+                          Timer1_U0         1
+                        all_modules         1
+                        bankArbiter         1
+                   fifo(length=256)         1
+                fifo(length=256)_U1         1
+                      sdram_to_uart         1
+                            uart_rx         1
+                      uart_to_sdram         1
+                            uart_tx         1
+                              TOTAL       809
+----------------------------------------------------------------------
+Report for cell all_modules.v1
+Instance Path : all_modules1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D       108           90.0
+                              DP8KC         2          100.0
+                            FD1P3AX       154           81.5
+                            FD1P3DX        31          100.0
+                            FD1P3IX        80          100.0
+                            FD1S3AX        27           69.2
+                            FD1S3AY         2           50.0
+                            FD1S3DX         1          100.0
+                            FD1S3IX         6           27.3
+                            L6MUX21         1          100.0
+                               LUT4       180           75.0
+                              PFUMX         7           87.5
+SUB MODULES
+                   SDRAM_Controller         1
+                              Timer         1
+                     Timer(SIZE=14)         1
+                     Timer(SIZE=24)         1
+                      Timer(SIZE=4)         1
+                             Timer1         1
+                          Timer1_U0         1
+                        bankArbiter         1
+                   fifo(length=256)         1
+                fifo(length=256)_U1         1
+                      sdram_to_uart         1
+                      uart_to_sdram         1
+                              TOTAL       611
+----------------------------------------------------------------------
+Report for cell uart_to_sdram.v1
+Instance Path : all_modules1.uart_to_sdram1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        40           33.3
+                            FD1P3AX        63           33.3
+                            FD1P3DX        31          100.0
+                            FD1S3AX         5           12.8
+                            FD1S3AY         1           25.0
+                            FD1S3DX         1          100.0
+                               LUT4        27           11.3
+SUB MODULES
+                             Timer1         1
+                          Timer1_U0         1
+                              TOTAL       170
+----------------------------------------------------------------------
+Report for cell Timer1.v1
+Instance Path : all_modules1.uart_to_sdram1.timout_tim_flag_I_0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            7.5
+                            FD1P3DX        15           48.4
+                            FD1S3DX         1          100.0
+                               LUT4         6            2.5
+                              TOTAL        31
+----------------------------------------------------------------------
+Report for cell Timer1_U0.v1
+Instance Path : all_modules1.uart_to_sdram1.data_tim_flag_I_0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        18           15.0
+                            FD1P3DX        16           51.6
+                              TOTAL        34
+----------------------------------------------------------------------
+Report for cell sdram_to_uart.v1
+Instance Path : all_modules1.sdram_to_uart1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3AX        17            9.0
+                            FD1S3AX         1            2.6
+                            FD1S3IX         1            4.5
+                               LUT4        22            9.2
+                              TOTAL        41
+----------------------------------------------------------------------
+Report for cell SDRAM_Controller.v1
+Instance Path : all_modules1.sdram_controller1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        36           30.0
+                            FD1P3AX        37           19.6
+                            FD1P3IX        80          100.0
+                            FD1S3AX        20           51.3
+                            FD1S3AY         1           25.0
+                            FD1S3IX         5           22.7
+                            L6MUX21         1          100.0
+                               LUT4       117           48.8
+                              PFUMX         7           87.5
+SUB MODULES
+                              Timer         1
+                     Timer(SIZE=14)         1
+                     Timer(SIZE=24)         1
+                      Timer(SIZE=4)         1
+                        bankArbiter         1
+                              TOTAL       309
+----------------------------------------------------------------------
+Report for cell Timer(SIZE=14).v1
+Instance Path : all_modules1.sdram_controller1.repeatTimer
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        14           11.7
+                            FD1P3IX        14           17.5
+                              TOTAL        28
+----------------------------------------------------------------------
+Report for cell Timer(SIZE=24).v1
+Instance Path : all_modules1.sdram_controller1.refreshTimer
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        13           10.8
+                            FD1P3IX        24           30.0
+                               LUT4         8            3.3
+                              TOTAL        45
+----------------------------------------------------------------------
+Report for cell Timer.v1
+Instance Path : all_modules1.sdram_controller1.initTimer
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         9            7.5
+                            FD1P3AX        16            8.5
+                               LUT4         8            3.3
+                              TOTAL        33
+----------------------------------------------------------------------
+Report for cell Timer(SIZE=4).v1
+Instance Path : all_modules1.sdram_controller1.delayTimer
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3IX         3            3.8
+                            FD1S3IX         1            4.5
+                               LUT4         6            2.5
+                              TOTAL        10
+----------------------------------------------------------------------
+Report for cell bankArbiter.v1
+Instance Path : all_modules1.sdram_controller1.arbBank
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX        12           30.8
+                            L6MUX21         1          100.0
+                               LUT4        29           12.1
+                              PFUMX         6           75.0
+                              TOTAL        48
+----------------------------------------------------------------------
+Report for cell fifo(length=256).v1
+Instance Path : all_modules1.fifo2
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16           13.3
+                              DP8KC         1           50.0
+                            FD1P3AX        17            9.0
+                               LUT4         2            0.8
+                              TOTAL        36
+----------------------------------------------------------------------
+Report for cell fifo(length=256)_U1.v1
+Instance Path : all_modules1.fifo1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D        16           13.3
+                              DP8KC         1           50.0
+                            FD1P3AX        16            8.5
+                            FD1S3AX         1            2.6
+                               LUT4         8            3.3
+                              TOTAL        42
+----------------------------------------------------------------------
+Report for cell uart_rx.v1
+Instance Path : uart1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            5.0
+                            FD1P3AX        25           13.2
+                            FD1S3AX         7           17.9
+                            FD1S3AY         1           25.0
+                            FD1S3IX         8           36.4
+                            FD1S3JX         3           42.9
+                               LUT4        39           16.3
+                              TOTAL        89
+----------------------------------------------------------------------
+Report for cell Clock_DCMA.v1
+Instance Path : clk_multiply
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            EHXPLLJ         1          100.0
+                              TOTAL         1
+----------------------------------------------------------------------
+Report for cell uart_tx.v1
+Instance Path : uart_tx1
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              CCU2D         6            5.0
+                            FD1P3AX        10            5.3
+                            FD1S3AX         5           12.8
+                            FD1S3AY         1           25.0
+                            FD1S3IX         8           36.4
+                            FD1S3JX         4           57.1
+                               LUT4        18            7.5
+                              PFUMX         1           12.5
+                              TOTAL        53

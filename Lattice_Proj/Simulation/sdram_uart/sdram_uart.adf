@@ -1,0 +1,59 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=3
+Current Config=compile
+[Configurations]
+compile=work
+[Library]
+sdram_uart=.\sdram_uart\sdram_uart.lib
+[Settings]
+AccessRead=1
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=0
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+PriorityLibNames=pmi_work
+LibNames=ovi_machxo2
+[LocalVhdlSets]
+CompileWithDebug=0
+[$LibMap$]
+sdram_uart=.
+work=.
+[LocalVerilogDirs]
+Count=0
+[DefineMacro]
+Global=
+[Files]
+/..\..\..\src\fifo.v=-1
+/..\..\..\src\sdram_to_uart.v=-1
+/..\..\..\src\Timer.v=-1
+/..\..\..\src\SDRAM_Controller.v=-1
+/..\..\..\src\uart_to_sdram.v=-1
+/..\..\..\src\all_modules.v=-1
+/..\..\..\src\all_mod_testbench.v=-1
+/..\..\..\Implementation\Clock_DCMA.v=-1
+[Files.Data]
+.\..\..\src\fifo.v=Verilog Source Code
+.\..\..\src\sdram_to_uart.v=Verilog Source Code
+.\..\..\src\Timer.v=Verilog Source Code
+.\..\..\src\SDRAM_Controller.v=Verilog Source Code
+.\..\..\src\uart_to_sdram.v=Verilog Source Code
+.\..\..\src\all_modules.v=Verilog Source Code
+.\..\..\src\all_mod_testbench.v=Verilog Source Code
+.\..\..\Implementation\Clock_DCMA.v=Verilog Source Code
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

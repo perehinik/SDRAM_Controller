@@ -1,0 +1,55 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Thu May 30 23:02:26 2019 *
+NOTE DESIGN NAME: sdram_uart_top *
+NOTE DEVICE NAME: LCMXO2-7000HC-6TQFP144 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS DB[14] : 99 : inout *
+NOTE PINS DB[15] : 100 : inout *
+NOTE PINS DB[13] : 98 : inout *
+NOTE PINS DB[12] : 97 : inout *
+NOTE PINS DB[11] : 96 : inout *
+NOTE PINS DB[10] : 95 : inout *
+NOTE PINS DB[9] : 94 : inout *
+NOTE PINS DB[8] : 93 : inout *
+NOTE PINS DB[7] : 82 : inout *
+NOTE PINS DB[6] : 83 : inout *
+NOTE PINS DB[5] : 84 : inout *
+NOTE PINS DB[4] : 85 : inout *
+NOTE PINS DB[3] : 86 : inout *
+NOTE PINS DB[2] : 89 : inout *
+NOTE PINS DB[1] : 91 : inout *
+NOTE PINS DB[0] : 92 : inout *
+NOTE PINS uart_tx : 114 : out *
+NOTE PINS ADR[12] : 65 : out *
+NOTE PINS ADR[11] : 63 : out *
+NOTE PINS ADR[10] : 71 : out *
+NOTE PINS ADR[9] : 62 : out *
+NOTE PINS ADR[8] : 61 : out *
+NOTE PINS ADR[7] : 60 : out *
+NOTE PINS ADR[6] : 59 : out *
+NOTE PINS ADR[5] : 58 : out *
+NOTE PINS ADR[4] : 57 : out *
+NOTE PINS ADR[3] : 67 : out *
+NOTE PINS ADR[2] : 68 : out *
+NOTE PINS ADR[1] : 69 : out *
+NOTE PINS ADR[0] : 70 : out *
+NOTE PINS BA[1] : 73 : out *
+NOTE PINS BA[0] : 74 : out *
+NOTE PINS DQM[1] : 103 : out *
+NOTE PINS DQM[0] : 81 : out *
+NOTE PINS nCAS : 77 : out *
+NOTE PINS CKE : 87 : out *
+NOTE PINS nRAS : 76 : out *
+NOTE PINS nWE : 78 : out *
+NOTE PINS nCS : 75 : out *
+NOTE PINS SD_CLK : 104 : out *
+NOTE PINS LED[3] : 15 : out *
+NOTE PINS LED[2] : 17 : out *
+NOTE PINS LED[1] : 19 : out *
+NOTE PINS LED[0] : 20 : out *
+NOTE PINS clk : 105 : in *
+NOTE PINS nreset : 23 : in *
+NOTE PINS uart_rx : 112 : in *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *
