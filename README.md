@@ -6,13 +6,13 @@ Project tested with board Alinx AX309 based on Spartan 6 and custom board based 
 FSM:
 ![Image](images/FSM.JPG)
 
-Initialization time diagram:
+Initialization timing diagram:
 ![Image](images/INIT.JPG)
 
-Write time diagram:
+Write timing diagram:
 ![Image](images/WRITE.JPG)
 
-Read time diagram:
+Read timing diagram:
 ![Image](images/READ.JPG)
 
 
