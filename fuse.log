@@ -1,0 +1,39 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Xilinx/XProject/SDRAM_Controller/SDRAM_Testbench_isim_beh.exe -prj C:/Xilinx/XProject/SDRAM_Controller/SDRAM_Testbench_beh.prj work.SDRAM_Testbench work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Xilinx/XProject/SDRAM_Controller/ipcore_dir/Clock_DCM.v" into library work
+Analyzing Verilog file "C:/Xilinx/XProject/SDRAM_Controller/Src/Timer.v" into library work
+Analyzing Verilog file "C:/Xilinx/XProject/SDRAM_Controller/Src/SDRAM_Controller.v" into library work
+Analyzing Verilog file "C:/Xilinx/XProject/SDRAM_Controller/Src/LED_Driver.v" into library work
+Analyzing Verilog file "C:/Xilinx/XProject/SDRAM_Controller/Src/SDRAM_Test.v" into library work
+Analyzing Verilog file "C:/Xilinx/XProject/SDRAM_Controller/Src/SDRAM_Testbench.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module IBUFG
+Compiling module PLL_ADV(BANDWIDTH="OPTIMIZED",CL...
+Compiling module PLL_BASE(CLKFBOUT_MULT=16,CLKIN_...
+Compiling module BUFG
+Compiling module Clock_DCM
+Compiling module Timer(SIZE=20)
+Compiling module LED_Driver
+Compiling module ODDR2_default
+Compiling module OBUF
+Compiling module CLK_Out_Buf
+Compiling module Timer
+Compiling module Timer(SIZE=24)
+Compiling module Timer(SIZE=4)
+Compiling module Timer(SIZE=14)
+Compiling module bankArbiter
+Compiling module SDRAM_Controller
+Compiling module SDRAM_Test
+Compiling module SDRAM_Testbench
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 19 Verilog Units
+Built simulation executable C:/Xilinx/XProject/SDRAM_Controller/SDRAM_Testbench_isim_beh.exe
+Fuse Memory Usage: 42712 KB
+Fuse CPU Usage: 623 ms

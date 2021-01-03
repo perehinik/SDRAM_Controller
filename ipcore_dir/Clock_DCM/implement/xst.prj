@@ -1,0 +1,2 @@
+verilog work ../../Clock_DCM.v
+verilog work ../example_design/Clock_DCM_exdes.v

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Xilinx/XProject/SDRAM_Test_New_FSM/SDRAM_Test_model_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="SDRAM_Test_model" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="22" />
+   <wvobject fp_name="/SDRAM_Test_model/rd_busy_flag" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rd_busy_flag</obj_property>
+      <obj_property name="ObjectShortName">rd_busy_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/rd_start_trig" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rd_start_trig</obj_property>
+      <obj_property name="ObjectShortName">rd_start_trig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/wt_busy_flag" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wt_busy_flag</obj_property>
+      <obj_property name="ObjectShortName">wt_busy_flag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/wt_start_trig" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wt_start_trig</obj_property>
+      <obj_property name="ObjectShortName">wt_start_trig</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/SD_P_CLK" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SD_P_CLK</obj_property>
+      <obj_property name="ObjectShortName">SD_P_CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/SD_P_nRAS" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SD_P_nRAS</obj_property>
+      <obj_property name="ObjectShortName">SD_P_nRAS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/SD_P_nCAS" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SD_P_nCAS</obj_property>
+      <obj_property name="ObjectShortName">SD_P_nCAS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/SD_P_nWE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SD_P_nWE</obj_property>
+      <obj_property name="ObjectShortName">SD_P_nWE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/SD_P_CKE" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SD_P_CKE</obj_property>
+      <obj_property name="ObjectShortName">SD_P_CKE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/SD_P_nCS" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SD_P_nCS</obj_property>
+      <obj_property name="ObjectShortName">SD_P_nCS</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/SD_P_DQM" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SD_P_DQM[1:0]</obj_property>
+      <obj_property name="ObjectShortName">SD_P_DQM[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/SD_P_BA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SD_P_BA[1:0]</obj_property>
+      <obj_property name="ObjectShortName">SD_P_BA[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/SD_P_ADR" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SD_P_ADR[12:0]</obj_property>
+      <obj_property name="ObjectShortName">SD_P_ADR[12:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/SD_P_DATA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SD_P_DATA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SD_P_DATA[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/RD_ADR" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">RD_ADR[23:0]</obj_property>
+      <obj_property name="ObjectShortName">RD_ADR[23:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/RD_DATA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">RD_DATA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">RD_DATA[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/WT_ADR" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">WT_ADR[23:0]</obj_property>
+      <obj_property name="ObjectShortName">WT_ADR[23:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/WT_DATA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">WT_DATA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">WT_DATA[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/uut/SD_ADR_TEMP" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SD_ADR_TEMP[23:0]</obj_property>
+      <obj_property name="ObjectShortName">SD_ADR_TEMP[23:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/uut/SD_DATA_TEMP" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">SD_DATA_TEMP[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SD_DATA_TEMP[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/uut/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SDRAM_Test_model/uut/next_state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">next_state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+</wave_config>

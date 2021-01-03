@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Xilinx\XProject\SDRAM_Controller\SDRAM_Test.ncd
+OUTFILE=C:\Xilinx\XProject\SDRAM_Controller\SDRAM_Test.bit
+FAMILY=Spartan6
+PART=xc6slx9-3nftg256
+WORKINGDIR=C:\Xilinx\XProject\SDRAM_Controller
+LICENSE=WebPack
+USER_INFO=__0_0_0

@@ -1,0 +1,28 @@
+Command line:
+   SDRAM_Testbench_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  64947
+
+Sun Jan 03 02:04:46 2021
+
+
+ Elaboration Time: 0.265202 sec
+
+ Current Memory Usage: 1323.69 Meg
+
+ Total Signals          : 248
+ Total Nets             : 581
+ Total Signal Drivers   : 146
+ Total Blocks           : 32
+ Total Primitive Blocks : 14
+ Total Processes        : 256
+ Total Traceable Variables  : 484
+ Total Scalar Nets and Variables : 8913
+
+ Total Simulation Time: 7.65965 sec
+
+ Current Memory Usage: 1009.09 Meg
+
+Sun Jan 03 02:05:57 2021
+

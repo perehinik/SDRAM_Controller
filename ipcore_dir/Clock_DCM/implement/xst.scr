@@ -1,0 +1,9 @@
+run
+-ifmt MIXED
+-top Clock_DCM_exdes
+-p xc6slx9-ftg256-3n
+-ifn xst.prj
+-ofn Clock_DCM_exdes
+-keep_hierarchy soft 
+-equivalent_register_removal no 
+-max_fanout 65535

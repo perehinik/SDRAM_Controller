@@ -1,0 +1,7 @@
+verilog work "ipcore_dir/Clock_DCM.v"
+verilog work "Src/Timer.v"
+verilog work "Src/SDRAM_Controller.v"
+verilog work "Src/LED_Driver.v"
+verilog work "Src/SDRAM_Test.v"
+verilog work "Src/SDRAM_Testbench.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
