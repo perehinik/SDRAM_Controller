@@ -1,4 +1,0 @@
-#Start recording tcl command: 5/30/2019 23:05:54
-#Project Location: C:/lscc/sd_ram_uart; Project name: sdram_uart
-prj_project open "C:/lscc/sd_ram_uart/sdram_uart.ldf"
-#Stop recording: 5/30/2019 23:08:10

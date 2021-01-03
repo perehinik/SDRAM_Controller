@@ -1,7 +1,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 // vim:set shiftwidth=3 softtabstop=3 expandtab:
 // Engineer:      Ivan Perehiniak
-//                iv.perehinik@gmail.com
+//	               iv.perehinik@gmail.com
 // Project:       SDRAM_Controller 
 // Revision:      1
 // Data:          2019.05.01
@@ -9,65 +9,57 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 module SDRAM_Controller
-#(
-parameter          DATA_WIDTH      = 16,
-                   ADR_ROW_WIDTH   = 13,
-				   ADR_COL_WIDTH   = 9,
-                   BANK_WIDTH      = 2,
-                   INTF_ADR_WIDTH  = BANK_WIDTH + ADR_ROW_WIDTH + ADR_COL_WIDTH,  // DO NOT CHANGE IT !!!
-                   CAS_DELAY       = 2,
-                   REF_DELAY       = 8,
-				   READ_DELAY      = 3,
-                   BURST_LENGTH    = 2,
-                   INIT_REF_CYCL   = 8,
-                   REF_ALL_CYCL    = 8192
-)
 (
-input  wire                        CLK,          //CLK
-input  wire                        RST,
+input  wire            CLK,          //CLK
+input  wire            RST,
 
-output wire                        rd_busy_flag, //controller interface
-input  wire                        rd_i_stb,     //
-output wire                        rd_i_ack,     //
-output reg                         rd_o_stb,     //
-input  wire                        rd_o_ack,     //
-input  wire  [INTF_ADR_WIDTH-1:0]  RD_ADR,       //
-output reg   [DATA_WIDTH-1:0]      RD_DATA,      //
+output wire            rd_busy_flag, //controller interface
+input  wire            rd_i_stb,     //
+output wire            rd_i_ack,     //
+output reg             rd_o_stb,     //
+input  wire            rd_o_ack,     //
+input  wire  [23:0]    RD_ADR,       //
+output reg   [15:0]    RD_DATA,      //
 
-output wire                        wt_busy_flag, //
-input  wire                        wt_i_stb,     //
-output wire                        wt_i_ack,     //
-output reg                         wt_o_stb,     //
-input  wire                        wt_o_ack,     //
-input  wire  [INTF_ADR_WIDTH-1:0]  WT_ADR,       //
-input  wire  [DATA_WIDTH-1:0]      WT_DATA,      //
+output wire            wt_busy_flag, //
+input  wire            wt_i_stb,     //
+output wire            wt_i_ack,     //
+output reg             wt_o_stb,     //
+input  wire            wt_o_ack,     //
+input  wire  [23:0]    WT_ADR,       //
+input  wire  [15:0]    WT_DATA,      //
 
-inout  wire  [DATA_WIDTH-1:0]      SD_P_DATA,    //output to SDRAM pins
-output reg   [BANK_WIDTH-1:0]      SD_P_BA,      //
-output reg   [ADR_ROW_WIDTH-1:0]   SD_P_ADR,     //	
-output reg                         SD_P_nCAS,    //
-output reg                         SD_P_nRAS,    //
-output reg                         SD_P_nWE,     //
-output wire                        SD_P_CKE,     //
-output wire  [1:0]                 SD_P_DQM,     //
-output wire                        SD_P_nCS,     //
-output wire                        SD_P_CLK      //
+inout  wire  [15:0]    SD_P_DATA,    //output to SDRAM pins
+output reg   [1:0]     SD_P_BA,      //
+output reg   [12:0]    SD_P_ADR,     //	
+output reg             SD_P_nCAS,    //
+output reg             SD_P_nRAS,    //
+output reg             SD_P_nWE,     //
+output wire            SD_P_CKE,     //
+output wire  [1:0]     SD_P_DQM,     //
+output wire            SD_P_nCS,     //
+output wire            SD_P_CLK      //
 );
 
 //to do: Add parameters with adress(row/column),data length, refresh cycle time...
-reg      [INTF_ADR_WIDTH-1:0]    SD_ADR_TEMP; 	  //23:22-bank, 21:9 - row, 8:0 - column
-reg      [DATA_WIDTH-1:0]        SD_DATA_TEMP;
-reg                              init_done       = 1'b0;
-wire                             init_tim_flag,refresh_tim_flag,delay_tim_flag,repeat_tim_flag;
-wire                             refresh_tim_reset;
-reg                              delay_tim_reset,repeat_tim_reset;
-reg      [3:0]                   delay_tim_period;
-wire     [13:0]                  repeat_tim_period;
-wire                             arb_reload;
-wire     [2:0]                   arb_delay;
-wire                             bank_en;
-reg      [1:0]                   rd_wt_operation;
-reg      [3:0]                   state,next_state;
+parameter          CAS_DELAY       = 2,
+                   REF_DELAY       = 8,
+				   READ_DELAY      = 3,
+                   INIT_REF_CYCL   = 8,
+                   REF_ALL_CYCL    = 8192;
+reg      [23:0]    SD_ADR_TEMP; 	  //23:22-bank, 21:9 - row, 8:0 - column
+reg      [15:0]    SD_DATA_TEMP;
+reg                init_done       = 1'b0;
+wire               init_tim_flag,refresh_tim_flag,delay_tim_flag,repeat_tim_flag;
+wire               refresh_tim_reset;
+reg                delay_tim_reset,repeat_tim_reset;
+reg      [3:0]     delay_tim_period;
+wire     [13:0]    repeat_tim_period;
+wire               arb_reload;
+wire     [2:0]     arb_delay;
+wire               bank_en;
+reg      [1:0]     rd_wt_operation;
+reg      [3:0]     state,next_state;
 
 localparam         IDLE       = 4'd0,  //IDLE
 
@@ -226,7 +218,7 @@ IDLE,NOP1,NOP2,NOP3,RD_WT_NOP,READ_NOP,READ:begin //NOP
    SD_P_nCAS            = 1'b1;
    SD_P_nWE             = 1'b1;
    SD_P_BA              = 2'b0;
-   SD_P_ADR             = 'b0;
+   SD_P_ADR             = 13'b0;
 end
 PCH_ALL:begin //precharge all banks
    SD_P_nRAS            = 1'b0; 
@@ -240,7 +232,7 @@ REFRESH:begin //refresh
    SD_P_nCAS            = 1'b0;
    SD_P_nWE             = 1'b1;
    SD_P_BA              = 2'b0;
-   SD_P_ADR             = 'b0;
+   SD_P_ADR             = 13'b0;
 end
 SEND_MRS:begin //send MRS
    SD_P_nRAS            = 1'b0; 
@@ -253,29 +245,29 @@ ROW_ACT:begin //Activate row
    SD_P_nRAS            = 1'b0; 
    SD_P_nCAS            = 1'b1;
    SD_P_nWE             = 1'b1;
-   SD_P_BA              = SD_ADR_TEMP[INTF_ADR_WIDTH-1:INTF_ADR_WIDTH-BANK_WIDTH]; // Bank adress
-   SD_P_ADR             = SD_ADR_TEMP[INTF_ADR_WIDTH-BANK_WIDTH-1:ADR_COL_WIDTH+1];
+   SD_P_BA              = SD_ADR_TEMP[23:22];
+   SD_P_ADR             = SD_ADR_TEMP[21:9];
 end
 WRITE:begin //WRITE
    SD_P_nRAS            = 1'b1; 
    SD_P_nCAS            = 1'b0;
    SD_P_nWE             = 1'b0;
-   SD_P_BA              = SD_ADR_TEMP[INTF_ADR_WIDTH-1:INTF_ADR_WIDTH-BANK_WIDTH];
-   SD_P_ADR             = {4'b0010, SD_ADR_TEMP[ADR_COL_WIDTH-1:0]};
+   SD_P_BA              = SD_ADR_TEMP[23:22];
+   SD_P_ADR             = {4'b0010, SD_ADR_TEMP[8:0]};
 end
 READ_START:begin //READ
    SD_P_nRAS            = 1'b1; 
    SD_P_nCAS            = 1'b0;
    SD_P_nWE             = 1'b1;
-   SD_P_BA              = SD_ADR_TEMP[INTF_ADR_WIDTH-1:INTF_ADR_WIDTH-BANK_WIDTH];
-   SD_P_ADR             = {4'b0010, SD_ADR_TEMP[ADR_COL_WIDTH-1:0]};
+   SD_P_BA              = SD_ADR_TEMP[23:22];
+   SD_P_ADR             = {4'b0010, SD_ADR_TEMP[8:0]};
 end
 default:begin //NOP
    SD_P_nRAS            = 1'b1;
    SD_P_nCAS            = 1'b1;
    SD_P_nWE             = 1'b1;
    SD_P_BA              = 2'b0;
-   SD_P_ADR             = 'b0;
+   SD_P_ADR             = 13'b0;
 end
 endcase
 end 
@@ -351,11 +343,11 @@ endmodule
 
 
 module bankArbiter(
-input  wire        CLK,
-input  wire        reload_en,
+input  wire       CLK,
+input  wire       reload_en,
 input  wire [1:0]  bank_num,
 input  wire [4:0]  bank_delay, //4:3 - bank, 2:0 - delay
-output wire        bank_enable
+output wire       bank_enable
 );
 reg [2:0] delay [3:0];
 

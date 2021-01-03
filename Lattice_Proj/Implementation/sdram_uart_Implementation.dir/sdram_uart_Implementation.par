@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
-Thu May 30 23:02:04 2019
+Sun May 26 19:32:22 2019
 
 C:/lscc/diamond/3.10_x64/ispfpga\bin\nt64\par -f sdram_uart_Implementation.p2t
 sdram_uart_Implementation_map.ncd sdram_uart_Implementation.dir
@@ -16,10 +16,10 @@ Preference file: sdram_uart_Implementation.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            -5.196       399554       0.219        0            15           Success
+5_1   *      0            -5.383       255987       0.137        0            12           Success
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 15 secs 
+Total (real) run time for 1-seed: 12 secs 
 
 par done!

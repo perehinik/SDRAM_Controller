@@ -5,4 +5,3 @@
 .\..\..\src\uart_to_sdram.v
 .\..\..\src\all_modules.v
 .\..\..\src\all_mod_testbench.v
-.\..\..\Implementation\Clock_DCMA.v

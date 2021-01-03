@@ -7,7 +7,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
-Thu May 30 23:01:55 2019
+Sun May 26 19:32:15 2019
 
 
 Command Line:  synthesis -f sdram_uart_Implementation_lattice.synproj -gui -msgset C:/lscc/sd_ram_uart/promote.xml 
@@ -107,20 +107,18 @@ Top module name (Verilog): sdram_uart_top
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/lscc/sd_ram_uart/src/uart_rx.v(21): " arg1="uart_rx" arg2="c:/lscc/sd_ram_uart/src/uart_rx.v" arg3="21"  />
     <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/lscc/sd_ram_uart/src/uart_rx.v(72): " arg1="32" arg2="11" arg3="c:/lscc/sd_ram_uart/src/uart_rx.v" arg4="72"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/lscc/sd_ram_uart/src/all_modules.v(1): " arg1="all_modules" arg2="c:/lscc/sd_ram_uart/src/all_modules.v" arg3="1"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/lscc/sd_ram_uart/src/fifo.v(1): " arg1="fifo(length=256)" arg2="c:/lscc/sd_ram_uart/src/fifo.v" arg3="1"  />
-    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/lscc/sd_ram_uart/src/fifo.v(25): " arg1="32" arg2="8" arg3="c:/lscc/sd_ram_uart/src/fifo.v" arg4="25"  />
-    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/lscc/sd_ram_uart/src/fifo.v(37): " arg1="32" arg2="8" arg3="c:/lscc/sd_ram_uart/src/fifo.v" arg4="37"  />
-    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/lscc/sd_ram_uart/src/fifo.v(54): " arg1="32" arg2="8" arg3="c:/lscc/sd_ram_uart/src/fifo.v" arg4="54"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/lscc/sd_ram_uart/src/fifo.v(1): " arg1="fifo" arg2="c:/lscc/sd_ram_uart/src/fifo.v" arg3="1"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/lscc/sd_ram_uart/src/fifo.v(25): " arg1="32" arg2="4" arg3="c:/lscc/sd_ram_uart/src/fifo.v" arg4="25"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/lscc/sd_ram_uart/src/fifo.v(37): " arg1="32" arg2="4" arg3="c:/lscc/sd_ram_uart/src/fifo.v" arg4="37"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/lscc/sd_ram_uart/src/fifo.v(54): " arg1="32" arg2="4" arg3="c:/lscc/sd_ram_uart/src/fifo.v" arg4="54"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/lscc/sd_ram_uart/src/uart_to_sdram.v(1): " arg1="uart_to_sdram" arg2="c:/lscc/sd_ram_uart/src/uart_to_sdram.v" arg3="1"  />
-    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/lscc/sd_ram_uart/src/uart_to_sdram.v(63): " arg1="32" arg2="24" arg3="c:/lscc/sd_ram_uart/src/uart_to_sdram.v" arg4="63"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/lscc/sd_ram_uart/src/timer.v(33): " arg1="Timer1" arg2="c:/lscc/sd_ram_uart/src/timer.v" arg3="33"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/lscc/sd_ram_uart/src/sdram_controller.v(11): " arg1="SDRAM_Controller" arg2="c:/lscc/sd_ram_uart/src/sdram_controller.v" arg3="11"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/lscc/sd_ram_uart/src/timer.v(10): " arg1="Timer" arg2="c:/lscc/sd_ram_uart/src/timer.v" arg3="10"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/lscc/sd_ram_uart/src/timer.v(10): " arg1="Timer(SIZE=24)" arg2="c:/lscc/sd_ram_uart/src/timer.v" arg3="10"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/lscc/sd_ram_uart/src/timer.v(10): " arg1="Timer(SIZE=4)" arg2="c:/lscc/sd_ram_uart/src/timer.v" arg3="10"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/lscc/sd_ram_uart/src/timer.v(10): " arg1="Timer(SIZE=14)" arg2="c:/lscc/sd_ram_uart/src/timer.v" arg3="10"  />
-    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/lscc/sd_ram_uart/src/sdram_controller.v(353): " arg1="bankArbiter" arg2="c:/lscc/sd_ram_uart/src/sdram_controller.v" arg3="353"  />
-    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/lscc/sd_ram_uart/src/sdram_controller.v(341): " arg1="32" arg2="14" arg3="c:/lscc/sd_ram_uart/src/sdram_controller.v" arg4="341"  />
+    <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/lscc/sd_ram_uart/src/sdram_controller.v(345): " arg1="bankArbiter" arg2="c:/lscc/sd_ram_uart/src/sdram_controller.v" arg3="345"  />
+    <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/lscc/sd_ram_uart/src/sdram_controller.v(333): " arg1="32" arg2="14" arg3="c:/lscc/sd_ram_uart/src/sdram_controller.v" arg4="333"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/lscc/sd_ram_uart/src/sdram_to_uart.v(1): " arg1="sdram_to_uart" arg2="c:/lscc/sd_ram_uart/src/sdram_to_uart.v" arg3="1"  />
     <postMsg mid="35901018" type="Info"    dynamic="2" navigation="2" arg0="c:/lscc/sd_ram_uart/src/uart_tx.v(1): " arg1="uart_tx" arg2="c:/lscc/sd_ram_uart/src/uart_tx.v" arg3="1"  />
     <postMsg mid="35901209" type="Warning" dynamic="3" navigation="2" arg0="c:/lscc/sd_ram_uart/src/uart_tx.v(44): " arg1="32" arg2="11" arg3="c:/lscc/sd_ram_uart/src/uart_tx.v" arg4="44"  />
@@ -133,53 +131,41 @@ Loading device for application map from file 'xo2c7000.nph' in environment: C:/l
 Package Status:                     Final          Version 1.39.
 Top-level module name = sdram_uart_top.
     <postMsg mid="35001774" type="Info"    dynamic="2" navigation="0" arg0="\all_modules1/uart_to_sdram1/state" arg1="one-hot"  />
-State machine has 11 reachable states with original encodings of:
+State machine has 8 reachable states with original encodings of:
 
- 0000 
+ 000 
 
- 0001 
+ 001 
 
- 0010 
+ 010 
 
- 0011 
+ 011 
 
- 0100 
+ 100 
 
- 0101 
+ 101 
 
- 0110 
+ 110 
 
- 0111 
-
- 1000 
-
- 1001 
-
- 1010 
+ 111 
 
 original encoding -> new encoding (one-hot encoding)
 
- 0000 -> 00000000001
+ 000 -> 00000001
 
- 0001 -> 00000000010
+ 001 -> 00000010
 
- 0010 -> 00000000100
+ 010 -> 00000100
 
- 0011 -> 00000001000
+ 011 -> 00001000
 
- 0100 -> 00000010000
+ 100 -> 00010000
 
- 0101 -> 00000100000
+ 101 -> 00100000
 
- 0110 -> 00001000000
+ 110 -> 01000000
 
- 0111 -> 00010000000
-
- 1000 -> 00100000000
-
- 1001 -> 01000000000
-
- 1010 -> 10000000000
+ 111 -> 10000000
 
     <postMsg mid="35001774" type="Info"    dynamic="2" navigation="0" arg0="\all_modules1/sdram_controller1/state" arg1="one-hot"  />
 State machine has 13 reachable states with original encodings of:
@@ -368,18 +354,13 @@ original encoding -> new encoding (one-hot encoding)
 
 
 
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\all_modules1/uart_to_sdram1/state_FSM"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\all_modules1/uart_to_sdram1/state_FSM"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\all_modules1/uart_to_sdram1/state_FSM"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="3" arg1="\all_modules1/uart_to_sdram1/state_FSM"  />
-    <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="4" arg1="\all_modules1/uart_to_sdram1/state_FSM"  />
     <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="0" arg1="\all_modules1/sdram_controller1/state_FSM"  />
     <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="1" arg1="\all_modules1/sdram_controller1/state_FSM"  />
     <postMsg mid="35001747" type="Warning" dynamic="2" navigation="0" arg0="2" arg1="\all_modules1/sdram_controller1/state_FSM"  />
 ######## Found 2 RTL RAMs in the design.
-######## Mapping RTL RAM \all_modules1/fifo1/m_RAM to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
+######## Mapping RTL RAM \all_modules1/fifo1/m_RAM to 2 Distributed blocks in PSEUDO_DUAL_PORT Mode
 
-######## Mapping RTL RAM \all_modules1/fifo2/m_RAM to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
+######## Mapping RTL RAM \all_modules1/fifo2/m_RAM to 2 Distributed blocks in PSEUDO_DUAL_PORT Mode
 
 GSR instance connected to net nreset_c.
 Applying 200.000000 MHz constraint to all clocks
@@ -397,31 +378,29 @@ Running DRC...
 DRC complete with no errors or warnings
 
 Design Results:
-    796 blocks expanded
+    706 blocks expanded
 completed the first expansion
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file sdram_uart_Implementation.ngd.
 
 ################### Begin Area Report (sdram_uart_top)######################
-Number of register bits => 373 of 7209 (5 % )
+Number of register bits => 330 of 7209 (4 % )
 BB => 16
-CCU2D => 120
-DP8KC => 2
+CCU2D => 48
+DPR16X4C => 4
 EHXPLLJ => 1
-FD1P3AX => 189
-FD1P3DX => 31
-FD1P3IX => 80
-FD1S3AX => 39
+FD1P3AX => 175
+FD1P3IX => 81
+FD1S3AX => 41
 FD1S3AY => 4
-FD1S3DX => 1
 FD1S3IX => 22
 FD1S3JX => 7
 GSR => 1
 IB => 3
 L6MUX21 => 1
-LUT4 => 240
+LUT4 => 261
 OB => 28
-PFUMX => 8
+PFUMX => 10
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -430,36 +409,35 @@ TSALL => 1
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 4
-  Net : clk_multiply/SD_CLK_c, loads : 349
-  Net : all_modules1/uart_to_sdram1/data_count_clk, loads : 21
+Number of Clocks: 3
+  Net : clk_multiply/SD_CLK_c, loads : 322
   Net : all_modules1/sdram_controller1/delayTimer/count_2_derived_14, loads : 30
   Net : clk_c, loads : 1
 Clock Enable Nets
-Number of Clock Enables: 33
+Number of Clock Enables: 29
 Top 10 highest fanout Clock Enables:
-  Net : all_modules1/sdram_controller1/SD_CLK_c_enable_213, loads : 41
-  Net : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/SD_CLK_c_enable_197, loads : 16
-  Net : all_modules1/sdram_to_uart1/SD_CLK_c_enable_146, loads : 16
-  Net : all_modules1/sdram_controller1/SD_CLK_c_enable_46, loads : 16
-  Net : all_modules1/sdram_controller1/init_done_N_558, loads : 15
-  Net : all_modules1/sdram_controller1/initTimer/SD_CLK_c_enable_125, loads : 15
-  Net : all_modules1/uart_to_sdram1/SD_CLK_c_enable_79, loads : 13
-  Net : uart1/SMPL, loads : 12
+  Net : all_modules1/sdram_controller1/SD_CLK_c_enable_202, loads : 43
+  Net : all_modules1/sdram_controller1/SD_CLK_c_enable_94, loads : 16
+  Net : all_modules1/sdram_controller1/init_done_N_443, loads : 16
+  Net : all_modules1/sdram_to_uart1/SD_CLK_c_enable_145, loads : 16
+  Net : all_modules1/sdram_controller1/initTimer/SD_CLK_c_enable_68, loads : 15
   Net : uart_tx1/SMPL, loads : 12
-  Net : all_modules1/uart_to_sdram1/SD_CLK_c_enable_63, loads : 10
+  Net : all_modules1/fifo2/SD_CLK_c_enable_127, loads : 12
+  Net : uart1/SMPL, loads : 12
+  Net : all_modules1/uart_to_sdram1/SD_CLK_c_enable_28, loads : 11
+  Net : all_modules1/fifo1/SD_CLK_c_enable_186, loads : 11
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : all_modules1/sdram_controller1/SD_CLK_c_enable_213, loads : 41
-  Net : all_modules1/uart_to_sdram1/o_stb_rd_N_367, loads : 32
+  Net : all_modules1/sdram_controller1/SD_CLK_c_enable_202, loads : 43
   Net : all_modules1/sdram_controller1/refresh_tim_reset, loads : 28
-  Net : SD_CLK_c_enable_128, loads : 25
-  Net : all_modules1/sdram_controller1/n400, loads : 24
-  Net : all_modules1/n1734, loads : 23
-  Net : all_modules1/fifo2/o_stb_N_212, loads : 20
-  Net : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/SD_CLK_c_enable_197, loads : 19
-  Net : all_modules1/fifo1/o_stb_N_212, loads : 18
-  Net : all_modules1/uart_to_sdram1/data_count_clk_enable_16, loads : 17
+  Net : all_modules1/sdram_controller1/n377, loads : 26
+  Net : SD_CLK_c_enable_117, loads : 25
+  Net : all_modules1/sdram_controller1/n1671, loads : 24
+  Net : all_modules1/uart_to_sdram1/SD_CLK_c_enable_43, loads : 20
+  Net : uart_tx1/DAT_7__N_878, loads : 20
+  Net : all_modules1/sdram_controller1/arb_delay_2, loads : 19
+  Net : all_modules1/sdram_controller1/n371, loads : 17
+  Net : all_modules1/uart_to_sdram1/SD_CLK_c_enable_35, loads : 16
 ################### End Clock Report ##################
 
 Timing Report Summary
@@ -469,11 +447,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets count[2]_derived_14]     |  200.000 MHz|  163.132 MHz|     8 *
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets                          |             |             |
-\all_modules1/data_count_clk]           |  200.000 MHz|  154.250 MHz|    11 *
+clk1 [get_nets count[2]_derived_14]     |  200.000 MHz|  163.132 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
 clk0 [get_nets SD_CLK_c]                |  200.000 MHz|   97.666 MHz|     9 *
@@ -481,13 +455,13 @@ clk0 [get_nets SD_CLK_c]                |  200.000 MHz|   97.666 MHz|     9 *
 --------------------------------------------------------------------------------
 
 
-3 constraints not met.
+2 constraints not met.
 
 
-Peak Memory Usage: 70.184  MB
+Peak Memory Usage: 68.602  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 2.137  secs
+Elapsed CPU time for LSE flow : 1.747  secs
 --------------------------------------------------------------
 
 map -a "MachXO2" -p LCMXO2-7000HC -t TQFP144 -s 6 -oc Commercial   "sdram_uart_Implementation.ngd" -o "sdram_uart_Implementation_map.ncd" -pr "sdram_uart_Implementation.prf" -mp "sdram_uart_Implementation.mrp" -lpf "C:/lscc/sd_ram_uart/Implementation/sdram_uart_Implementation.lpf" -lpf "C:/lscc/sd_ram_uart/sdram_uart.lpf" -c 0            
@@ -524,20 +498,20 @@ Optimizing...
 
 
 Design Summary:
-   Number of registers:    373 out of  7209 (5%)
-      PFU registers:          373 out of  6864 (5%)
+   Number of registers:    330 out of  7209 (5%)
+      PFU registers:          330 out of  6864 (5%)
       PIO registers:            0 out of   345 (0%)
-   Number of SLICEs:       243 out of  3432 (7%)
-      SLICEs as Logic/ROM:    243 out of  3432 (7%)
-      SLICEs as RAM:            0 out of  2574 (0%)
-      SLICEs as Carry:        120 out of  3432 (3%)
-   Number of LUT4s:        482 out of  6864 (7%)
-      Number used as logic LUTs:        242
-      Number used as distributed RAM:     0
-      Number used as ripple logic:      240
+   Number of SLICEs:       202 out of  3432 (6%)
+      SLICEs as Logic/ROM:    190 out of  3432 (6%)
+      SLICEs as RAM:           12 out of  2574 (0%)
+      SLICEs as Carry:         48 out of  3432 (1%)
+   Number of LUT4s:        384 out of  6864 (6%)
+      Number used as logic LUTs:        264
+      Number used as distributed RAM:    24
+      Number used as ripple logic:       96
       Number used as shift registers:     0
    Number of PIO sites used: 47 + 4(JTAG) out of 115 (44%)
-   Number of block RAMs:  2 out of 26 (8%)
+   Number of block RAMs:  0 out of 26 (0%)
    Number of GSRs:  1 out of 1 (100%)
    EFB used :       No
    JTAG used :      No
@@ -559,74 +533,67 @@ Design Summary:
    Notes:-
       1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and ripple logic.
-   Number of clocks:  4
-     Net SD_CLK_c: 207 loads, 207 rising, 0 falling (Driver: clk_multiply/PLLInst_0 )
-     Net all_modules1/uart_to_sdram1/data_count_clk: 9 loads, 9 rising, 0 falling (Driver: all_modules1/uart_to_sdram1/state_FSM_i8 )
-     Net all_modules1/sdram_controller1/delayTimer/count[2]_derived_14: 8 loads, 8 rising, 0 falling (Driver: all_modules1/sdram_controller1/delayTimer/period_3__I_0_i8_4_lut_rep_48 )
+   Number of clocks:  3
+     Net SD_CLK_c: 195 loads, 195 rising, 0 falling (Driver: clk_multiply/PLLInst_0 )
+     Net all_modules1/sdram_controller1/delayTimer/count[2]_derived_14: 8 loads, 8 rising, 0 falling (Driver: all_modules1/sdram_controller1/delayTimer/period_3__I_0_i8_4_lut_rep_60 )
      Net clk_c: 1 loads, 1 rising, 0 falling (Driver: PIO clk )
-   Number of Clock Enables:  33
+   Number of Clock Enables:  29
      Net all_modules1/tx_stb1: 2 loads, 2 LSLICEs
-     Net all_modules1/SD_CLK_c_enable_213: 22 loads, 22 LSLICEs
-     Net nreset_c: 2 loads, 2 LSLICEs
-     Net all_modules1/uart_to_sdram1/data_tim_reset: 1 loads, 1 LSLICEs
-     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_102: 4 loads, 4 LSLICEs
+     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_35: 4 loads, 4 LSLICEs
+     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_44: 2 loads, 2 LSLICEs
+     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_43: 4 loads, 4 LSLICEs
+     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_28: 4 loads, 4 LSLICEs
+     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_71: 4 loads, 4 LSLICEs
      Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_79: 4 loads, 4 LSLICEs
-     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_63: 4 loads, 4 LSLICEs
-     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_55: 4 loads, 4 LSLICEs
-     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_197: 8 loads, 8 LSLICEs
-     Net all_modules1/rx_stb1: 3 loads, 3 LSLICEs
-     Net all_modules1/uart_to_sdram1/data_tim_flag: 9 loads, 9 LSLICEs
-     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_72: 4 loads, 4 LSLICEs
-     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_87: 4 loads, 4 LSLICEs
-     Net all_modules1/uart_to_sdram1/SD_CLK_c_enable_95: 4 loads, 4 LSLICEs
-     Net all_modules1/sdram_to_uart1/SD_CLK_c_enable_146: 8 loads, 8 LSLICEs
-     Net all_modules1/sdram_to_uart1/SD_CLK_c_enable_147: 1 loads, 1 LSLICEs
-     Net all_modules1/tx_ack1: 5 loads, 5 LSLICEs
-     Net all_modules1/sdram_controller1/init_done_N_558: 1 loads, 1 LSLICEs
-     Net all_modules1/sdram_controller1/SD_CLK_c_enable_46: 8 loads, 8 LSLICEs
+     Net all_modules1/SD_CLK_c_enable_202: 22 loads, 22 LSLICEs
+     Net all_modules1/rx_stb1: 2 loads, 2 LSLICEs
+     Net nreset_c: 2 loads, 2 LSLICEs
+     Net all_modules1/sdram_to_uart1/SD_CLK_c_enable_145: 8 loads, 8 LSLICEs
+     Net all_modules1/SD_CLK_c_enable_130: 2 loads, 2 LSLICEs
+     Net all_modules1/sdram_to_uart1/SD_CLK_c_enable_146: 1 loads, 1 LSLICEs
+     Net all_modules1/sdram_controller1/SD_CLK_c_enable_94: 8 loads, 8 LSLICEs
+     Net all_modules1/sdram_controller1/init_done_N_443: 1 loads, 1 LSLICEs
+     Net all_modules1/sdram_controller1/SD_CLK_c_enable_68: 8 loads, 8 LSLICEs
      Net all_modules1/sdram_controller1/count_2_derived_14_enable_14: 8 loads, 8 LSLICEs
-     Net all_modules1/sdram_controller1/SD_CLK_c_enable_125: 8 loads, 8 LSLICEs
-     Net SD_CLK_c_enable_128: 13 loads, 13 LSLICEs
-     Net all_modules1/sdram_controller1/initTimer/SD_CLK_c_enable_110: 1 loads, 1 LSLICEs
-     Net SD_CLK_c_enable_131: 2 loads, 2 LSLICEs
-     Net all_modules1/fifo2/o_stb_N_212: 6 loads, 5 LSLICEs
-     Net DAT_7__N_993: 1 loads, 0 LSLICEs
-     Net all_modules1/fifo2/SD_CLK_c_enable_23: 1 loads, 1 LSLICEs
-     Net SD_CLK_c_enable_109: 5 loads, 5 LSLICEs
-     Net all_modules1/fifo1/o_stb_N_212: 6 loads, 5 LSLICEs
+     Net SD_CLK_c_enable_117: 13 loads, 13 LSLICEs
+     Net all_modules1/sdram_controller1/initTimer/SD_CLK_c_enable_51: 1 loads, 1 LSLICEs
+     Net SD_CLK_c_enable_120: 2 loads, 2 LSLICEs
+     Net all_modules1/fifo2/SD_CLK_c_enable_127: 6 loads, 6 LSLICEs
+     Net all_modules1/fifo2/SD_CLK_c_enable_17: 1 loads, 1 LSLICEs
+     Net all_modules1/fifo1/SD_CLK_c_enable_186: 6 loads, 6 LSLICEs
+     Net rx_ack: 2 loads, 2 LSLICEs
      Net uart1/SMPL: 5 loads, 5 LSLICEs
-     Net uart1/SD_CLK_c_enable_154: 4 loads, 4 LSLICEs
      Net uart1/FSM_7__N_59: 4 loads, 4 LSLICEs
+     Net uart1/SD_CLK_c_enable_153: 4 loads, 4 LSLICEs
+     Net uart_tx1/DAT_7__N_878: 4 loads, 4 LSLICEs
      Net uart_tx1/SMPL: 5 loads, 5 LSLICEs
-   Number of LSRs:  16
-     Net all_modules1/n1734: 12 loads, 12 LSLICEs
-     Net all_modules1/repeat_tim_period_13: 1 loads, 1 LSLICEs
-     Net all_modules1/uart_to_sdram1/timout_tim_flag_N_370: 9 loads, 9 LSLICEs
-     Net all_modules1/uart_to_sdram1/data_tim_flag_N_369: 9 loads, 9 LSLICEs
+   Number of LSRs:  14
+     Net all_modules1/n1673: 8 loads, 8 LSLICEs
      Net all_modules1/sdram_to_uart1/state_0: 1 loads, 1 LSLICEs
-     Net all_modules1/sdram_controller1/n393: 1 loads, 1 LSLICEs
-     Net all_modules1/sdram_controller1/n1737: 8 loads, 8 LSLICEs
-     Net all_modules1/sdram_controller1/n5382: 8 loads, 8 LSLICEs
-     Net delay_tim_reset: 3 loads, 3 LSLICEs
+     Net n370: 1 loads, 1 LSLICEs
+     Net all_modules1/sdram_controller1/n1671: 12 loads, 12 LSLICEs
+     Net all_modules1/sdram_controller1/repeat_tim_period_13: 1 loads, 1 LSLICEs
+     Net all_modules1/sdram_controller1/repeat_tim_reset: 8 loads, 8 LSLICEs
+     Net all_modules1/sdram_controller1/n4836: 1 loads, 1 LSLICEs
      Net refresh_tim_reset: 13 loads, 13 LSLICEs
-     Net all_modules1/sdram_controller1/n5383: 1 loads, 1 LSLICEs
-     Net all_modules1/sdram_controller1/delay_tim_flag_N_589: 1 loads, 1 LSLICEs
+     Net all_modules1/sdram_controller1/delay_tim_flag_N_474: 1 loads, 1 LSLICEs
+     Net all_modules1/sdram_controller1/delay_tim_reset: 3 loads, 3 LSLICEs
      Net uart1/PS_10__N_48: 3 loads, 3 LSLICEs
-     Net uart1/n2114: 5 loads, 5 LSLICEs
-     Net uart_tx1/PS_10__N_882: 6 loads, 6 LSLICEs
-     Net uart_tx1/n4789: 1 loads, 1 LSLICEs
+     Net uart1/n2106: 5 loads, 5 LSLICEs
+     Net uart_tx1/PS_10__N_767: 6 loads, 6 LSLICEs
+     Net uart_tx1/n4302: 1 loads, 1 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net all_modules1/o_stb_rd_N_367: 33 loads
-     Net all_modules1/sdram_controller1/n400: 24 loads
-     Net all_modules1/SD_CLK_c_enable_213: 23 loads
-     Net all_modules1/sdram_controller1/arb_delay_2: 19 loads
+     Net all_modules1/sdram_controller1/n377: 26 loads
+     Net all_modules1/SD_CLK_c_enable_202: 24 loads
+     Net all_modules1/sdram_controller1/arb_delay_2: 21 loads
      Net refresh_tim_reset: 19 loads
-     Net all_modules1/sdram_controller1/n394: 16 loads
-     Net SD_P_DATA_15__N_423: 16 loads
+     Net all_modules1/sdram_controller1/n371: 17 loads
+     Net all_modules1/sdram_controller1/init_done_N_443: 16 loads
+     Net SD_P_DATA_15__N_308: 16 loads
      Net uart1/RXDc: 16 loads
-     Net all_modules1/sdram_controller1/init_done_N_558: 15 loads
-     Net all_modules1/rx_stb1: 13 loads
+     Net arb_delay_2_N_350_1: 15 loads
+     Net all_modules1/fifo2/o_addr_0: 14 loads
  
 
    Number of warnings:  0
@@ -667,7 +634,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.0.111.2
-Thu May 30 23:02:00 2019
+Sun May 26 19:32:19 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -693,14 +660,14 @@ BLOCK RESETPATHS
 Timing summary (Setup):
 ---------------
 
-Timing errors: 144  Score: 68130
-Cumulative negative slack: 68130
+Timing errors: 80  Score: 42647
+Cumulative negative slack: 42647
 
-Constraints cover 6009 paths, 2 nets, and 1836 connections (84.18% coverage)
+Constraints cover 3525 paths, 2 nets, and 1673 connections (85.71% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.0.111.2
-Thu May 30 23:02:00 2019
+Sun May 26 19:32:19 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -729,16 +696,16 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 6009 paths, 2 nets, and 1851 connections (84.87% coverage)
+Constraints cover 3525 paths, 2 nets, and 1673 connections (85.71% coverage)
 
 
 
 Timing summary (Setup and Hold):
 ---------------
 
-Timing errors: 144 (setup), 0 (hold)
-Score: 68130 (setup), 0 (hold)
-Cumulative negative slack: 68130 (68130+0)
+Timing errors: 80 (setup), 0 (hold)
+Score: 42647 (setup), 0 (hold)
+Cumulative negative slack: 42647 (42647+0)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------
@@ -804,7 +771,7 @@ Removing old design directory at request of -rem command line option to this pro
 Running par. Please wait . . .
 
 Lattice Place and Route Report for Design "sdram_uart_Implementation_map.ncd"
-Thu May 30 23:02:04 2019
+Sun May 26 19:32:22 2019
 
 PAR: Place And Route Diamond (64-bit) 3.10.0.111.2.
 Command Line: par -w -l 5 -i 6 -t 1 -c 0 -e 0 -gui -msgset C:/lscc/sd_ram_uart/promote.xml -exp parUseNBR=1:parCDP=0:parCDR=0:parPathBased=OFF sdram_uart_Implementation_map.ncd sdram_uart_Implementation.dir/5_1.ncd sdram_uart_Implementation.prf
@@ -831,46 +798,44 @@ Device utilization summary:
    PIO (prelim)   47+4(JTAG)/336     15% used
                   47+4(JTAG)/115     44% bonded
 
-   SLICE            243/3432          7% used
+   SLICE            202/3432          5% used
 
    GSR                1/1           100% used
-   EBR                2/26            7% used
    PLL                1/2            50% used
 
 
-Number of Signals: 919
-Number of Connections: 2181
+Number of Signals: 776
+Number of Connections: 1952
 
 Pin Constraint Summary:
    47 out of 47 pins locked (100% locked).
 
     <postMsg mid="61091062" type="Warning" dynamic="0" navigation="0"  />
 The following 1 signal is selected to use the primary clock routing resources:
-    SD_CLK_c (driver: clk_multiply/PLLInst_0, clk load #: 206)
+    SD_CLK_c (driver: clk_multiply/PLLInst_0, clk load #: 194)
 
 
-The following 6 signals are selected to use the secondary clock routing resources:
-    all_modules1/SD_CLK_c_enable_213 (driver: all_modules1/SLICE_269, clk load #: 0, sr load #: 0, ce load #: 22)
-    all_modules1/uart_to_sdram1/data_count_clk (driver: all_modules1/SLICE_207, clk load #: 9, sr load #: 0, ce load #: 0)
-    all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 (driver: all_modules1/sdram_controller1/SLICE_278, clk load #: 8, sr load #: 0, ce load #: 0)
-    refresh_tim_reset (driver: all_modules1/sdram_controller1/SLICE_215, clk load #: 0, sr load #: 13, ce load #: 0)
-    SD_CLK_c_enable_128 (driver: SLICE_282, clk load #: 0, sr load #: 0, ce load #: 13)
-    all_modules1/n1734 (driver: all_modules1/SLICE_269, clk load #: 0, sr load #: 12, ce load #: 0)
+The following 5 signals are selected to use the secondary clock routing resources:
+    all_modules1/SD_CLK_c_enable_202 (driver: all_modules1/sdram_controller1/SLICE_268, clk load #: 0, sr load #: 0, ce load #: 22)
+    all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 (driver: all_modules1/sdram_controller1/SLICE_234, clk load #: 8, sr load #: 0, ce load #: 0)
+    refresh_tim_reset (driver: all_modules1/sdram_controller1/SLICE_170, clk load #: 0, sr load #: 13, ce load #: 0)
+    SD_CLK_c_enable_117 (driver: SLICE_239, clk load #: 0, sr load #: 0, ce load #: 13)
+    all_modules1/sdram_controller1/n1671 (driver: all_modules1/SLICE_226, clk load #: 0, sr load #: 12, ce load #: 0)
 
 Signal nreset_c is selected as Global Set/Reset.
 Starting Placer Phase 0.
-...........
+.........
 Finished Placer Phase 0.  REAL time: 2 secs 
 
 Starting Placer Phase 1.
-...................
-Placer score = 171830.
-Finished Placer Phase 1.  REAL time: 8 secs 
+..................
+Placer score = 183470.
+Finished Placer Phase 1.  REAL time: 5 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  170645
-Finished Placer Phase 2.  REAL time: 8 secs 
+Placer score =  180369
+Finished Placer Phase 2.  REAL time: 5 secs 
 
 
 ------------------ Clock Report ------------------
@@ -882,16 +847,15 @@ Global Clock Resources:
   DCC        : 0 out of 8 (0%)
 
 Quadrants All (TL, TR, BL, BR) - Global Clocks:
-  PRIMARY "SD_CLK_c" from CLKOP on comp "clk_multiply/PLLInst_0" on PLL site "RPLL", clk load = 206
-  SECONDARY "all_modules1/SD_CLK_c_enable_213" from F1 on comp "all_modules1/SLICE_269" on site "R21C20D", clk load = 0, ce load = 22, sr load = 0
-  SECONDARY "all_modules1/uart_to_sdram1/data_count_clk" from Q0 on comp "all_modules1/SLICE_207" on site "R14C22C", clk load = 9, ce load = 0, sr load = 0
-  SECONDARY "all_modules1/sdram_controller1/delayTimer/count[2]_derived_14" from F1 on comp "all_modules1/sdram_controller1/SLICE_278" on site "R14C20C", clk load = 8, ce load = 0, sr load = 0
-  SECONDARY "refresh_tim_reset" from Q0 on comp "all_modules1/sdram_controller1/SLICE_215" on site "R14C20A", clk load = 0, ce load = 0, sr load = 13
-  SECONDARY "SD_CLK_c_enable_128" from F1 on comp "SLICE_282" on site "R21C22A", clk load = 0, ce load = 13, sr load = 0
-  SECONDARY "all_modules1/n1734" from F0 on comp "all_modules1/SLICE_269" on site "R21C20D", clk load = 0, ce load = 0, sr load = 12
+  PRIMARY "SD_CLK_c" from CLKOP on comp "clk_multiply/PLLInst_0" on PLL site "RPLL", clk load = 194
+  SECONDARY "all_modules1/SD_CLK_c_enable_202" from F0 on comp "all_modules1/sdram_controller1/SLICE_268" on site "R14C20D", clk load = 0, ce load = 22, sr load = 0
+  SECONDARY "all_modules1/sdram_controller1/delayTimer/count[2]_derived_14" from F1 on comp "all_modules1/sdram_controller1/SLICE_234" on site "R14C20A", clk load = 8, ce load = 0, sr load = 0
+  SECONDARY "refresh_tim_reset" from Q0 on comp "all_modules1/sdram_controller1/SLICE_170" on site "R14C20B", clk load = 0, ce load = 0, sr load = 13
+  SECONDARY "SD_CLK_c_enable_117" from F1 on comp "SLICE_239" on site "R23C20D", clk load = 0, ce load = 13, sr load = 0
+  SECONDARY "all_modules1/sdram_controller1/n1671" from F1 on comp "all_modules1/SLICE_226" on site "R21C20D", clk load = 0, ce load = 0, sr load = 12
 
   PRIMARY  : 1 out of 8 (12%)
-  SECONDARY: 6 out of 8 (75%)
+  SECONDARY: 5 out of 8 (62%)
 
 Edge Clocks:
   No edge clock selected.
@@ -917,16 +881,16 @@ I/O Bank Usage Summary:
 | 5        | 0 / 10 (  0%)  | -          | -         |
 +----------+----------------+------------+-----------+
 
-Total placer CPU time: 7 secs 
+Total placer CPU time: 5 secs 
 
 Dumping design to file sdram_uart_Implementation.dir/5_1.ncd.
 
-0 connections routed; 2181 unrouted.
+0 connections routed; 1952 unrouted.
 Starting router resource preassignment
 
-Completed router resource preassignment. Real time: 11 secs 
+Completed router resource preassignment. Real time: 8 secs 
 
-Start NBR router at 23:02:15 05/30/19
+Start NBR router at 19:32:30 05/26/19
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -941,116 +905,101 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at 23:02:15 05/30/19
+Start NBR special constraint process at 19:32:30 05/26/19
 
-Start NBR section for initial routing at 23:02:15 05/30/19
+Start NBR section for initial routing at 19:32:30 05/26/19
 Level 1, iteration 1
-9(0.00%) conflicts; 1501(68.82%) untouched conns; 106686 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.387ns/-106.686ns; real time: 12 secs 
+28(0.01%) conflicts; 1361(69.72%) untouched conns; 70030 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.261ns/-70.030ns; real time: 9 secs 
 Level 2, iteration 1
-39(0.01%) conflicts; 1286(58.96%) untouched conns; 104392 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.387ns/-104.392ns; real time: 12 secs 
+24(0.01%) conflicts; 1177(60.30%) untouched conns; 78640 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.301ns/-78.640ns; real time: 9 secs 
 Level 3, iteration 1
-64(0.02%) conflicts; 626(28.70%) untouched conns; 106521 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.374ns/-106.522ns; real time: 13 secs 
+31(0.01%) conflicts; 727(37.24%) untouched conns; 80080 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -2.222ns/-80.081ns; real time: 10 secs 
 Level 4, iteration 1
-79(0.02%) conflicts; 0(0.00%) untouched conn; 102175 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -1.374ns/-102.175ns; real time: 13 secs 
+60(0.02%) conflicts; 0(0.00%) untouched conn; 69520 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -1.881ns/-69.520ns; real time: 10 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 23:02:17 05/30/19
+Start NBR section for normal routing at 19:32:32 05/26/19
 Level 1, iteration 1
-30(0.01%) conflicts; 70(3.21%) untouched conns; 280465 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.990ns/-280.465ns; real time: 13 secs 
+10(0.00%) conflicts; 81(4.15%) untouched conns; 228911 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -6.371ns/-228.912ns; real time: 10 secs 
 Level 1, iteration 2
-20(0.01%) conflicts; 72(3.30%) untouched conns; 293971 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.681ns/-293.971ns; real time: 13 secs 
+9(0.00%) conflicts; 84(4.30%) untouched conns; 217083 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.805ns/-217.084ns; real time: 10 secs 
 Level 2, iteration 1
-11(0.00%) conflicts; 74(3.39%) untouched conns; 301171 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.681ns/-301.171ns; real time: 14 secs 
+4(0.00%) conflicts; 85(4.35%) untouched conns; 221725 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.805ns/-221.726ns; real time: 10 secs 
 Level 3, iteration 1
-7(0.00%) conflicts; 68(3.12%) untouched conns; 305610 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.681ns/-305.610ns; real time: 14 secs 
+6(0.00%) conflicts; 80(4.10%) untouched conns; 222765 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.805ns/-222.766ns; real time: 10 secs 
 Level 4, iteration 1
-33(0.01%) conflicts; 0(0.00%) untouched conn; 310857 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.681ns/-310.857ns; real time: 14 secs 
+28(0.01%) conflicts; 0(0.00%) untouched conn; 219660 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.805ns/-219.661ns; real time: 11 secs 
 Level 4, iteration 2
-14(0.00%) conflicts; 0(0.00%) untouched conn; 311185 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.681ns/-311.185ns; real time: 14 secs 
+11(0.00%) conflicts; 0(0.00%) untouched conn; 222918 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.805ns/-222.919ns; real time: 11 secs 
 Level 4, iteration 3
-6(0.00%) conflicts; 0(0.00%) untouched conn; 311891 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.681ns/-311.891ns; real time: 14 secs 
+3(0.00%) conflicts; 0(0.00%) untouched conn; 222918 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.805ns/-222.919ns; real time: 11 secs 
 Level 4, iteration 4
-2(0.00%) conflicts; 0(0.00%) untouched conn; 311891 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.681ns/-311.891ns; real time: 14 secs 
+1(0.00%) conflict; 0(0.00%) untouched conn; 222918 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.805ns/-222.919ns; real time: 11 secs 
 Level 4, iteration 5
-2(0.00%) conflicts; 0(0.00%) untouched conn; 311891 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.681ns/-311.891ns; real time: 14 secs 
-Level 4, iteration 6
-2(0.00%) conflicts; 0(0.00%) untouched conn; 311891 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.681ns/-311.891ns; real time: 14 secs 
-Level 4, iteration 7
-1(0.00%) conflict; 0(0.00%) untouched conn; 311891 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.681ns/-311.891ns; real time: 14 secs 
-Level 4, iteration 8
-2(0.00%) conflicts; 0(0.00%) untouched conn; 311891 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.681ns/-311.891ns; real time: 14 secs 
-Level 4, iteration 9
-1(0.00%) conflict; 0(0.00%) untouched conn; 311891 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.681ns/-311.891ns; real time: 14 secs 
-Level 4, iteration 10
-0(0.00%) conflict; 0(0.00%) untouched conn; 311891 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.681ns/-311.891ns; real time: 14 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 222918 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.805ns/-222.919ns; real time: 11 secs 
 
-Start NBR section for performance tuning (iteration 1) at 23:02:18 05/30/19
+Start NBR section for performance tuning (iteration 1) at 19:32:33 05/26/19
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 311891 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.681ns/-311.891ns; real time: 14 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 222918 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.805ns/-222.919ns; real time: 11 secs 
 
-Start NBR section for re-routing at 23:02:18 05/30/19
+Start NBR section for re-routing at 19:32:33 05/26/19
 Level 4, iteration 1
-0(0.00%) conflict; 0(0.00%) untouched conn; 311891 (nbr) score; 
-Estimated worst slack/total negative slack<setup>: -6.681ns/-311.891ns; real time: 14 secs 
+0(0.00%) conflict; 0(0.00%) untouched conn; 222805 (nbr) score; 
+Estimated worst slack/total negative slack<setup>: -5.805ns/-222.806ns; real time: 11 secs 
 
-Start NBR section for post-routing at 23:02:18 05/30/19
+Start NBR section for post-routing at 19:32:33 05/26/19
 
 End NBR router with 0 unrouted connection
 
 NBR Summary
 -----------
   Number of unrouted connections : 0 (0.00%)
-  Number of connections with timing violations : 233 (10.68%)
-  Estimated worst slack<setup> : -6.681ns
-  Timing score<setup> : 399554
+  Number of connections with timing violations : 116 (5.94%)
+  Estimated worst slack<setup> : -5.805ns
+  Timing score<setup> : 255987
 -----------
 Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored.
 
 
 
-Total CPU time 14 secs 
-Total REAL time: 15 secs 
+Total CPU time 11 secs 
+Total REAL time: 11 secs 
 Completely routed.
-End of route.  2181 routed (100.00%); 0 unrouted.
+End of route.  1952 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
-Timing score: 399554 
+Timing score: 255987 
 
 Dumping design to file sdram_uart_Implementation.dir/5_1.ncd.
 
 
 PAR_SUMMARY::Run status = Success
 PAR_SUMMARY::Number of unrouted conns = 0
-PAR_SUMMARY::Worst  slack<setup/<ns>> = -5.196
-PAR_SUMMARY::Timing score<setup/<ns>> = 399.554
-PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.219
+PAR_SUMMARY::Worst  slack<setup/<ns>> = -5.383
+PAR_SUMMARY::Timing score<setup/<ns>> = 255.987
+PAR_SUMMARY::Worst  slack<hold /<ns>> = 0.137
 PAR_SUMMARY::Timing score<hold /<ns>> = 0.000
 PAR_SUMMARY::Number of errors = 0
 
-Total CPU  time to completion: 14 secs 
-Total REAL time to completion: 15 secs 
+Total CPU  time to completion: 11 secs 
+Total REAL time to completion: 12 secs 
 
 par done!
 
@@ -1085,7 +1034,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.0.111.2
-Thu May 30 23:02:20 2019
+Sun May 26 19:32:34 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1111,14 +1060,14 @@ BLOCK RESETPATHS
 Timing summary (Setup):
 ---------------
 
-Timing errors: 553  Score: 399554
-Cumulative negative slack: 399554
+Timing errors: 223  Score: 255987
+Cumulative negative slack: 255987
 
-Constraints cover 6009 paths, 2 nets, and 1853 connections (84.96% coverage)
+Constraints cover 3525 paths, 2 nets, and 1675 connections (85.81% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.0.111.2
-Thu May 30 23:02:20 2019
+Sun May 26 19:32:34 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1147,16 +1096,16 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 6009 paths, 2 nets, and 1852 connections (84.92% coverage)
+Constraints cover 3525 paths, 2 nets, and 1675 connections (85.81% coverage)
 
 
 
 Timing summary (Setup and Hold):
 ---------------
 
-Timing errors: 553 (setup), 0 (hold)
-Score: 399554 (setup), 0 (hold)
-Cumulative negative slack: 399554 (399554+0)
+Timing errors: 223 (setup), 0 (hold)
+Score: 255987 (setup), 0 (hold)
+Cumulative negative slack: 255987 (255987+0)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------

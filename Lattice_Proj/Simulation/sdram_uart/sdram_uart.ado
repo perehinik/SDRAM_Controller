@@ -22,7 +22,6 @@ addfile "C:/lscc/sd_ram_uart/src/SDRAM_Controller.v"
 addfile "C:/lscc/sd_ram_uart/src/uart_to_sdram.v"
 addfile "C:/lscc/sd_ram_uart/src/all_modules.v"
 addfile "C:/lscc/sd_ram_uart/src/all_mod_testbench.v"
-addfile "C:/lscc/sd_ram_uart/Implementation/Clock_DCMA.v"
 vlib "C:/lscc/sd_ram_uart/Simulation/sdram_uart/work"
 set worklib work
 adel -all
@@ -33,7 +32,6 @@ vlog -dbg -work work "C:/lscc/sd_ram_uart/src/SDRAM_Controller.v"
 vlog -dbg -work work "C:/lscc/sd_ram_uart/src/uart_to_sdram.v"
 vlog -dbg -work work "C:/lscc/sd_ram_uart/src/all_modules.v"
 vlog -dbg -work work "C:/lscc/sd_ram_uart/src/all_mod_testbench.v"
-vlog -dbg -work work "C:/lscc/sd_ram_uart/Implementation/Clock_DCMA.v"
 module sdram_uart_testbench
 vsim  +access +r sdram_uart_testbench   -PL pmi_work -L ovi_machxo2
 add wave *

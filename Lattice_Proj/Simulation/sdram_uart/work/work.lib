@@ -1,109 +1,92 @@
-timestamp=1559249164115
+timestamp=1558884276049
 
 [~A]
-C:/lscc/sd_ram_uart/Implementation/Clock_DCMA.v=0*19154*20506
-C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/fifo.v_sdram_to_uart.v_Timer.v_SDRAM_Controller.v_uart_to_sdram.v_all_modules.v_all_mod_testbench.v_Clock_DCMA.v=0*24703*33916
-C:/lscc/sd_ram_uart/src/SDRAM_Controller.v=0*6837*10552
-C:/lscc/sd_ram_uart/src/Timer.v=0*4587*5186
-C:/lscc/sd_ram_uart/src/all_mod_testbench.v=0*16943*18147
-C:/lscc/sd_ram_uart/src/all_modules.v=0*14472*15958
+C:/lscc/sd_ram_uart/Simulation/sdram_uart/../../src/fifo.v_sdram_to_uart.v_Timer.v_SDRAM_Controller.v_uart_to_sdram.v_all_modules.v_all_mod_testbench.v=0*20401*27777
+C:/lscc/sd_ram_uart/src/SDRAM_Controller.v=0*6445*9920
+C:/lscc/sd_ram_uart/src/Timer.v=0*4335*4870
+C:/lscc/sd_ram_uart/src/all_mod_testbench.v=0*15698*16854
+C:/lscc/sd_ram_uart/src/all_modules.v=0*13355*14713
 C:/lscc/sd_ram_uart/src/fifo.v=0*449*1367
 C:/lscc/sd_ram_uart/src/sdram_to_uart.v=0*2358*3397
-C:/lscc/sd_ram_uart/src/uart_to_sdram.v=0*11703*13335
-LastVerilogToplevel=Clock_DCMA
-ModifyID=9
+C:/lscc/sd_ram_uart/src/uart_to_sdram.v=0*11030*12230
+LastVerilogToplevel=sdram_uart_testbench
+ModifyID=8
 Version=74
 
 [$root]
-A/$root=22|||1*47952
-BinI32/$root=3*39052
-SLP=3*39156
-Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|c73a565f2ade592f8ac1c68f484c9216406bb19ed0ca3cd80a1648ff6425ced0
-
-[Clock_DCMA]
-A/Clock_DCMA=22|./../../../Implementation/Clock_DCMA.v|8|1*86706
-BinI32/Clock_DCMA=3*72227
-R=./../../../Implementation/Clock_DCMA.v|8
-SLP=3*72470
-Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|6fe4587651c0a803324cdf92e286f3ed0cc31a255d50a7d2786d4352cbf01ae13e133c6baf008648526dea6658ce956b
+A/$root=22|||1*36277
+BinI32/$root=3*31821
+SLP=3*31925
+Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|c73a565f2ade592f8ac1c68f484c92164187a1fb161fee80720303cdae51c9ec
 
 [SDRAM_Controller]
-A/SDRAM_Controller=22|./../../../src/SDRAM_Controller.v|11|1*58187
-BinI32/SDRAM_Controller=3*48098
+A/SDRAM_Controller=22|./../../../src/SDRAM_Controller.v|11|1*44897
+BinI32/SDRAM_Controller=3*39560
 R=./../../../src/SDRAM_Controller.v|11
-SLP=3*57753
-Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|c106c9f515acba52a56446e36f152ae55b90492a90c1a06deab6cf28f3ca9685fb7d9d1bb06b3c62267e3a99613bf439
+SLP=3*46726
+Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|c106c9f515acba52a56446e36f152ae55b90492a90c1a06deab6cf28f3ca96851973bf7525921da540ef05cf75db0215
 
 [Timer]
-A/Timer=22|./../../../src/Timer.v|10|1*55098
-BinI32/Timer=3*45361
+A/Timer=22|./../../../src/Timer.v|10|1*43407
+BinI32/Timer=3*38132
 R=./../../../src/Timer.v|10
-SLP=3*46430
-Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|8b9cdf1dd8a08e29491cc87a0b08e9b65bfde6e90ea20bd892712ba914a3cddb
-
-[Timer1]
-A/Timer1=22|./../../../src/Timer.v|33|1*56681
-BinI32/Timer1=3*46759
-R=./../../../src/Timer.v|33
-SLP=3*47794
-Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|acc7f8989c80366f46920cb07879fbfae61293a44792012d3ac34b651a6c2f3a
+SLP=3*39270
+Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|8b9cdf1dd8a08e29491cc87a0b08e9b62d44b8e12789719d262bbc2fac27ae48
 
 [all_modules]
-A/all_modules=22|./../../../src/all_modules.v|1|1*76968
-BinI32/all_modules=3*68433
+A/all_modules=22|./../../../src/all_modules.v|1|1*60682
+BinI32/all_modules=3*56296
 R=./../../../src/all_modules.v|1
-SLP=3*69192
-Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|f78915b1e4fa3f07c6b39b50ff6e8c11cbbe6599a7993eeaf5880d5b22d93cf75a6704530690d1ffac5185b9734fd327
+SLP=3*56568
+Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|f78915b1e4fa3f07c6b39b50ff6e8c11cbbe6599a7993eeaf5880d5b22d93cf7905eaf85a56d64d7016199732eee4d2b
 
 [bankArbiter]
-A/bankArbiter=22|./../../../src/SDRAM_Controller.v|353|1*69485
-BinI32/bankArbiter=3*61209
-R=./../../../src/SDRAM_Controller.v|353
-SLP=3*62637
-Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|198b80fcf989e5bbb2fe84d48a001ce727144e0a009b7b8316a22bf36248e48bed00c6ab9a8efec7d08ab18a26bbd881
+A/bankArbiter=22|./../../../src/SDRAM_Controller.v|338|1*55079
+BinI32/bankArbiter=3*50057
+R=./../../../src/SDRAM_Controller.v|338
+SLP=3*51489
+Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|198b80fcf989e5bbb2fe84d48a001ce727144e0a009b7b8316a22bf36248e48b1aa7904b2a450763545c40f8bbd2b9ed
 
 [fifo]
-A/fifo=22|./../../../src/fifo.v|1|1*48358
-BinI32/fifo=3*39224
+A/fifo=22|./../../../src/fifo.v|1|1*36667
+BinI32/fifo=3*31993
 R=./../../../src/fifo.v|1
-SLP=3*41842
-Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|af9652c152b2c954af45fb87fa26cfa5b0fe85e2544d32f4df9ca99517d827b2
+SLP=3*34617
+Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|af9652c152b2c954af45fb87fa26cfa57fdcdfe102a9b4c711deaf574eb82937
 
 [sdram_to_uart]
-A/sdram_to_uart=22|./../../../src/sdram_to_uart.v|1|1*51982
-BinI32/sdram_to_uart=3*42603
+A/sdram_to_uart=22|./../../../src/sdram_to_uart.v|1|1*40291
+BinI32/sdram_to_uart=3*35378
 R=./../../../src/sdram_to_uart.v|1
-SLP=3*44482
-Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|4da6404abb76679c5711f25400e410b639d2d3de8d75a6f56dbfda5140852e5e734241aca1b67f1d35ded80863aae775
+SLP=3*37253
+Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|4da6404abb76679c5711f25400e410b639d2d3de8d75a6f56dbfda5140852e5ee7a2e2818a885d5403b0e88e8774cff8
 
 [sdram_uart_testbench]
-A/sdram_uart_testbench=22|./../../../src/all_mod_testbench.v|3|1*83071
-BinI32/sdram_uart_testbench=3*69619
+A/sdram_uart_testbench=22|./../../../src/all_mod_testbench.v|3|1*66138
+BinI32/sdram_uart_testbench=3*56814
 R=./../../../src/all_mod_testbench.v|3
-SLP=3*71432
-Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|9cfc99df9fa28fa5632b97fa0ad7c732c2fb3747f14bc9b6aa919c1bc9518d38bc6e8405214a07ec4773fd378a675fe1
+SLP=3*58440
+Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|9cfc99df9fa28fa5632b97fa0ad7c732c2fb3747f14bc9b6aa919c1bc9518d38d0aec2cf4929e35d244afe73b0cbb6fb
 
 [uart_to_sdram]
-A/uart_to_sdram=22|./../../../src/uart_to_sdram.v|1|1*71091
-BinI32/uart_to_sdram=3*63678
+A/uart_to_sdram=22|./../../../src/uart_to_sdram.v|1|1*56685
+BinI32/uart_to_sdram=3*52531
 R=./../../../src/uart_to_sdram.v|1
-SLP=3*66880
-Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|949721201a072ab9544ecfb46b06ab4f880b7c236fb392d7c528b54c550b485b3a2fa831dfb6e103ee1a9ee5c89b6a88
+SLP=3*55161
+Version=10.3.3558.6081  (Windows)|0000000b789cd3f53752d02d2e33ca3634020010aa02e5|949721201a072ab9544ecfb46b06ab4f880b7c236fb392d7c528b54c550b485b05568b3a382e51dddd6545cba531055a
 
 [~MFT]
-0=13|0work.mgf|33916|0
-1=22|1work.mgf|86706|47952
-3=44|3work.mgf|72470|39052
+0=11|0work.mgf|27777|0
+1=18|1work.mgf|66138|36277
+3=36|3work.mgf|58440|31821
 
 [~U]
-$root=12|0*21018|
-Clock_DCMA=12|0*24482||0x10
-SDRAM_Controller=12|0*22413|
-Timer=12|0*21909|
-Timer1=12|0*22166|
-all_modules=12|0*23768|
-bankArbiter=12|0*23116|
-fifo=12|0*21280|
-sdram_to_uart=12|0*21579|
-sdram_uart_testbench=12|0*24195||0x10
-uart_to_sdram=12|0*23354|
+$root=12|0*17362|
+SDRAM_Controller=12|0*18473|
+Timer=12|0*18221|
+all_modules=12|0*19711|
+bankArbiter=12|0*19100|
+fifo=12|0*17592|
+sdram_to_uart=12|0*17891|
+sdram_uart_testbench=12|0*20119||0x10
+uart_to_sdram=12|0*19338|

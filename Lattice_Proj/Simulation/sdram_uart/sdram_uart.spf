@@ -6,7 +6,6 @@
     <Source worklib="work" path="src/uart_to_sdram.v" type="VERILOG" include="none"/>
     <Source worklib="work" path="src/all_modules.v" type="VERILOG" include="none"/>
     <Source worklib="work" path="src/all_mod_testbench.v" type="VERILOG" include="none"/>
-    <Source worklib="work" path="Implementation/Clock_DCMA.v" type="VERILOG" include="none"/>
     <SimLib value="pmi_work ovi_machxo2"/>
     <GlbInc value=""/>
     <Macro value=""/>

@@ -41,7 +41,7 @@ Global=
 /..\..\..\src\uart_to_sdram.v=-1
 /..\..\..\src\all_modules.v=-1
 /..\..\..\src\all_mod_testbench.v=-1
-/..\..\..\Implementation\Clock_DCMA.v=-1
+/..\untitled.awc=-1
 [Files.Data]
 .\..\..\src\fifo.v=Verilog Source Code
 .\..\..\src\sdram_to_uart.v=Verilog Source Code
@@ -50,7 +50,7 @@ Global=
 .\..\..\src\uart_to_sdram.v=Verilog Source Code
 .\..\..\src\all_modules.v=Verilog Source Code
 .\..\..\src\all_mod_testbench.v=Verilog Source Code
-.\..\..\Implementation\Clock_DCMA.v=Verilog Source Code
+.\untitled.awc=Accelerated Waveform Configuration
 [SpecTracer]
 WindowVisible=0
 [HierarchyViewer]

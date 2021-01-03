@@ -3,171 +3,147 @@ Report for cell sdram_uart_top
    Instance path: sdram_uart_top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     243.00        100.0
-                                  LUT4	     242.00        100.0
+                                  SLIC	     202.00        100.0
+                                  LUT4	     264.00        100.0
+                               DISTRAM	      12.00        100.0
                                  IOBUF	         47        100.0
-                                PFUREG	        373        100.0
-                                RIPPLE	        120        100.0
-                                   EBR	          2        100.0
+                                PFUREG	        330        100.0
+                                RIPPLE	         48        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                               uart_tx	          1         6.9
-                               uart_rx	          1        11.1
-                           all_modules	          1        81.2
+                               uart_rx	          1        13.7
+                               uart_tx	          1         9.9
+                           all_modules	          1        75.3
                             Clock_DCMA	          1         0.0
 ---------------------------------------------------
 Report for cell all_modules
    Instance path: sdram_uart_top/all_modules1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	     197.42        81.2
-                                  LUT4	     179.00        74.0
-                                PFUREG	        301        80.7
-                                RIPPLE	        108        90.0
-                                   EBR	          2        100.0
+                                  SLIC	     152.10        75.3
+                                  LUT4	     200.50        75.9
+                               DISTRAM	      12.00        100.0
+                                PFUREG	        251        76.1
+                                RIPPLE	         36        75.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                         uart_to_sdram	          1        21.9
-                         sdram_to_uart	          1         5.8
-                      fifo(length=256)	          1         6.3
-                   fifo(length=256)_U1	          1         6.2
-                      SDRAM_Controller	          1        39.9
+                         uart_to_sdram	          1        10.4
+                         sdram_to_uart	          1         5.4
+                               fifo_U0	          1         6.8
+                                  fifo	          1         6.6
+                      SDRAM_Controller	          1        45.5
 ---------------------------------------------------
 Report for cell uart_to_sdram
    Instance path: sdram_uart_top/all_modules1/uart_to_sdram1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      53.17        21.9
-                                  LUT4	      26.00        10.7
-                                PFUREG	        101        27.1
-                                RIPPLE	         40        33.3
-SUB MODULES
-                                  cell	      count    SLC Usage(%)
-                                Timer1	          1         4.2
-                             Timer1_U0	          1         4.9
----------------------------------------------------
-Report for cell Timer1
-   Instance path: sdram_uart_top/all_modules1/uart_to_sdram1/timout_tim_flag_I_0
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      10.25         4.2
-                                  LUT4	       6.00         2.5
-                                PFUREG	         16         4.3
-                                RIPPLE	          9         7.5
----------------------------------------------------
-Report for cell Timer1_U0
-   Instance path: sdram_uart_top/all_modules1/uart_to_sdram1/data_tim_flag_I_0
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      12.00         4.9
-                                PFUREG	         16         4.3
-                                RIPPLE	         18        15.0
+                                  SLIC	      21.00        10.4
+                                  LUT4	      21.00         8.0
+                                PFUREG	         50        15.2
 ---------------------------------------------------
 Report for cell sdram_to_uart
    Instance path: sdram_uart_top/all_modules1/sdram_to_uart1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      14.17         5.8
-                                  LUT4	      21.00         8.7
-                                PFUREG	         19         5.1
+                                  SLIC	      10.90         5.4
+                                  LUT4	      21.00         8.0
+                                PFUREG	         19         5.8
 ---------------------------------------------------
 Report for cell SDRAM_Controller
    Instance path: sdram_uart_top/all_modules1/sdram_controller1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      96.92        39.9
-                                  LUT4	     118.00        48.8
-                                PFUREG	        143        38.3
-                                RIPPLE	         36        30.0
+                                  SLIC	      91.95        45.5
+                                  LUT4	     124.50        47.2
+                                PFUREG	        144        43.6
+                                RIPPLE	         36        75.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                           bankArbiter	          1         5.1
-                        Timer(SIZE=14)	          1         5.8
-                        Timer(SIZE=24)	          1         6.8
-                         Timer(SIZE=4)	          1         1.2
-                                 Timer	          1         5.1
+                           bankArbiter	          1         6.2
+                        Timer(SIZE=14)	          1         5.0
+                         Timer(SIZE=4)	          1         1.4
+                        Timer(SIZE=24)	          1         7.5
+                                 Timer	          1         5.6
 ---------------------------------------------------
 Report for cell Timer(SIZE=14)
    Instance path: sdram_uart_top/all_modules1/sdram_controller1/repeatTimer
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      14.00         5.8
-                                PFUREG	         14         3.8
-                                RIPPLE	         14        11.7
+                                  SLIC	      10.17         5.0
+                                PFUREG	         14         4.2
+                                RIPPLE	         14        29.2
 ---------------------------------------------------
 Report for cell Timer(SIZE=24)
    Instance path: sdram_uart_top/all_modules1/sdram_controller1/refreshTimer
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      16.42         6.8
-                                  LUT4	       8.00         3.3
-                                PFUREG	         24         6.4
-                                RIPPLE	         13        10.8
+                                  SLIC	      15.17         7.5
+                                  LUT4	       8.00         3.0
+                                PFUREG	         24         7.3
+                                RIPPLE	         13        27.1
 ---------------------------------------------------
 Report for cell Timer
    Instance path: sdram_uart_top/all_modules1/sdram_controller1/initTimer
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      12.33         5.1
-                                  LUT4	       8.00         3.3
-                                PFUREG	         16         4.3
-                                RIPPLE	          9         7.5
+                                  SLIC	      11.33         5.6
+                                  LUT4	       8.00         3.0
+                                PFUREG	         16         4.8
+                                RIPPLE	          9        18.8
 ---------------------------------------------------
 Report for cell Timer(SIZE=4)
    Instance path: sdram_uart_top/all_modules1/sdram_controller1/delayTimer
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       2.83         1.2
-                                  LUT4	       6.00         2.5
-                                PFUREG	          4         1.1
+                                  SLIC	       2.83         1.4
+                                  LUT4	       5.00         1.9
+                                PFUREG	          4         1.2
 ---------------------------------------------------
 Report for cell bankArbiter
    Instance path: sdram_uart_top/all_modules1/sdram_controller1/arbBank
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      12.40         5.1
-                                  LUT4	      30.50        12.6
-                                PFUREG	         12         3.2
+                                  SLIC	      12.50         6.2
+                                  LUT4	      31.33        11.9
+                                PFUREG	         12         3.6
 ---------------------------------------------------
-Report for cell fifo(length=256)
+Report for cell fifo
    Instance path: sdram_uart_top/all_modules1/fifo2
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      15.33         6.3
-                                  LUT4	       2.00         0.8
-                                PFUREG	         17         4.6
-                                RIPPLE	         16        13.3
-                                   EBR	          1        50.0
+                                  SLIC	      13.42         6.6
+                                  LUT4	      16.00         6.1
+                               DISTRAM	       6.00        50.0
+                                PFUREG	         17         5.2
 ---------------------------------------------------
-Report for cell fifo(length=256)_U1
+Report for cell fifo_U0
    Instance path: sdram_uart_top/all_modules1/fifo1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      15.00         6.2
-                                  LUT4	       8.00         3.3
-                                PFUREG	         17         4.6
-                                RIPPLE	         16        13.3
-                                   EBR	          1        50.0
----------------------------------------------------
-Report for cell uart_rx
-   Instance path: sdram_uart_top/uart1
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      27.00        11.1
-                                  LUT4	      38.00        15.7
-                                PFUREG	         44        11.8
-                                RIPPLE	          6         5.0
+                                  SLIC	      13.83         6.8
+                                  LUT4	      18.00         6.8
+                               DISTRAM	       6.00        50.0
+                                PFUREG	         17         5.2
 ---------------------------------------------------
 Report for cell Clock_DCMA
    Instance path: sdram_uart_top/clk_multiply
                      Cell usage:
                                   cell	      count    Res Usage(%)
 ---------------------------------------------------
+Report for cell uart_rx
+   Instance path: sdram_uart_top/uart1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      27.75        13.7
+                                  LUT4	      39.00        14.8
+                                PFUREG	         44        13.3
+                                RIPPLE	          6        12.5
+---------------------------------------------------
 Report for cell uart_tx
    Instance path: sdram_uart_top/uart_tx1
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      16.75         6.9
-                                  LUT4	      18.00         7.4
-                                PFUREG	         28         7.5
-                                RIPPLE	          6         5.0
+                                  SLIC	      19.92         9.9
+                                  LUT4	      16.00         6.1
+                                PFUREG	         35        10.6
+                                RIPPLE	          6        12.5

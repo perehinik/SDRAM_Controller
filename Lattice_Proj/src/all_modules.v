@@ -30,7 +30,7 @@ wire       rx_stb1,
            rx_ack1;
 
 fifo #(
-.length    (256),
+.length    (16),
 .width     (8) 
 )
 fifo1// 	 
@@ -137,7 +137,7 @@ sdram_to_uart1
 
 
 fifo #(
-.length    (256),
+.length    (16),
 .width     (8) 
 )
 fifo2// 	 

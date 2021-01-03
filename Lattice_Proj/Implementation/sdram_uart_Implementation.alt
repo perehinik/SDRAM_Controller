@@ -1,11 +1,11 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Thu May 30 23:02:26 2019 *
+NOTE DATE CREATED: Sun May 26 19:32:39 2019 *
 NOTE DESIGN NAME: sdram_uart_top *
 NOTE DEVICE NAME: LCMXO2-7000HC-6TQFP144 *
 NOTE PIN ASSIGNMENTS *
-NOTE PINS DB[14] : 99 : inout *
 NOTE PINS DB[15] : 100 : inout *
+NOTE PINS DB[14] : 99 : inout *
 NOTE PINS DB[13] : 98 : inout *
 NOTE PINS DB[12] : 97 : inout *
 NOTE PINS DB[11] : 96 : inout *

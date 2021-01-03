@@ -190,7 +190,7 @@
             <ID>35901018</ID>
             <Severity>Info</Severity>
             <Dynamic>c:/lscc/sd_ram_uart/src/fifo.v(1): </Dynamic>
-            <Dynamic>fifo(length=256)</Dynamic>
+            <Dynamic>fifo</Dynamic>
             <Navigation>c:/lscc/sd_ram_uart/src/fifo.v</Navigation>
             <Navigation>1</Navigation>
         </Message>
@@ -199,7 +199,7 @@
             <Severity>Warning</Severity>
             <Dynamic>c:/lscc/sd_ram_uart/src/fifo.v(25): </Dynamic>
             <Dynamic>32</Dynamic>
-            <Dynamic>8</Dynamic>
+            <Dynamic>4</Dynamic>
             <Navigation>c:/lscc/sd_ram_uart/src/fifo.v</Navigation>
             <Navigation>25</Navigation>
         </Message>
@@ -208,7 +208,7 @@
             <Severity>Warning</Severity>
             <Dynamic>c:/lscc/sd_ram_uart/src/fifo.v(37): </Dynamic>
             <Dynamic>32</Dynamic>
-            <Dynamic>8</Dynamic>
+            <Dynamic>4</Dynamic>
             <Navigation>c:/lscc/sd_ram_uart/src/fifo.v</Navigation>
             <Navigation>37</Navigation>
         </Message>
@@ -217,7 +217,7 @@
             <Severity>Warning</Severity>
             <Dynamic>c:/lscc/sd_ram_uart/src/fifo.v(54): </Dynamic>
             <Dynamic>32</Dynamic>
-            <Dynamic>8</Dynamic>
+            <Dynamic>4</Dynamic>
             <Navigation>c:/lscc/sd_ram_uart/src/fifo.v</Navigation>
             <Navigation>54</Navigation>
         </Message>
@@ -228,23 +228,6 @@
             <Dynamic>uart_to_sdram</Dynamic>
             <Navigation>c:/lscc/sd_ram_uart/src/uart_to_sdram.v</Navigation>
             <Navigation>1</Navigation>
-        </Message>
-        <Message>
-            <ID>35901209</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>c:/lscc/sd_ram_uart/src/uart_to_sdram.v(63): </Dynamic>
-            <Dynamic>32</Dynamic>
-            <Dynamic>24</Dynamic>
-            <Navigation>c:/lscc/sd_ram_uart/src/uart_to_sdram.v</Navigation>
-            <Navigation>63</Navigation>
-        </Message>
-        <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>c:/lscc/sd_ram_uart/src/timer.v(33): </Dynamic>
-            <Dynamic>Timer1</Dynamic>
-            <Navigation>c:/lscc/sd_ram_uart/src/timer.v</Navigation>
-            <Navigation>33</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -289,19 +272,19 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>c:/lscc/sd_ram_uart/src/sdram_controller.v(353): </Dynamic>
+            <Dynamic>c:/lscc/sd_ram_uart/src/sdram_controller.v(345): </Dynamic>
             <Dynamic>bankArbiter</Dynamic>
             <Navigation>c:/lscc/sd_ram_uart/src/sdram_controller.v</Navigation>
-            <Navigation>353</Navigation>
+            <Navigation>345</Navigation>
         </Message>
         <Message>
             <ID>35901209</ID>
             <Severity>Warning</Severity>
-            <Dynamic>c:/lscc/sd_ram_uart/src/sdram_controller.v(341): </Dynamic>
+            <Dynamic>c:/lscc/sd_ram_uart/src/sdram_controller.v(333): </Dynamic>
             <Dynamic>32</Dynamic>
             <Dynamic>14</Dynamic>
             <Navigation>c:/lscc/sd_ram_uart/src/sdram_controller.v</Navigation>
-            <Navigation>341</Navigation>
+            <Navigation>333</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -357,36 +340,6 @@
             <Severity>Info</Severity>
             <Dynamic>\uart_tx1/FSM</Dynamic>
             <Dynamic>one-hot</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>0</Dynamic>
-            <Dynamic>\all_modules1/uart_to_sdram1/state_FSM</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>1</Dynamic>
-            <Dynamic>\all_modules1/uart_to_sdram1/state_FSM</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>2</Dynamic>
-            <Dynamic>\all_modules1/uart_to_sdram1/state_FSM</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>3</Dynamic>
-            <Dynamic>\all_modules1/uart_to_sdram1/state_FSM</Dynamic>
-        </Message>
-        <Message>
-            <ID>35001747</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>4</Dynamic>
-            <Dynamic>\all_modules1/uart_to_sdram1/state_FSM</Dynamic>
         </Message>
         <Message>
             <ID>35001747</ID>

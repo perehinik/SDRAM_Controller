@@ -22,7 +22,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 <A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.10.0.111.2</big></U></B>
-Thu May 30 23:02:20 2019
+Sun May 26 19:32:34 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -41,9 +41,9 @@ Report level:    verbose report, limited to 10 items per preference
 
 <A name="ptwr_set_ps"></A><B><U><big>Preference Summary</big></U></B>
 
-<FONT COLOR=red><LI><A href='#par_twr_pref_0_0' Target='right'><FONT COLOR=red>FREQUENCY NET "SD_CLK_c" 133.333333 MHz (553 errors)</FONT></A></LI>
-</FONT>            4096 items scored, 553 timing errors detected.
-Warning:  78.765MHz is the maximum frequency for this preference.
+<FONT COLOR=red><LI><A href='#par_twr_pref_0_0' Target='right'><FONT COLOR=red>FREQUENCY NET "SD_CLK_c" 133.333333 MHz (223 errors)</FONT></A></LI>
+</FONT>            3195 items scored, 223 timing errors detected.
+Warning:  77.622MHz is the maximum frequency for this preference.
 
 <LI><A href='#par_twr_pref_0_1' Target='right'>FREQUENCY NET "clk_c" 50.000000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
 
@@ -55,850 +55,870 @@ BLOCK RESETPATHS
 
 ================================================================================
 <A name="par_twr_pref_0_0"></A>Preference: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;
-            4096 items scored, 553 timing errors detected.
+            3195 items scored, 223 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error: The following path exceeds requirements by 5.196ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i7  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
-   Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
-
-   Delay:               5.506ns  (49.5% logic, 50.5% route), 7 logic levels.
-
- Constraint Details:
-
-      5.506ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_44 to all_modules1/sdram_controller1/SLICE_131 exceeds
-      7.500ns delay constraint less
-      7.057ns skew and
-      0.000ns feedback compensation and
-      0.133ns DIN_SET requirement (totaling 0.310ns) by 5.196ns
-
- Physical Path Details:
-
-      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_44 to all_modules1/sdram_controller1/SLICE_131:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R16C20A.CLK to     R16C20A.Q0 all_modules1/sdram_controller1/repeatTimer/SLICE_44 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
-ROUTE         2     1.027     R16C20A.Q0 to     R15C19C.A0 all_modules1/sdram_controller1/repeatTimer/count_7
-C0TOFCO_DE  ---     0.787     R15C19C.A0 to    R15C19C.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_46
-ROUTE         1     0.000    R15C19C.FCO to    R15C19D.FCI all_modules1/sdram_controller1/repeatTimer/n4689
-FCITOFCO_D  ---     0.130    R15C19D.FCI to    R15C19D.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_45
-ROUTE         1     0.000    R15C19D.FCO to    R15C20A.FCI all_modules1/sdram_controller1/repeatTimer/n4690
-FCITOFCO_D  ---     0.130    R15C20A.FCI to    R15C20A.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_43
-ROUTE         1     0.000    R15C20A.FCO to    R15C20B.FCI all_modules1/sdram_controller1/repeatTimer/n4691
-FCITOF1_DE  ---     0.495    R15C20B.FCI to     R15C20B.F1 all_modules1/sdram_controller1/repeatTimer/SLICE_53
-ROUTE         5     1.013     R15C20B.F1 to     R15C25A.C1 all_modules1/sdram_controller1/repeat_tim_flag
-CTOF_DEL    ---     0.408     R15C25A.C1 to     R15C25A.F1 all_modules1/sdram_controller1/SLICE_170
-ROUTE         1     0.741     R15C25A.F1 to     R15C28A.D0 all_modules1/sdram_controller1/n10
-CTOF_DEL    ---     0.408     R15C28A.D0 to     R15C28A.F0 all_modules1/sdram_controller1/SLICE_131
-ROUTE         1     0.000     R15C28A.F0 to    R15C28A.DI0 all_modules1/sdram_controller1/n5076 (to SD_CLK_c)
-                  --------
-                    5.506   (49.5% logic, 50.5% route), 7 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_44:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
-ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
-CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R14C20A.CLK SD_CLK_c
-REG_DEL     ---     0.367    R14C20A.CLK to     R14C20A.Q0 all_modules1/sdram_controller1/SLICE_215
-ROUTE        19     2.310     R14C20A.Q0 to     R14C34B.D1 refresh_tim_reset
-CTOF_DEL    ---     0.408     R14C34B.D1 to     R14C34B.F1 all_modules1/sdram_controller1/SLICE_301
-ROUTE         2     1.391     R14C34B.F1 to     R14C20C.C1 all_modules1/sdram_controller1/delay_tim_period_3
-CTOF_DEL    ---     0.408     R14C20C.C1 to     R14C20C.F1 all_modules1/sdram_controller1/SLICE_278
-ROUTE        24     2.173     R14C20C.F1 to    R16C20A.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
-                  --------
-                   10.678   (23.9% logic, 76.1% route), 5 logic levels.
-
-      Source Clock f/b:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
-                  --------
-                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
-
-      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_131:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
-ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
-CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R15C28A.CLK SD_CLK_c
-                  --------
-                    3.621   (37.9% logic, 62.1% route), 2 logic levels.
-
-      Destination Clock f/b:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
-                  --------
-                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
-
-
-Error: The following path exceeds requirements by 5.194ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i3  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
-   Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
-
-   Delay:               5.504ns  (54.2% logic, 45.8% route), 9 logic levels.
-
- Constraint Details:
-
-      5.504ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_50 to all_modules1/sdram_controller1/SLICE_131 exceeds
-      7.500ns delay constraint less
-      7.057ns skew and
-      0.000ns feedback compensation and
-      0.133ns DIN_SET requirement (totaling 0.310ns) by 5.194ns
-
- Physical Path Details:
-
-      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_50 to all_modules1/sdram_controller1/SLICE_131:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R16C19C.CLK to     R16C19C.Q0 all_modules1/sdram_controller1/repeatTimer/SLICE_50 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
-ROUTE         2     0.765     R16C19C.Q0 to     R15C19A.A0 all_modules1/sdram_controller1/repeatTimer/count_3
-C0TOFCO_DE  ---     0.787     R15C19A.A0 to    R15C19A.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_49
-ROUTE         1     0.000    R15C19A.FCO to    R15C19B.FCI all_modules1/sdram_controller1/repeatTimer/n4687
-FCITOFCO_D  ---     0.130    R15C19B.FCI to    R15C19B.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_48
-ROUTE         1     0.000    R15C19B.FCO to    R15C19C.FCI all_modules1/sdram_controller1/repeatTimer/n4688
-FCITOFCO_D  ---     0.130    R15C19C.FCI to    R15C19C.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_46
-ROUTE         1     0.000    R15C19C.FCO to    R15C19D.FCI all_modules1/sdram_controller1/repeatTimer/n4689
-FCITOFCO_D  ---     0.130    R15C19D.FCI to    R15C19D.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_45
-ROUTE         1     0.000    R15C19D.FCO to    R15C20A.FCI all_modules1/sdram_controller1/repeatTimer/n4690
-FCITOFCO_D  ---     0.130    R15C20A.FCI to    R15C20A.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_43
-ROUTE         1     0.000    R15C20A.FCO to    R15C20B.FCI all_modules1/sdram_controller1/repeatTimer/n4691
-FCITOF1_DE  ---     0.495    R15C20B.FCI to     R15C20B.F1 all_modules1/sdram_controller1/repeatTimer/SLICE_53
-ROUTE         5     1.013     R15C20B.F1 to     R15C25A.C1 all_modules1/sdram_controller1/repeat_tim_flag
-CTOF_DEL    ---     0.408     R15C25A.C1 to     R15C25A.F1 all_modules1/sdram_controller1/SLICE_170
-ROUTE         1     0.741     R15C25A.F1 to     R15C28A.D0 all_modules1/sdram_controller1/n10
-CTOF_DEL    ---     0.408     R15C28A.D0 to     R15C28A.F0 all_modules1/sdram_controller1/SLICE_131
-ROUTE         1     0.000     R15C28A.F0 to    R15C28A.DI0 all_modules1/sdram_controller1/n5076 (to SD_CLK_c)
-                  --------
-                    5.504   (54.2% logic, 45.8% route), 9 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_50:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
-ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
-CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R14C20A.CLK SD_CLK_c
-REG_DEL     ---     0.367    R14C20A.CLK to     R14C20A.Q0 all_modules1/sdram_controller1/SLICE_215
-ROUTE        19     2.310     R14C20A.Q0 to     R14C34B.D1 refresh_tim_reset
-CTOF_DEL    ---     0.408     R14C34B.D1 to     R14C34B.F1 all_modules1/sdram_controller1/SLICE_301
-ROUTE         2     1.391     R14C34B.F1 to     R14C20C.C1 all_modules1/sdram_controller1/delay_tim_period_3
-CTOF_DEL    ---     0.408     R14C20C.C1 to     R14C20C.F1 all_modules1/sdram_controller1/SLICE_278
-ROUTE        24     2.173     R14C20C.F1 to    R16C19C.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
-                  --------
-                   10.678   (23.9% logic, 76.1% route), 5 logic levels.
-
-      Source Clock f/b:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
-                  --------
-                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
-
-      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_131:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
-ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
-CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R15C28A.CLK SD_CLK_c
-                  --------
-                    3.621   (37.9% logic, 62.1% route), 2 logic levels.
-
-      Destination Clock f/b:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
-                  --------
-                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
-
-
-Error: The following path exceeds requirements by 5.117ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i8  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
-   Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
-
-   Delay:               5.427ns  (48.3% logic, 51.7% route), 7 logic levels.
-
- Constraint Details:
-
-      5.427ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_44 to all_modules1/sdram_controller1/SLICE_131 exceeds
-      7.500ns delay constraint less
-      7.057ns skew and
-      0.000ns feedback compensation and
-      0.133ns DIN_SET requirement (totaling 0.310ns) by 5.117ns
-
- Physical Path Details:
-
-      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_44 to all_modules1/sdram_controller1/SLICE_131:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R16C20A.CLK to     R16C20A.Q1 all_modules1/sdram_controller1/repeatTimer/SLICE_44 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
-ROUTE         2     1.051     R16C20A.Q1 to     R15C19C.B1 all_modules1/sdram_controller1/repeatTimer/count_8
-C1TOFCO_DE  ---     0.684     R15C19C.B1 to    R15C19C.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_46
-ROUTE         1     0.000    R15C19C.FCO to    R15C19D.FCI all_modules1/sdram_controller1/repeatTimer/n4689
-FCITOFCO_D  ---     0.130    R15C19D.FCI to    R15C19D.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_45
-ROUTE         1     0.000    R15C19D.FCO to    R15C20A.FCI all_modules1/sdram_controller1/repeatTimer/n4690
-FCITOFCO_D  ---     0.130    R15C20A.FCI to    R15C20A.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_43
-ROUTE         1     0.000    R15C20A.FCO to    R15C20B.FCI all_modules1/sdram_controller1/repeatTimer/n4691
-FCITOF1_DE  ---     0.495    R15C20B.FCI to     R15C20B.F1 all_modules1/sdram_controller1/repeatTimer/SLICE_53
-ROUTE         5     1.013     R15C20B.F1 to     R15C25A.C1 all_modules1/sdram_controller1/repeat_tim_flag
-CTOF_DEL    ---     0.408     R15C25A.C1 to     R15C25A.F1 all_modules1/sdram_controller1/SLICE_170
-ROUTE         1     0.741     R15C25A.F1 to     R15C28A.D0 all_modules1/sdram_controller1/n10
-CTOF_DEL    ---     0.408     R15C28A.D0 to     R15C28A.F0 all_modules1/sdram_controller1/SLICE_131
-ROUTE         1     0.000     R15C28A.F0 to    R15C28A.DI0 all_modules1/sdram_controller1/n5076 (to SD_CLK_c)
-                  --------
-                    5.427   (48.3% logic, 51.7% route), 7 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_44:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
-ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
-CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R14C20A.CLK SD_CLK_c
-REG_DEL     ---     0.367    R14C20A.CLK to     R14C20A.Q0 all_modules1/sdram_controller1/SLICE_215
-ROUTE        19     2.310     R14C20A.Q0 to     R14C34B.D1 refresh_tim_reset
-CTOF_DEL    ---     0.408     R14C34B.D1 to     R14C34B.F1 all_modules1/sdram_controller1/SLICE_301
-ROUTE         2     1.391     R14C34B.F1 to     R14C20C.C1 all_modules1/sdram_controller1/delay_tim_period_3
-CTOF_DEL    ---     0.408     R14C20C.C1 to     R14C20C.F1 all_modules1/sdram_controller1/SLICE_278
-ROUTE        24     2.173     R14C20C.F1 to    R16C20A.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
-                  --------
-                   10.678   (23.9% logic, 76.1% route), 5 logic levels.
-
-      Source Clock f/b:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
-                  --------
-                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
-
-      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_131:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
-ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
-CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R15C28A.CLK SD_CLK_c
-                  --------
-                    3.621   (37.9% logic, 62.1% route), 2 logic levels.
-
-      Destination Clock f/b:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
-                  --------
-                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
-
-
-Error: The following path exceeds requirements by 5.113ns
+Error: The following path exceeds requirements by 5.383ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i4  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
    Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
 
-   Delay:               5.423ns  (53.1% logic, 46.9% route), 9 logic levels.
+   Delay:               6.722ns  (48.9% logic, 51.1% route), 10 logic levels.
 
  Constraint Details:
 
-      5.423ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_50 to all_modules1/sdram_controller1/SLICE_131 exceeds
+      6.722ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_3 to all_modules1/sdram_controller1/SLICE_169 exceeds
       7.500ns delay constraint less
-      7.057ns skew and
+      6.028ns skew and
       0.000ns feedback compensation and
-      0.133ns DIN_SET requirement (totaling 0.310ns) by 5.113ns
+      0.133ns DIN_SET requirement (totaling 1.339ns) by 5.383ns
 
  Physical Path Details:
 
-      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_50 to all_modules1/sdram_controller1/SLICE_131:
+      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_3 to all_modules1/sdram_controller1/SLICE_169:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R16C19C.CLK to     R16C19C.Q1 all_modules1/sdram_controller1/repeatTimer/SLICE_50 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
-ROUTE         2     0.787     R16C19C.Q1 to     R15C19A.A1 all_modules1/sdram_controller1/repeatTimer/count_4
-C1TOFCO_DE  ---     0.684     R15C19A.A1 to    R15C19A.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_49
-ROUTE         1     0.000    R15C19A.FCO to    R15C19B.FCI all_modules1/sdram_controller1/repeatTimer/n4687
-FCITOFCO_D  ---     0.130    R15C19B.FCI to    R15C19B.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_48
-ROUTE         1     0.000    R15C19B.FCO to    R15C19C.FCI all_modules1/sdram_controller1/repeatTimer/n4688
-FCITOFCO_D  ---     0.130    R15C19C.FCI to    R15C19C.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_46
-ROUTE         1     0.000    R15C19C.FCO to    R15C19D.FCI all_modules1/sdram_controller1/repeatTimer/n4689
-FCITOFCO_D  ---     0.130    R15C19D.FCI to    R15C19D.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_45
-ROUTE         1     0.000    R15C19D.FCO to    R15C20A.FCI all_modules1/sdram_controller1/repeatTimer/n4690
-FCITOFCO_D  ---     0.130    R15C20A.FCI to    R15C20A.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_43
-ROUTE         1     0.000    R15C20A.FCO to    R15C20B.FCI all_modules1/sdram_controller1/repeatTimer/n4691
-FCITOF1_DE  ---     0.495    R15C20B.FCI to     R15C20B.F1 all_modules1/sdram_controller1/repeatTimer/SLICE_53
-ROUTE         5     1.013     R15C20B.F1 to     R15C25A.C1 all_modules1/sdram_controller1/repeat_tim_flag
-CTOF_DEL    ---     0.408     R15C25A.C1 to     R15C25A.F1 all_modules1/sdram_controller1/SLICE_170
-ROUTE         1     0.741     R15C25A.F1 to     R15C28A.D0 all_modules1/sdram_controller1/n10
-CTOF_DEL    ---     0.408     R15C28A.D0 to     R15C28A.F0 all_modules1/sdram_controller1/SLICE_131
-ROUTE         1     0.000     R15C28A.F0 to    R15C28A.DI0 all_modules1/sdram_controller1/n5076 (to SD_CLK_c)
+REG_DEL     ---     0.367    R19C28C.CLK to     R19C28C.Q1 all_modules1/sdram_controller1/repeatTimer/SLICE_3 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
+ROUTE         2     1.239     R19C28C.Q1 to     R21C29A.A1 all_modules1/sdram_controller1/repeatTimer/count_4
+C1TOFCO_DE  ---     0.684     R21C29A.A1 to    R21C29A.FCO all_modules1/SLICE_0
+ROUTE         1     0.000    R21C29A.FCO to    R21C29B.FCI all_modules1/sdram_controller1/repeatTimer/n4212
+FCITOFCO_D  ---     0.130    R21C29B.FCI to    R21C29B.FCO all_modules1/SLICE_7
+ROUTE         1     0.000    R21C29B.FCO to    R21C29C.FCI all_modules1/sdram_controller1/repeatTimer/n4213
+FCITOFCO_D  ---     0.130    R21C29C.FCI to    R21C29C.FCO SLICE_8
+ROUTE         1     0.000    R21C29C.FCO to    R21C29D.FCI all_modules1/sdram_controller1/repeatTimer/n4214
+FCITOFCO_D  ---     0.130    R21C29D.FCI to    R21C29D.FCO SLICE_6
+ROUTE         1     0.000    R21C29D.FCO to    R21C30A.FCI all_modules1/sdram_controller1/repeatTimer/n4215
+FCITOFCO_D  ---     0.130    R21C30A.FCI to    R21C30A.FCO all_modules1/SLICE_1
+ROUTE         1     0.000    R21C30A.FCO to    R21C30B.FCI all_modules1/sdram_controller1/repeatTimer/n4216
+FCITOF1_DE  ---     0.495    R21C30B.FCI to     R21C30B.F1 all_modules1/SLICE_9
+ROUTE         5     0.577     R21C30B.F1 to     R19C30A.D1 all_modules1/sdram_controller1/repeat_tim_flag
+CTOF_DEL    ---     0.408     R19C30A.D1 to     R19C30A.F1 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     0.481     R19C30A.F1 to     R19C30A.D0 all_modules1/sdram_controller1/n4
+CTOF_DEL    ---     0.408     R19C30A.D0 to     R19C30A.F0 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     1.135     R19C30A.F0 to     R23C28B.D0 all_modules1/sdram_controller1/n63
+CTOF_DEL    ---     0.408     R23C28B.D0 to     R23C28B.F0 all_modules1/sdram_controller1/SLICE_169
+ROUTE         1     0.000     R23C28B.F0 to    R23C28B.DI0 all_modules1/sdram_controller1/n4546 (to SD_CLK_c)
                   --------
-                    5.423   (53.1% logic, 46.9% route), 9 logic levels.
+                    6.722   (48.9% logic, 51.1% route), 10 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_50:
+      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
 ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
 CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R14C20A.CLK SD_CLK_c
-REG_DEL     ---     0.367    R14C20A.CLK to     R14C20A.Q0 all_modules1/sdram_controller1/SLICE_215
-ROUTE        19     2.310     R14C20A.Q0 to     R14C34B.D1 refresh_tim_reset
-CTOF_DEL    ---     0.408     R14C34B.D1 to     R14C34B.F1 all_modules1/sdram_controller1/SLICE_301
-ROUTE         2     1.391     R14C34B.F1 to     R14C20C.C1 all_modules1/sdram_controller1/delay_tim_period_3
-CTOF_DEL    ---     0.408     R14C20C.C1 to     R14C20C.F1 all_modules1/sdram_controller1/SLICE_278
-ROUTE        24     2.173     R14C20C.F1 to    R16C19C.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
+ROUTE       196     1.560     RPLL.CLKOP to    R18C30D.CLK SD_CLK_c
+REG_DEL     ---     0.367    R18C30D.CLK to     R18C30D.Q1 all_modules1/sdram_controller1/SLICE_130
+ROUTE         7     1.482     R18C30D.Q1 to     R16C26D.A0 all_modules1/sdram_controller1/n368
+CTOF_DEL    ---     0.408     R16C26D.A0 to     R16C26D.F0 all_modules1/sdram_controller1/SLICE_235
+ROUTE         2     1.178     R16C26D.F0 to     R14C20A.A1 all_modules1/sdram_controller1/n9
+CTOF_DEL    ---     0.408     R14C20A.A1 to     R14C20A.F1 all_modules1/sdram_controller1/SLICE_234
+ROUTE        24     2.151     R14C20A.F1 to    R19C28C.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
                   --------
-                   10.678   (23.9% logic, 76.1% route), 5 logic levels.
+                    9.615   (26.6% logic, 73.4% route), 5 logic levels.
 
       Source Clock f/b:
 
    Name    Fanout   Delay (ns)          Site               Resource
 CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
                   --------
                     1.693   (0.0% logic, 100.0% route), 1 logic levels.
 
-      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_131:
+      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_169:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
 ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
 CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R15C28A.CLK SD_CLK_c
+ROUTE       196     1.526     RPLL.CLKOP to    R23C28B.CLK SD_CLK_c
                   --------
-                    3.621   (37.9% logic, 62.1% route), 2 logic levels.
+                    3.587   (38.2% logic, 61.8% route), 2 logic levels.
 
       Destination Clock f/b:
 
    Name    Fanout   Delay (ns)          Site               Resource
 CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
                   --------
                     1.693   (0.0% logic, 100.0% route), 1 logic levels.
 
 
-Error: The following path exceeds requirements by 5.090ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i9  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
-   Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
-
-   Delay:               5.400ns  (48.1% logic, 51.9% route), 6 logic levels.
-
- Constraint Details:
-
-      5.400ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_42 to all_modules1/sdram_controller1/SLICE_131 exceeds
-      7.500ns delay constraint less
-      7.057ns skew and
-      0.000ns feedback compensation and
-      0.133ns DIN_SET requirement (totaling 0.310ns) by 5.090ns
-
- Physical Path Details:
-
-      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_42 to all_modules1/sdram_controller1/SLICE_131:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R16C20B.CLK to     R16C20B.Q0 all_modules1/sdram_controller1/repeatTimer/SLICE_42 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
-ROUTE         2     1.051     R16C20B.Q0 to     R15C19D.B0 all_modules1/sdram_controller1/repeatTimer/count_9
-C0TOFCO_DE  ---     0.787     R15C19D.B0 to    R15C19D.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_45
-ROUTE         1     0.000    R15C19D.FCO to    R15C20A.FCI all_modules1/sdram_controller1/repeatTimer/n4690
-FCITOFCO_D  ---     0.130    R15C20A.FCI to    R15C20A.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_43
-ROUTE         1     0.000    R15C20A.FCO to    R15C20B.FCI all_modules1/sdram_controller1/repeatTimer/n4691
-FCITOF1_DE  ---     0.495    R15C20B.FCI to     R15C20B.F1 all_modules1/sdram_controller1/repeatTimer/SLICE_53
-ROUTE         5     1.013     R15C20B.F1 to     R15C25A.C1 all_modules1/sdram_controller1/repeat_tim_flag
-CTOF_DEL    ---     0.408     R15C25A.C1 to     R15C25A.F1 all_modules1/sdram_controller1/SLICE_170
-ROUTE         1     0.741     R15C25A.F1 to     R15C28A.D0 all_modules1/sdram_controller1/n10
-CTOF_DEL    ---     0.408     R15C28A.D0 to     R15C28A.F0 all_modules1/sdram_controller1/SLICE_131
-ROUTE         1     0.000     R15C28A.F0 to    R15C28A.DI0 all_modules1/sdram_controller1/n5076 (to SD_CLK_c)
-                  --------
-                    5.400   (48.1% logic, 51.9% route), 6 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_42:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
-ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
-CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R14C20A.CLK SD_CLK_c
-REG_DEL     ---     0.367    R14C20A.CLK to     R14C20A.Q0 all_modules1/sdram_controller1/SLICE_215
-ROUTE        19     2.310     R14C20A.Q0 to     R14C34B.D1 refresh_tim_reset
-CTOF_DEL    ---     0.408     R14C34B.D1 to     R14C34B.F1 all_modules1/sdram_controller1/SLICE_301
-ROUTE         2     1.391     R14C34B.F1 to     R14C20C.C1 all_modules1/sdram_controller1/delay_tim_period_3
-CTOF_DEL    ---     0.408     R14C20C.C1 to     R14C20C.F1 all_modules1/sdram_controller1/SLICE_278
-ROUTE        24     2.173     R14C20C.F1 to    R16C20B.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
-                  --------
-                   10.678   (23.9% logic, 76.1% route), 5 logic levels.
-
-      Source Clock f/b:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
-                  --------
-                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
-
-      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_131:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
-ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
-CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R15C28A.CLK SD_CLK_c
-                  --------
-                    3.621   (37.9% logic, 62.1% route), 2 logic levels.
-
-      Destination Clock f/b:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
-                  --------
-                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
-
-
-Error: The following path exceeds requirements by 5.088ns
+Error: The following path exceeds requirements by 5.356ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i5  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
    Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
 
-   Delay:               5.398ns  (52.9% logic, 47.1% route), 8 logic levels.
+   Delay:               6.695ns  (48.7% logic, 51.3% route), 9 logic levels.
 
  Constraint Details:
 
-      5.398ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_47 to all_modules1/sdram_controller1/SLICE_131 exceeds
+      6.695ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_2 to all_modules1/sdram_controller1/SLICE_169 exceeds
       7.500ns delay constraint less
-      7.057ns skew and
+      6.028ns skew and
       0.000ns feedback compensation and
-      0.133ns DIN_SET requirement (totaling 0.310ns) by 5.088ns
+      0.133ns DIN_SET requirement (totaling 1.339ns) by 5.356ns
 
  Physical Path Details:
 
-      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_47 to all_modules1/sdram_controller1/SLICE_131:
+      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_2 to all_modules1/sdram_controller1/SLICE_169:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R16C19D.CLK to     R16C19D.Q0 all_modules1/sdram_controller1/repeatTimer/SLICE_47 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
-ROUTE         2     0.789     R16C19D.Q0 to     R15C19B.B0 all_modules1/sdram_controller1/repeatTimer/count_5
-C0TOFCO_DE  ---     0.787     R15C19B.B0 to    R15C19B.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_48
-ROUTE         1     0.000    R15C19B.FCO to    R15C19C.FCI all_modules1/sdram_controller1/repeatTimer/n4688
-FCITOFCO_D  ---     0.130    R15C19C.FCI to    R15C19C.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_46
-ROUTE         1     0.000    R15C19C.FCO to    R15C19D.FCI all_modules1/sdram_controller1/repeatTimer/n4689
-FCITOFCO_D  ---     0.130    R15C19D.FCI to    R15C19D.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_45
-ROUTE         1     0.000    R15C19D.FCO to    R15C20A.FCI all_modules1/sdram_controller1/repeatTimer/n4690
-FCITOFCO_D  ---     0.130    R15C20A.FCI to    R15C20A.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_43
-ROUTE         1     0.000    R15C20A.FCO to    R15C20B.FCI all_modules1/sdram_controller1/repeatTimer/n4691
-FCITOF1_DE  ---     0.495    R15C20B.FCI to     R15C20B.F1 all_modules1/sdram_controller1/repeatTimer/SLICE_53
-ROUTE         5     1.013     R15C20B.F1 to     R15C25A.C1 all_modules1/sdram_controller1/repeat_tim_flag
-CTOF_DEL    ---     0.408     R15C25A.C1 to     R15C25A.F1 all_modules1/sdram_controller1/SLICE_170
-ROUTE         1     0.741     R15C25A.F1 to     R15C28A.D0 all_modules1/sdram_controller1/n10
-CTOF_DEL    ---     0.408     R15C28A.D0 to     R15C28A.F0 all_modules1/sdram_controller1/SLICE_131
-ROUTE         1     0.000     R15C28A.F0 to    R15C28A.DI0 all_modules1/sdram_controller1/n5076 (to SD_CLK_c)
+REG_DEL     ---     0.367    R19C28D.CLK to     R19C28D.Q0 all_modules1/sdram_controller1/repeatTimer/SLICE_2 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
+ROUTE         2     1.239     R19C28D.Q0 to     R21C29B.A0 all_modules1/sdram_controller1/repeatTimer/count_5
+C0TOFCO_DE  ---     0.787     R21C29B.A0 to    R21C29B.FCO all_modules1/SLICE_7
+ROUTE         1     0.000    R21C29B.FCO to    R21C29C.FCI all_modules1/sdram_controller1/repeatTimer/n4213
+FCITOFCO_D  ---     0.130    R21C29C.FCI to    R21C29C.FCO SLICE_8
+ROUTE         1     0.000    R21C29C.FCO to    R21C29D.FCI all_modules1/sdram_controller1/repeatTimer/n4214
+FCITOFCO_D  ---     0.130    R21C29D.FCI to    R21C29D.FCO SLICE_6
+ROUTE         1     0.000    R21C29D.FCO to    R21C30A.FCI all_modules1/sdram_controller1/repeatTimer/n4215
+FCITOFCO_D  ---     0.130    R21C30A.FCI to    R21C30A.FCO all_modules1/SLICE_1
+ROUTE         1     0.000    R21C30A.FCO to    R21C30B.FCI all_modules1/sdram_controller1/repeatTimer/n4216
+FCITOF1_DE  ---     0.495    R21C30B.FCI to     R21C30B.F1 all_modules1/SLICE_9
+ROUTE         5     0.577     R21C30B.F1 to     R19C30A.D1 all_modules1/sdram_controller1/repeat_tim_flag
+CTOF_DEL    ---     0.408     R19C30A.D1 to     R19C30A.F1 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     0.481     R19C30A.F1 to     R19C30A.D0 all_modules1/sdram_controller1/n4
+CTOF_DEL    ---     0.408     R19C30A.D0 to     R19C30A.F0 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     1.135     R19C30A.F0 to     R23C28B.D0 all_modules1/sdram_controller1/n63
+CTOF_DEL    ---     0.408     R23C28B.D0 to     R23C28B.F0 all_modules1/sdram_controller1/SLICE_169
+ROUTE         1     0.000     R23C28B.F0 to    R23C28B.DI0 all_modules1/sdram_controller1/n4546 (to SD_CLK_c)
                   --------
-                    5.398   (52.9% logic, 47.1% route), 8 logic levels.
+                    6.695   (48.7% logic, 51.3% route), 9 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_47:
+      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_2:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
 ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
 CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R14C20A.CLK SD_CLK_c
-REG_DEL     ---     0.367    R14C20A.CLK to     R14C20A.Q0 all_modules1/sdram_controller1/SLICE_215
-ROUTE        19     2.310     R14C20A.Q0 to     R14C34B.D1 refresh_tim_reset
-CTOF_DEL    ---     0.408     R14C34B.D1 to     R14C34B.F1 all_modules1/sdram_controller1/SLICE_301
-ROUTE         2     1.391     R14C34B.F1 to     R14C20C.C1 all_modules1/sdram_controller1/delay_tim_period_3
-CTOF_DEL    ---     0.408     R14C20C.C1 to     R14C20C.F1 all_modules1/sdram_controller1/SLICE_278
-ROUTE        24     2.173     R14C20C.F1 to    R16C19D.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
+ROUTE       196     1.560     RPLL.CLKOP to    R18C30D.CLK SD_CLK_c
+REG_DEL     ---     0.367    R18C30D.CLK to     R18C30D.Q1 all_modules1/sdram_controller1/SLICE_130
+ROUTE         7     1.482     R18C30D.Q1 to     R16C26D.A0 all_modules1/sdram_controller1/n368
+CTOF_DEL    ---     0.408     R16C26D.A0 to     R16C26D.F0 all_modules1/sdram_controller1/SLICE_235
+ROUTE         2     1.178     R16C26D.F0 to     R14C20A.A1 all_modules1/sdram_controller1/n9
+CTOF_DEL    ---     0.408     R14C20A.A1 to     R14C20A.F1 all_modules1/sdram_controller1/SLICE_234
+ROUTE        24     2.151     R14C20A.F1 to    R19C28D.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
                   --------
-                   10.678   (23.9% logic, 76.1% route), 5 logic levels.
+                    9.615   (26.6% logic, 73.4% route), 5 logic levels.
 
       Source Clock f/b:
 
    Name    Fanout   Delay (ns)          Site               Resource
 CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
                   --------
                     1.693   (0.0% logic, 100.0% route), 1 logic levels.
 
-      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_131:
+      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_169:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
 ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
 CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R15C28A.CLK SD_CLK_c
+ROUTE       196     1.526     RPLL.CLKOP to    R23C28B.CLK SD_CLK_c
                   --------
-                    3.621   (37.9% logic, 62.1% route), 2 logic levels.
+                    3.587   (38.2% logic, 61.8% route), 2 logic levels.
 
       Destination Clock f/b:
 
    Name    Fanout   Delay (ns)          Site               Resource
 CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
                   --------
                     1.693   (0.0% logic, 100.0% route), 1 logic levels.
 
 
-Error: The following path exceeds requirements by 5.065ns
+Error: The following path exceeds requirements by 5.336ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i10  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
+   Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i3  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
    Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
 
-   Delay:               5.375ns  (46.4% logic, 53.6% route), 6 logic levels.
+   Delay:               6.675ns  (50.8% logic, 49.2% route), 10 logic levels.
 
  Constraint Details:
 
-      5.375ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_42 to all_modules1/sdram_controller1/SLICE_131 exceeds
+      6.675ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_3 to all_modules1/sdram_controller1/SLICE_169 exceeds
       7.500ns delay constraint less
-      7.057ns skew and
+      6.028ns skew and
       0.000ns feedback compensation and
-      0.133ns DIN_SET requirement (totaling 0.310ns) by 5.065ns
+      0.133ns DIN_SET requirement (totaling 1.339ns) by 5.336ns
 
  Physical Path Details:
 
-      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_42 to all_modules1/sdram_controller1/SLICE_131:
+      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_3 to all_modules1/sdram_controller1/SLICE_169:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R16C20B.CLK to     R16C20B.Q1 all_modules1/sdram_controller1/repeatTimer/SLICE_42 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
-ROUTE         2     1.129     R16C20B.Q1 to     R15C19D.A1 all_modules1/sdram_controller1/repeatTimer/count_10
-C1TOFCO_DE  ---     0.684     R15C19D.A1 to    R15C19D.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_45
-ROUTE         1     0.000    R15C19D.FCO to    R15C20A.FCI all_modules1/sdram_controller1/repeatTimer/n4690
-FCITOFCO_D  ---     0.130    R15C20A.FCI to    R15C20A.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_43
-ROUTE         1     0.000    R15C20A.FCO to    R15C20B.FCI all_modules1/sdram_controller1/repeatTimer/n4691
-FCITOF1_DE  ---     0.495    R15C20B.FCI to     R15C20B.F1 all_modules1/sdram_controller1/repeatTimer/SLICE_53
-ROUTE         5     1.013     R15C20B.F1 to     R15C25A.C1 all_modules1/sdram_controller1/repeat_tim_flag
-CTOF_DEL    ---     0.408     R15C25A.C1 to     R15C25A.F1 all_modules1/sdram_controller1/SLICE_170
-ROUTE         1     0.741     R15C25A.F1 to     R15C28A.D0 all_modules1/sdram_controller1/n10
-CTOF_DEL    ---     0.408     R15C28A.D0 to     R15C28A.F0 all_modules1/sdram_controller1/SLICE_131
-ROUTE         1     0.000     R15C28A.F0 to    R15C28A.DI0 all_modules1/sdram_controller1/n5076 (to SD_CLK_c)
+REG_DEL     ---     0.367    R19C28C.CLK to     R19C28C.Q0 all_modules1/sdram_controller1/repeatTimer/SLICE_3 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
+ROUTE         2     1.089     R19C28C.Q0 to     R21C29A.A0 all_modules1/sdram_controller1/repeatTimer/count_3
+C0TOFCO_DE  ---     0.787     R21C29A.A0 to    R21C29A.FCO all_modules1/SLICE_0
+ROUTE         1     0.000    R21C29A.FCO to    R21C29B.FCI all_modules1/sdram_controller1/repeatTimer/n4212
+FCITOFCO_D  ---     0.130    R21C29B.FCI to    R21C29B.FCO all_modules1/SLICE_7
+ROUTE         1     0.000    R21C29B.FCO to    R21C29C.FCI all_modules1/sdram_controller1/repeatTimer/n4213
+FCITOFCO_D  ---     0.130    R21C29C.FCI to    R21C29C.FCO SLICE_8
+ROUTE         1     0.000    R21C29C.FCO to    R21C29D.FCI all_modules1/sdram_controller1/repeatTimer/n4214
+FCITOFCO_D  ---     0.130    R21C29D.FCI to    R21C29D.FCO SLICE_6
+ROUTE         1     0.000    R21C29D.FCO to    R21C30A.FCI all_modules1/sdram_controller1/repeatTimer/n4215
+FCITOFCO_D  ---     0.130    R21C30A.FCI to    R21C30A.FCO all_modules1/SLICE_1
+ROUTE         1     0.000    R21C30A.FCO to    R21C30B.FCI all_modules1/sdram_controller1/repeatTimer/n4216
+FCITOF1_DE  ---     0.495    R21C30B.FCI to     R21C30B.F1 all_modules1/SLICE_9
+ROUTE         5     0.577     R21C30B.F1 to     R19C30A.D1 all_modules1/sdram_controller1/repeat_tim_flag
+CTOF_DEL    ---     0.408     R19C30A.D1 to     R19C30A.F1 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     0.481     R19C30A.F1 to     R19C30A.D0 all_modules1/sdram_controller1/n4
+CTOF_DEL    ---     0.408     R19C30A.D0 to     R19C30A.F0 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     1.135     R19C30A.F0 to     R23C28B.D0 all_modules1/sdram_controller1/n63
+CTOF_DEL    ---     0.408     R23C28B.D0 to     R23C28B.F0 all_modules1/sdram_controller1/SLICE_169
+ROUTE         1     0.000     R23C28B.F0 to    R23C28B.DI0 all_modules1/sdram_controller1/n4546 (to SD_CLK_c)
                   --------
-                    5.375   (46.4% logic, 53.6% route), 6 logic levels.
+                    6.675   (50.8% logic, 49.2% route), 10 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_42:
+      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
 ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
 CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R14C20A.CLK SD_CLK_c
-REG_DEL     ---     0.367    R14C20A.CLK to     R14C20A.Q0 all_modules1/sdram_controller1/SLICE_215
-ROUTE        19     2.310     R14C20A.Q0 to     R14C34B.D1 refresh_tim_reset
-CTOF_DEL    ---     0.408     R14C34B.D1 to     R14C34B.F1 all_modules1/sdram_controller1/SLICE_301
-ROUTE         2     1.391     R14C34B.F1 to     R14C20C.C1 all_modules1/sdram_controller1/delay_tim_period_3
-CTOF_DEL    ---     0.408     R14C20C.C1 to     R14C20C.F1 all_modules1/sdram_controller1/SLICE_278
-ROUTE        24     2.173     R14C20C.F1 to    R16C20B.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
+ROUTE       196     1.560     RPLL.CLKOP to    R18C30D.CLK SD_CLK_c
+REG_DEL     ---     0.367    R18C30D.CLK to     R18C30D.Q1 all_modules1/sdram_controller1/SLICE_130
+ROUTE         7     1.482     R18C30D.Q1 to     R16C26D.A0 all_modules1/sdram_controller1/n368
+CTOF_DEL    ---     0.408     R16C26D.A0 to     R16C26D.F0 all_modules1/sdram_controller1/SLICE_235
+ROUTE         2     1.178     R16C26D.F0 to     R14C20A.A1 all_modules1/sdram_controller1/n9
+CTOF_DEL    ---     0.408     R14C20A.A1 to     R14C20A.F1 all_modules1/sdram_controller1/SLICE_234
+ROUTE        24     2.151     R14C20A.F1 to    R19C28C.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
                   --------
-                   10.678   (23.9% logic, 76.1% route), 5 logic levels.
+                    9.615   (26.6% logic, 73.4% route), 5 logic levels.
 
       Source Clock f/b:
 
    Name    Fanout   Delay (ns)          Site               Resource
 CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
                   --------
                     1.693   (0.0% logic, 100.0% route), 1 logic levels.
 
-      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_131:
+      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_169:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
 ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
 CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R15C28A.CLK SD_CLK_c
+ROUTE       196     1.526     RPLL.CLKOP to    R23C28B.CLK SD_CLK_c
                   --------
-                    3.621   (37.9% logic, 62.1% route), 2 logic levels.
+                    3.587   (38.2% logic, 61.8% route), 2 logic levels.
 
       Destination Clock f/b:
 
    Name    Fanout   Delay (ns)          Site               Resource
 CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
                   --------
                     1.693   (0.0% logic, 100.0% route), 1 logic levels.
 
 
-Error: The following path exceeds requirements by 4.983ns
+Error: The following path exceeds requirements by 5.253ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i6  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
    Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
 
-   Delay:               5.293ns  (52.0% logic, 48.0% route), 8 logic levels.
+   Delay:               6.592ns  (47.9% logic, 52.1% route), 9 logic levels.
 
  Constraint Details:
 
-      5.293ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_47 to all_modules1/sdram_controller1/SLICE_131 exceeds
+      6.592ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_2 to all_modules1/sdram_controller1/SLICE_169 exceeds
       7.500ns delay constraint less
-      7.057ns skew and
+      6.028ns skew and
       0.000ns feedback compensation and
-      0.133ns DIN_SET requirement (totaling 0.310ns) by 4.983ns
+      0.133ns DIN_SET requirement (totaling 1.339ns) by 5.253ns
 
  Physical Path Details:
 
-      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_47 to all_modules1/sdram_controller1/SLICE_131:
+      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_2 to all_modules1/sdram_controller1/SLICE_169:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R16C19D.CLK to     R16C19D.Q1 all_modules1/sdram_controller1/repeatTimer/SLICE_47 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
-ROUTE         2     0.787     R16C19D.Q1 to     R15C19B.A1 all_modules1/sdram_controller1/repeatTimer/count_6
-C1TOFCO_DE  ---     0.684     R15C19B.A1 to    R15C19B.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_48
-ROUTE         1     0.000    R15C19B.FCO to    R15C19C.FCI all_modules1/sdram_controller1/repeatTimer/n4688
-FCITOFCO_D  ---     0.130    R15C19C.FCI to    R15C19C.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_46
-ROUTE         1     0.000    R15C19C.FCO to    R15C19D.FCI all_modules1/sdram_controller1/repeatTimer/n4689
-FCITOFCO_D  ---     0.130    R15C19D.FCI to    R15C19D.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_45
-ROUTE         1     0.000    R15C19D.FCO to    R15C20A.FCI all_modules1/sdram_controller1/repeatTimer/n4690
-FCITOFCO_D  ---     0.130    R15C20A.FCI to    R15C20A.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_43
-ROUTE         1     0.000    R15C20A.FCO to    R15C20B.FCI all_modules1/sdram_controller1/repeatTimer/n4691
-FCITOF1_DE  ---     0.495    R15C20B.FCI to     R15C20B.F1 all_modules1/sdram_controller1/repeatTimer/SLICE_53
-ROUTE         5     1.013     R15C20B.F1 to     R15C25A.C1 all_modules1/sdram_controller1/repeat_tim_flag
-CTOF_DEL    ---     0.408     R15C25A.C1 to     R15C25A.F1 all_modules1/sdram_controller1/SLICE_170
-ROUTE         1     0.741     R15C25A.F1 to     R15C28A.D0 all_modules1/sdram_controller1/n10
-CTOF_DEL    ---     0.408     R15C28A.D0 to     R15C28A.F0 all_modules1/sdram_controller1/SLICE_131
-ROUTE         1     0.000     R15C28A.F0 to    R15C28A.DI0 all_modules1/sdram_controller1/n5076 (to SD_CLK_c)
+REG_DEL     ---     0.367    R19C28D.CLK to     R19C28D.Q1 all_modules1/sdram_controller1/repeatTimer/SLICE_2 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
+ROUTE         2     1.239     R19C28D.Q1 to     R21C29B.A1 all_modules1/sdram_controller1/repeatTimer/count_6
+C1TOFCO_DE  ---     0.684     R21C29B.A1 to    R21C29B.FCO all_modules1/SLICE_7
+ROUTE         1     0.000    R21C29B.FCO to    R21C29C.FCI all_modules1/sdram_controller1/repeatTimer/n4213
+FCITOFCO_D  ---     0.130    R21C29C.FCI to    R21C29C.FCO SLICE_8
+ROUTE         1     0.000    R21C29C.FCO to    R21C29D.FCI all_modules1/sdram_controller1/repeatTimer/n4214
+FCITOFCO_D  ---     0.130    R21C29D.FCI to    R21C29D.FCO SLICE_6
+ROUTE         1     0.000    R21C29D.FCO to    R21C30A.FCI all_modules1/sdram_controller1/repeatTimer/n4215
+FCITOFCO_D  ---     0.130    R21C30A.FCI to    R21C30A.FCO all_modules1/SLICE_1
+ROUTE         1     0.000    R21C30A.FCO to    R21C30B.FCI all_modules1/sdram_controller1/repeatTimer/n4216
+FCITOF1_DE  ---     0.495    R21C30B.FCI to     R21C30B.F1 all_modules1/SLICE_9
+ROUTE         5     0.577     R21C30B.F1 to     R19C30A.D1 all_modules1/sdram_controller1/repeat_tim_flag
+CTOF_DEL    ---     0.408     R19C30A.D1 to     R19C30A.F1 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     0.481     R19C30A.F1 to     R19C30A.D0 all_modules1/sdram_controller1/n4
+CTOF_DEL    ---     0.408     R19C30A.D0 to     R19C30A.F0 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     1.135     R19C30A.F0 to     R23C28B.D0 all_modules1/sdram_controller1/n63
+CTOF_DEL    ---     0.408     R23C28B.D0 to     R23C28B.F0 all_modules1/sdram_controller1/SLICE_169
+ROUTE         1     0.000     R23C28B.F0 to    R23C28B.DI0 all_modules1/sdram_controller1/n4546 (to SD_CLK_c)
                   --------
-                    5.293   (52.0% logic, 48.0% route), 8 logic levels.
+                    6.592   (47.9% logic, 52.1% route), 9 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_47:
+      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_2:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
 ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
 CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R14C20A.CLK SD_CLK_c
-REG_DEL     ---     0.367    R14C20A.CLK to     R14C20A.Q0 all_modules1/sdram_controller1/SLICE_215
-ROUTE        19     2.310     R14C20A.Q0 to     R14C34B.D1 refresh_tim_reset
-CTOF_DEL    ---     0.408     R14C34B.D1 to     R14C34B.F1 all_modules1/sdram_controller1/SLICE_301
-ROUTE         2     1.391     R14C34B.F1 to     R14C20C.C1 all_modules1/sdram_controller1/delay_tim_period_3
-CTOF_DEL    ---     0.408     R14C20C.C1 to     R14C20C.F1 all_modules1/sdram_controller1/SLICE_278
-ROUTE        24     2.173     R14C20C.F1 to    R16C19D.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
+ROUTE       196     1.560     RPLL.CLKOP to    R18C30D.CLK SD_CLK_c
+REG_DEL     ---     0.367    R18C30D.CLK to     R18C30D.Q1 all_modules1/sdram_controller1/SLICE_130
+ROUTE         7     1.482     R18C30D.Q1 to     R16C26D.A0 all_modules1/sdram_controller1/n368
+CTOF_DEL    ---     0.408     R16C26D.A0 to     R16C26D.F0 all_modules1/sdram_controller1/SLICE_235
+ROUTE         2     1.178     R16C26D.F0 to     R14C20A.A1 all_modules1/sdram_controller1/n9
+CTOF_DEL    ---     0.408     R14C20A.A1 to     R14C20A.F1 all_modules1/sdram_controller1/SLICE_234
+ROUTE        24     2.151     R14C20A.F1 to    R19C28D.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
                   --------
-                   10.678   (23.9% logic, 76.1% route), 5 logic levels.
+                    9.615   (26.6% logic, 73.4% route), 5 logic levels.
 
       Source Clock f/b:
 
    Name    Fanout   Delay (ns)          Site               Resource
 CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
                   --------
                     1.693   (0.0% logic, 100.0% route), 1 logic levels.
 
-      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_131:
+      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_169:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
 ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
 CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R15C28A.CLK SD_CLK_c
+ROUTE       196     1.526     RPLL.CLKOP to    R23C28B.CLK SD_CLK_c
                   --------
-                    3.621   (37.9% logic, 62.1% route), 2 logic levels.
+                    3.587   (38.2% logic, 61.8% route), 2 logic levels.
 
       Destination Clock f/b:
 
    Name    Fanout   Delay (ns)          Site               Resource
 CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
                   --------
                     1.693   (0.0% logic, 100.0% route), 1 logic levels.
 
 
-Error: The following path exceeds requirements by 4.696ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i11  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
-   Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
-
-   Delay:               5.006ns  (49.2% logic, 50.8% route), 5 logic levels.
-
- Constraint Details:
-
-      5.006ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_41 to all_modules1/sdram_controller1/SLICE_131 exceeds
-      7.500ns delay constraint less
-      7.057ns skew and
-      0.000ns feedback compensation and
-      0.133ns DIN_SET requirement (totaling 0.310ns) by 4.696ns
-
- Physical Path Details:
-
-      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_41 to all_modules1/sdram_controller1/SLICE_131:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R16C20C.CLK to     R16C20C.Q0 all_modules1/sdram_controller1/repeatTimer/SLICE_41 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
-ROUTE         2     0.787     R16C20C.Q0 to     R15C20A.A0 all_modules1/sdram_controller1/repeatTimer/count_11
-C0TOFCO_DE  ---     0.787     R15C20A.A0 to    R15C20A.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_43
-ROUTE         1     0.000    R15C20A.FCO to    R15C20B.FCI all_modules1/sdram_controller1/repeatTimer/n4691
-FCITOF1_DE  ---     0.495    R15C20B.FCI to     R15C20B.F1 all_modules1/sdram_controller1/repeatTimer/SLICE_53
-ROUTE         5     1.013     R15C20B.F1 to     R15C25A.C1 all_modules1/sdram_controller1/repeat_tim_flag
-CTOF_DEL    ---     0.408     R15C25A.C1 to     R15C25A.F1 all_modules1/sdram_controller1/SLICE_170
-ROUTE         1     0.741     R15C25A.F1 to     R15C28A.D0 all_modules1/sdram_controller1/n10
-CTOF_DEL    ---     0.408     R15C28A.D0 to     R15C28A.F0 all_modules1/sdram_controller1/SLICE_131
-ROUTE         1     0.000     R15C28A.F0 to    R15C28A.DI0 all_modules1/sdram_controller1/n5076 (to SD_CLK_c)
-                  --------
-                    5.006   (49.2% logic, 50.8% route), 5 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_41:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
-ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
-CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R14C20A.CLK SD_CLK_c
-REG_DEL     ---     0.367    R14C20A.CLK to     R14C20A.Q0 all_modules1/sdram_controller1/SLICE_215
-ROUTE        19     2.310     R14C20A.Q0 to     R14C34B.D1 refresh_tim_reset
-CTOF_DEL    ---     0.408     R14C34B.D1 to     R14C34B.F1 all_modules1/sdram_controller1/SLICE_301
-ROUTE         2     1.391     R14C34B.F1 to     R14C20C.C1 all_modules1/sdram_controller1/delay_tim_period_3
-CTOF_DEL    ---     0.408     R14C20C.C1 to     R14C20C.F1 all_modules1/sdram_controller1/SLICE_278
-ROUTE        24     2.173     R14C20C.F1 to    R16C20C.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
-                  --------
-                   10.678   (23.9% logic, 76.1% route), 5 logic levels.
-
-      Source Clock f/b:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
-                  --------
-                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
-
-      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_131:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
-ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
-CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R15C28A.CLK SD_CLK_c
-                  --------
-                    3.621   (37.9% logic, 62.1% route), 2 logic levels.
-
-      Destination Clock f/b:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
-                  --------
-                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
-
-
-Error: The following path exceeds requirements by 4.593ns
+Error: The following path exceeds requirements by 4.863ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i12  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
    Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
 
-   Delay:               4.903ns  (48.2% logic, 51.8% route), 5 logic levels.
+   Delay:               6.202ns  (44.7% logic, 55.3% route), 6 logic levels.
 
  Constraint Details:
 
-      4.903ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_41 to all_modules1/sdram_controller1/SLICE_131 exceeds
+      6.202ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_11 to all_modules1/sdram_controller1/SLICE_169 exceeds
       7.500ns delay constraint less
-      7.057ns skew and
+      6.028ns skew and
       0.000ns feedback compensation and
-      0.133ns DIN_SET requirement (totaling 0.310ns) by 4.593ns
+      0.133ns DIN_SET requirement (totaling 1.339ns) by 4.863ns
 
  Physical Path Details:
 
-      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_41 to all_modules1/sdram_controller1/SLICE_131:
+      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_11 to all_modules1/sdram_controller1/SLICE_169:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.367    R16C20C.CLK to     R16C20C.Q1 all_modules1/sdram_controller1/repeatTimer/SLICE_41 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
-ROUTE         2     0.787     R16C20C.Q1 to     R15C20A.A1 all_modules1/sdram_controller1/repeatTimer/count_12
-C1TOFCO_DE  ---     0.684     R15C20A.A1 to    R15C20A.FCO all_modules1/sdram_controller1/repeatTimer/SLICE_43
-ROUTE         1     0.000    R15C20A.FCO to    R15C20B.FCI all_modules1/sdram_controller1/repeatTimer/n4691
-FCITOF1_DE  ---     0.495    R15C20B.FCI to     R15C20B.F1 all_modules1/sdram_controller1/repeatTimer/SLICE_53
-ROUTE         5     1.013     R15C20B.F1 to     R15C25A.C1 all_modules1/sdram_controller1/repeat_tim_flag
-CTOF_DEL    ---     0.408     R15C25A.C1 to     R15C25A.F1 all_modules1/sdram_controller1/SLICE_170
-ROUTE         1     0.741     R15C25A.F1 to     R15C28A.D0 all_modules1/sdram_controller1/n10
-CTOF_DEL    ---     0.408     R15C28A.D0 to     R15C28A.F0 all_modules1/sdram_controller1/SLICE_131
-ROUTE         1     0.000     R15C28A.F0 to    R15C28A.DI0 all_modules1/sdram_controller1/n5076 (to SD_CLK_c)
+REG_DEL     ---     0.367    R19C29C.CLK to     R19C29C.Q1 all_modules1/sdram_controller1/repeatTimer/SLICE_11 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
+ROUTE         2     1.239     R19C29C.Q1 to     R21C30A.A1 all_modules1/sdram_controller1/repeatTimer/count_12
+C1TOFCO_DE  ---     0.684     R21C30A.A1 to    R21C30A.FCO all_modules1/SLICE_1
+ROUTE         1     0.000    R21C30A.FCO to    R21C30B.FCI all_modules1/sdram_controller1/repeatTimer/n4216
+FCITOF1_DE  ---     0.495    R21C30B.FCI to     R21C30B.F1 all_modules1/SLICE_9
+ROUTE         5     0.577     R21C30B.F1 to     R19C30A.D1 all_modules1/sdram_controller1/repeat_tim_flag
+CTOF_DEL    ---     0.408     R19C30A.D1 to     R19C30A.F1 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     0.481     R19C30A.F1 to     R19C30A.D0 all_modules1/sdram_controller1/n4
+CTOF_DEL    ---     0.408     R19C30A.D0 to     R19C30A.F0 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     1.135     R19C30A.F0 to     R23C28B.D0 all_modules1/sdram_controller1/n63
+CTOF_DEL    ---     0.408     R23C28B.D0 to     R23C28B.F0 all_modules1/sdram_controller1/SLICE_169
+ROUTE         1     0.000     R23C28B.F0 to    R23C28B.DI0 all_modules1/sdram_controller1/n4546 (to SD_CLK_c)
                   --------
-                    4.903   (48.2% logic, 51.8% route), 5 logic levels.
+                    6.202   (44.7% logic, 55.3% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_41:
+      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_11:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
 ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
 CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R14C20A.CLK SD_CLK_c
-REG_DEL     ---     0.367    R14C20A.CLK to     R14C20A.Q0 all_modules1/sdram_controller1/SLICE_215
-ROUTE        19     2.310     R14C20A.Q0 to     R14C34B.D1 refresh_tim_reset
-CTOF_DEL    ---     0.408     R14C34B.D1 to     R14C34B.F1 all_modules1/sdram_controller1/SLICE_301
-ROUTE         2     1.391     R14C34B.F1 to     R14C20C.C1 all_modules1/sdram_controller1/delay_tim_period_3
-CTOF_DEL    ---     0.408     R14C20C.C1 to     R14C20C.F1 all_modules1/sdram_controller1/SLICE_278
-ROUTE        24     2.173     R14C20C.F1 to    R16C20C.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
+ROUTE       196     1.560     RPLL.CLKOP to    R18C30D.CLK SD_CLK_c
+REG_DEL     ---     0.367    R18C30D.CLK to     R18C30D.Q1 all_modules1/sdram_controller1/SLICE_130
+ROUTE         7     1.482     R18C30D.Q1 to     R16C26D.A0 all_modules1/sdram_controller1/n368
+CTOF_DEL    ---     0.408     R16C26D.A0 to     R16C26D.F0 all_modules1/sdram_controller1/SLICE_235
+ROUTE         2     1.178     R16C26D.F0 to     R14C20A.A1 all_modules1/sdram_controller1/n9
+CTOF_DEL    ---     0.408     R14C20A.A1 to     R14C20A.F1 all_modules1/sdram_controller1/SLICE_234
+ROUTE        24     2.151     R14C20A.F1 to    R19C29C.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
                   --------
-                   10.678   (23.9% logic, 76.1% route), 5 logic levels.
+                    9.615   (26.6% logic, 73.4% route), 5 logic levels.
 
       Source Clock f/b:
 
    Name    Fanout   Delay (ns)          Site               Resource
 CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
                   --------
                     1.693   (0.0% logic, 100.0% route), 1 logic levels.
 
-      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_131:
+      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_169:
 
    Name    Fanout   Delay (ns)          Site               Resource
 PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
 ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
 CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.560     RPLL.CLKOP to    R15C28A.CLK SD_CLK_c
+ROUTE       196     1.526     RPLL.CLKOP to    R23C28B.CLK SD_CLK_c
                   --------
-                    3.621   (37.9% logic, 62.1% route), 2 logic levels.
+                    3.587   (38.2% logic, 61.8% route), 2 logic levels.
 
       Destination Clock f/b:
 
    Name    Fanout   Delay (ns)          Site               Resource
 CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
-ROUTE       208     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
                   --------
                     1.693   (0.0% logic, 100.0% route), 1 logic levels.
 
-Warning:  78.765MHz is the maximum frequency for this preference.
+
+Error: The following path exceeds requirements by 4.836ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i7  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
+   Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
+
+   Delay:               6.175ns  (50.7% logic, 49.3% route), 8 logic levels.
+
+ Constraint Details:
+
+      6.175ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_13 to all_modules1/sdram_controller1/SLICE_169 exceeds
+      7.500ns delay constraint less
+      6.028ns skew and
+      0.000ns feedback compensation and
+      0.133ns DIN_SET requirement (totaling 1.339ns) by 4.836ns
+
+ Physical Path Details:
+
+      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_13 to all_modules1/sdram_controller1/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.367    R19C29A.CLK to     R19C29A.Q0 all_modules1/sdram_controller1/repeatTimer/SLICE_13 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
+ROUTE         2     0.849     R19C29A.Q0 to     R21C29C.A0 all_modules1/sdram_controller1/repeatTimer/count_7
+C0TOFCO_DE  ---     0.787     R21C29C.A0 to    R21C29C.FCO SLICE_8
+ROUTE         1     0.000    R21C29C.FCO to    R21C29D.FCI all_modules1/sdram_controller1/repeatTimer/n4214
+FCITOFCO_D  ---     0.130    R21C29D.FCI to    R21C29D.FCO SLICE_6
+ROUTE         1     0.000    R21C29D.FCO to    R21C30A.FCI all_modules1/sdram_controller1/repeatTimer/n4215
+FCITOFCO_D  ---     0.130    R21C30A.FCI to    R21C30A.FCO all_modules1/SLICE_1
+ROUTE         1     0.000    R21C30A.FCO to    R21C30B.FCI all_modules1/sdram_controller1/repeatTimer/n4216
+FCITOF1_DE  ---     0.495    R21C30B.FCI to     R21C30B.F1 all_modules1/SLICE_9
+ROUTE         5     0.577     R21C30B.F1 to     R19C30A.D1 all_modules1/sdram_controller1/repeat_tim_flag
+CTOF_DEL    ---     0.408     R19C30A.D1 to     R19C30A.F1 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     0.481     R19C30A.F1 to     R19C30A.D0 all_modules1/sdram_controller1/n4
+CTOF_DEL    ---     0.408     R19C30A.D0 to     R19C30A.F0 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     1.135     R19C30A.F0 to     R23C28B.D0 all_modules1/sdram_controller1/n63
+CTOF_DEL    ---     0.408     R23C28B.D0 to     R23C28B.F0 all_modules1/sdram_controller1/SLICE_169
+ROUTE         1     0.000     R23C28B.F0 to    R23C28B.DI0 all_modules1/sdram_controller1/n4546 (to SD_CLK_c)
+                  --------
+                    6.175   (50.7% logic, 49.3% route), 8 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_13:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
+ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
+CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.560     RPLL.CLKOP to    R18C30D.CLK SD_CLK_c
+REG_DEL     ---     0.367    R18C30D.CLK to     R18C30D.Q1 all_modules1/sdram_controller1/SLICE_130
+ROUTE         7     1.482     R18C30D.Q1 to     R16C26D.A0 all_modules1/sdram_controller1/n368
+CTOF_DEL    ---     0.408     R16C26D.A0 to     R16C26D.F0 all_modules1/sdram_controller1/SLICE_235
+ROUTE         2     1.178     R16C26D.F0 to     R14C20A.A1 all_modules1/sdram_controller1/n9
+CTOF_DEL    ---     0.408     R14C20A.A1 to     R14C20A.F1 all_modules1/sdram_controller1/SLICE_234
+ROUTE        24     2.151     R14C20A.F1 to    R19C29A.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
+                  --------
+                    9.615   (26.6% logic, 73.4% route), 5 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+                  --------
+                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
+ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
+CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.526     RPLL.CLKOP to    R23C28B.CLK SD_CLK_c
+                  --------
+                    3.587   (38.2% logic, 61.8% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+                  --------
+                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 4.816ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i11  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
+   Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
+
+   Delay:               6.155ns  (46.7% logic, 53.3% route), 6 logic levels.
+
+ Constraint Details:
+
+      6.155ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_11 to all_modules1/sdram_controller1/SLICE_169 exceeds
+      7.500ns delay constraint less
+      6.028ns skew and
+      0.000ns feedback compensation and
+      0.133ns DIN_SET requirement (totaling 1.339ns) by 4.816ns
+
+ Physical Path Details:
+
+      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_11 to all_modules1/sdram_controller1/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.367    R19C29C.CLK to     R19C29C.Q0 all_modules1/sdram_controller1/repeatTimer/SLICE_11 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
+ROUTE         2     1.089     R19C29C.Q0 to     R21C30A.A0 all_modules1/sdram_controller1/repeatTimer/count_11
+C0TOFCO_DE  ---     0.787     R21C30A.A0 to    R21C30A.FCO all_modules1/SLICE_1
+ROUTE         1     0.000    R21C30A.FCO to    R21C30B.FCI all_modules1/sdram_controller1/repeatTimer/n4216
+FCITOF1_DE  ---     0.495    R21C30B.FCI to     R21C30B.F1 all_modules1/SLICE_9
+ROUTE         5     0.577     R21C30B.F1 to     R19C30A.D1 all_modules1/sdram_controller1/repeat_tim_flag
+CTOF_DEL    ---     0.408     R19C30A.D1 to     R19C30A.F1 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     0.481     R19C30A.F1 to     R19C30A.D0 all_modules1/sdram_controller1/n4
+CTOF_DEL    ---     0.408     R19C30A.D0 to     R19C30A.F0 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     1.135     R19C30A.F0 to     R23C28B.D0 all_modules1/sdram_controller1/n63
+CTOF_DEL    ---     0.408     R23C28B.D0 to     R23C28B.F0 all_modules1/sdram_controller1/SLICE_169
+ROUTE         1     0.000     R23C28B.F0 to    R23C28B.DI0 all_modules1/sdram_controller1/n4546 (to SD_CLK_c)
+                  --------
+                    6.155   (46.7% logic, 53.3% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
+ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
+CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.560     RPLL.CLKOP to    R18C30D.CLK SD_CLK_c
+REG_DEL     ---     0.367    R18C30D.CLK to     R18C30D.Q1 all_modules1/sdram_controller1/SLICE_130
+ROUTE         7     1.482     R18C30D.Q1 to     R16C26D.A0 all_modules1/sdram_controller1/n368
+CTOF_DEL    ---     0.408     R16C26D.A0 to     R16C26D.F0 all_modules1/sdram_controller1/SLICE_235
+ROUTE         2     1.178     R16C26D.F0 to     R14C20A.A1 all_modules1/sdram_controller1/n9
+CTOF_DEL    ---     0.408     R14C20A.A1 to     R14C20A.F1 all_modules1/sdram_controller1/SLICE_234
+ROUTE        24     2.151     R14C20A.F1 to    R19C29C.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
+                  --------
+                    9.615   (26.6% logic, 73.4% route), 5 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+                  --------
+                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
+ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
+CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.526     RPLL.CLKOP to    R23C28B.CLK SD_CLK_c
+                  --------
+                    3.587   (38.2% logic, 61.8% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+                  --------
+                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 4.733ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i8  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
+   Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
+
+   Delay:               6.072ns  (49.9% logic, 50.1% route), 8 logic levels.
+
+ Constraint Details:
+
+      6.072ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_13 to all_modules1/sdram_controller1/SLICE_169 exceeds
+      7.500ns delay constraint less
+      6.028ns skew and
+      0.000ns feedback compensation and
+      0.133ns DIN_SET requirement (totaling 1.339ns) by 4.733ns
+
+ Physical Path Details:
+
+      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_13 to all_modules1/sdram_controller1/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.367    R19C29A.CLK to     R19C29A.Q1 all_modules1/sdram_controller1/repeatTimer/SLICE_13 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
+ROUTE         2     0.849     R19C29A.Q1 to     R21C29C.A1 all_modules1/sdram_controller1/repeatTimer/count_8
+C1TOFCO_DE  ---     0.684     R21C29C.A1 to    R21C29C.FCO SLICE_8
+ROUTE         1     0.000    R21C29C.FCO to    R21C29D.FCI all_modules1/sdram_controller1/repeatTimer/n4214
+FCITOFCO_D  ---     0.130    R21C29D.FCI to    R21C29D.FCO SLICE_6
+ROUTE         1     0.000    R21C29D.FCO to    R21C30A.FCI all_modules1/sdram_controller1/repeatTimer/n4215
+FCITOFCO_D  ---     0.130    R21C30A.FCI to    R21C30A.FCO all_modules1/SLICE_1
+ROUTE         1     0.000    R21C30A.FCO to    R21C30B.FCI all_modules1/sdram_controller1/repeatTimer/n4216
+FCITOF1_DE  ---     0.495    R21C30B.FCI to     R21C30B.F1 all_modules1/SLICE_9
+ROUTE         5     0.577     R21C30B.F1 to     R19C30A.D1 all_modules1/sdram_controller1/repeat_tim_flag
+CTOF_DEL    ---     0.408     R19C30A.D1 to     R19C30A.F1 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     0.481     R19C30A.F1 to     R19C30A.D0 all_modules1/sdram_controller1/n4
+CTOF_DEL    ---     0.408     R19C30A.D0 to     R19C30A.F0 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     1.135     R19C30A.F0 to     R23C28B.D0 all_modules1/sdram_controller1/n63
+CTOF_DEL    ---     0.408     R23C28B.D0 to     R23C28B.F0 all_modules1/sdram_controller1/SLICE_169
+ROUTE         1     0.000     R23C28B.F0 to    R23C28B.DI0 all_modules1/sdram_controller1/n4546 (to SD_CLK_c)
+                  --------
+                    6.072   (49.9% logic, 50.1% route), 8 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_13:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
+ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
+CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.560     RPLL.CLKOP to    R18C30D.CLK SD_CLK_c
+REG_DEL     ---     0.367    R18C30D.CLK to     R18C30D.Q1 all_modules1/sdram_controller1/SLICE_130
+ROUTE         7     1.482     R18C30D.Q1 to     R16C26D.A0 all_modules1/sdram_controller1/n368
+CTOF_DEL    ---     0.408     R16C26D.A0 to     R16C26D.F0 all_modules1/sdram_controller1/SLICE_235
+ROUTE         2     1.178     R16C26D.F0 to     R14C20A.A1 all_modules1/sdram_controller1/n9
+CTOF_DEL    ---     0.408     R14C20A.A1 to     R14C20A.F1 all_modules1/sdram_controller1/SLICE_234
+ROUTE        24     2.151     R14C20A.F1 to    R19C29A.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
+                  --------
+                    9.615   (26.6% logic, 73.4% route), 5 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+                  --------
+                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
+ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
+CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.526     RPLL.CLKOP to    R23C28B.CLK SD_CLK_c
+                  --------
+                    3.587   (38.2% logic, 61.8% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+                  --------
+                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 4.706ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i9  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
+   Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
+
+   Delay:               6.045ns  (49.7% logic, 50.3% route), 7 logic levels.
+
+ Constraint Details:
+
+      6.045ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_12 to all_modules1/sdram_controller1/SLICE_169 exceeds
+      7.500ns delay constraint less
+      6.028ns skew and
+      0.000ns feedback compensation and
+      0.133ns DIN_SET requirement (totaling 1.339ns) by 4.706ns
+
+ Physical Path Details:
+
+      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_12 to all_modules1/sdram_controller1/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.367    R19C29B.CLK to     R19C29B.Q0 all_modules1/sdram_controller1/repeatTimer/SLICE_12 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
+ROUTE         2     0.849     R19C29B.Q0 to     R21C29D.A0 all_modules1/sdram_controller1/repeatTimer/count_9
+C0TOFCO_DE  ---     0.787     R21C29D.A0 to    R21C29D.FCO SLICE_6
+ROUTE         1     0.000    R21C29D.FCO to    R21C30A.FCI all_modules1/sdram_controller1/repeatTimer/n4215
+FCITOFCO_D  ---     0.130    R21C30A.FCI to    R21C30A.FCO all_modules1/SLICE_1
+ROUTE         1     0.000    R21C30A.FCO to    R21C30B.FCI all_modules1/sdram_controller1/repeatTimer/n4216
+FCITOF1_DE  ---     0.495    R21C30B.FCI to     R21C30B.F1 all_modules1/SLICE_9
+ROUTE         5     0.577     R21C30B.F1 to     R19C30A.D1 all_modules1/sdram_controller1/repeat_tim_flag
+CTOF_DEL    ---     0.408     R19C30A.D1 to     R19C30A.F1 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     0.481     R19C30A.F1 to     R19C30A.D0 all_modules1/sdram_controller1/n4
+CTOF_DEL    ---     0.408     R19C30A.D0 to     R19C30A.F0 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     1.135     R19C30A.F0 to     R23C28B.D0 all_modules1/sdram_controller1/n63
+CTOF_DEL    ---     0.408     R23C28B.D0 to     R23C28B.F0 all_modules1/sdram_controller1/SLICE_169
+ROUTE         1     0.000     R23C28B.F0 to    R23C28B.DI0 all_modules1/sdram_controller1/n4546 (to SD_CLK_c)
+                  --------
+                    6.045   (49.7% logic, 50.3% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
+ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
+CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.560     RPLL.CLKOP to    R18C30D.CLK SD_CLK_c
+REG_DEL     ---     0.367    R18C30D.CLK to     R18C30D.Q1 all_modules1/sdram_controller1/SLICE_130
+ROUTE         7     1.482     R18C30D.Q1 to     R16C26D.A0 all_modules1/sdram_controller1/n368
+CTOF_DEL    ---     0.408     R16C26D.A0 to     R16C26D.F0 all_modules1/sdram_controller1/SLICE_235
+ROUTE         2     1.178     R16C26D.F0 to     R14C20A.A1 all_modules1/sdram_controller1/n9
+CTOF_DEL    ---     0.408     R14C20A.A1 to     R14C20A.F1 all_modules1/sdram_controller1/SLICE_234
+ROUTE        24     2.151     R14C20A.F1 to    R19C29B.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
+                  --------
+                    9.615   (26.6% logic, 73.4% route), 5 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+                  --------
+                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
+ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
+CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.526     RPLL.CLKOP to    R23C28B.CLK SD_CLK_c
+                  --------
+                    3.587   (38.2% logic, 61.8% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+                  --------
+                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
+
+
+Error: The following path exceeds requirements by 4.603ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              all_modules1/sdram_controller1/repeatTimer/count__i10  (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14 +)
+   Destination:    FF         Data in        all_modules1/sdram_controller1/state_FSM_i1  (to SD_CLK_c +)
+
+   Delay:               5.942ns  (48.8% logic, 51.2% route), 7 logic levels.
+
+ Constraint Details:
+
+      5.942ns physical path delay all_modules1/sdram_controller1/repeatTimer/SLICE_12 to all_modules1/sdram_controller1/SLICE_169 exceeds
+      7.500ns delay constraint less
+      6.028ns skew and
+      0.000ns feedback compensation and
+      0.133ns DIN_SET requirement (totaling 1.339ns) by 4.603ns
+
+ Physical Path Details:
+
+      Data path all_modules1/sdram_controller1/repeatTimer/SLICE_12 to all_modules1/sdram_controller1/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.367    R19C29B.CLK to     R19C29B.Q1 all_modules1/sdram_controller1/repeatTimer/SLICE_12 (from all_modules1/sdram_controller1/delayTimer/count[2]_derived_14)
+ROUTE         2     0.849     R19C29B.Q1 to     R21C29D.A1 all_modules1/sdram_controller1/repeatTimer/count_10
+C1TOFCO_DE  ---     0.684     R21C29D.A1 to    R21C29D.FCO SLICE_6
+ROUTE         1     0.000    R21C29D.FCO to    R21C30A.FCI all_modules1/sdram_controller1/repeatTimer/n4215
+FCITOFCO_D  ---     0.130    R21C30A.FCI to    R21C30A.FCO all_modules1/SLICE_1
+ROUTE         1     0.000    R21C30A.FCO to    R21C30B.FCI all_modules1/sdram_controller1/repeatTimer/n4216
+FCITOF1_DE  ---     0.495    R21C30B.FCI to     R21C30B.F1 all_modules1/SLICE_9
+ROUTE         5     0.577     R21C30B.F1 to     R19C30A.D1 all_modules1/sdram_controller1/repeat_tim_flag
+CTOF_DEL    ---     0.408     R19C30A.D1 to     R19C30A.F1 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     0.481     R19C30A.F1 to     R19C30A.D0 all_modules1/sdram_controller1/n4
+CTOF_DEL    ---     0.408     R19C30A.D0 to     R19C30A.F0 all_modules1/sdram_controller1/SLICE_237
+ROUTE         1     1.135     R19C30A.F0 to     R23C28B.D0 all_modules1/sdram_controller1/n63
+CTOF_DEL    ---     0.408     R23C28B.D0 to     R23C28B.F0 all_modules1/sdram_controller1/SLICE_169
+ROUTE         1     0.000     R23C28B.F0 to    R23C28B.DI0 all_modules1/sdram_controller1/n4546 (to SD_CLK_c)
+                  --------
+                    5.942   (48.8% logic, 51.2% route), 7 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk to all_modules1/sdram_controller1/repeatTimer/SLICE_12:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
+ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
+CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.560     RPLL.CLKOP to    R18C30D.CLK SD_CLK_c
+REG_DEL     ---     0.367    R18C30D.CLK to     R18C30D.Q1 all_modules1/sdram_controller1/SLICE_130
+ROUTE         7     1.482     R18C30D.Q1 to     R16C26D.A0 all_modules1/sdram_controller1/n368
+CTOF_DEL    ---     0.408     R16C26D.A0 to     R16C26D.F0 all_modules1/sdram_controller1/SLICE_235
+ROUTE         2     1.178     R16C26D.F0 to     R14C20A.A1 all_modules1/sdram_controller1/n9
+CTOF_DEL    ---     0.408     R14C20A.A1 to     R14C20A.F1 all_modules1/sdram_controller1/SLICE_234
+ROUTE        24     2.151     R14C20A.F1 to    R19C29B.CLK all_modules1/sdram_controller1/delayTimer/count[2]_derived_14
+                  --------
+                    9.615   (26.6% logic, 73.4% route), 5 logic levels.
+
+      Source Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+                  --------
+                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
+
+      Destination Clock Path clk to all_modules1/sdram_controller1/SLICE_169:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+PADI_DEL    ---     1.372        105.PAD to      105.PADDI clk
+ROUTE         1     0.689      105.PADDI to      RPLL.CLKI clk_c
+CLKI2OP_DE  ---     0.000      RPLL.CLKI to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.526     RPLL.CLKOP to    R23C28B.CLK SD_CLK_c
+                  --------
+                    3.587   (38.2% logic, 61.8% route), 2 logic levels.
+
+      Destination Clock f/b:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+CLKFB2OP_D  ---     0.000     RPLL.CLKFB to     RPLL.CLKOP clk_multiply/PLLInst_0
+ROUTE       196     1.693     RPLL.CLKOP to     RPLL.CLKFB SD_CLK_c
+                  --------
+                    1.693   (0.0% logic, 100.0% route), 1 logic levels.
+
+Warning:  77.622MHz is the maximum frequency for this preference.
 
 
 ================================================================================
@@ -913,7 +933,7 @@ Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
 FREQUENCY NET "SD_CLK_c" 133.333333 MHz |             |             |
-;                                       |  133.333 MHz|   78.765 MHz|   7 *
+;                                       |  133.333 MHz|   77.622 MHz|  10 *
                                         |             |             |
 FREQUENCY NET "clk_c" 50.000000 MHz ;   |            -|            -|   0  
                                         |             |             |
@@ -925,37 +945,52 @@ FREQUENCY NET "clk_c" 50.000000 MHz ;   |            -|            -|   0
 ----------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 ----------------------------------------------------------------------------
-<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/uart_to_sdram1/n4677">all_modules1/uart_to_sdram1/n4677</a>       |       1|     359|     64.92%
+all_modules1/sdram_controller1/refreshTi|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/refreshTimer/n5">mer/n5</a>                                  |       1|     134|     60.09%
                                         |        |        |
-<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/uart_to_sdram1/n4676">all_modules1/uart_to_sdram1/n4676</a>       |       1|     352|     63.65%
+all_modules1/sdram_controller1/refreshTi|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/refreshTimer/n9_adj_888">mer/n9_adj_888</a>                          |       1|     134|     60.09%
                                         |        |        |
-<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/uart_to_sdram1/n4678">all_modules1/uart_to_sdram1/n4678</a>       |       1|     346|     62.57%
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=refresh_tim_flag">refresh_tim_flag</a>                        |       3|     134|     60.09%
                                         |        |        |
-<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/uart_to_sdram1/n4675">all_modules1/uart_to_sdram1/n4675</a>       |       1|     326|     58.95%
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=SD_CLK_c_enable_117">SD_CLK_c_enable_117</a>                     |      13|     113|     50.67%
                                         |        |        |
-<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/uart_to_sdram1/n4679">all_modules1/uart_to_sdram1/n4679</a>       |       1|     317|     57.32%
+all_modules1/sdram_controller1/refreshTi|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/refreshTimer/n12_adj_892">mer/n12_adj_892</a>                         |       1|      78|     34.98%
                                         |        |        |
-<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/uts_ack1">all_modules1/uts_ack1</a>                   |       5|     300|     54.25%
+all_modules1/sdram_controller1/refreshTi|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/refreshTimer/n11_adj_891">mer/n11_adj_891</a>                         |       1|      45|     20.18%
                                         |        |        |
-<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/uart_to_sdram1/n4680">all_modules1/uart_to_sdram1/n4680</a>       |       1|     289|     52.26%
+all_modules1/sdram_controller1/initTimer|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/initTimer/n10">/n10</a>                                    |       1|      34|     15.25%
                                         |        |        |
-<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/n4060">all_modules1/n4060</a>                      |       4|     265|     47.92%
+all_modules1/sdram_controller1/initTimer|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/initTimer/n24">/n24</a>                                    |       1|      34|     15.25%
                                         |        |        |
-<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/uart_to_sdram1/n4681">all_modules1/uart_to_sdram1/n4681</a>       |       1|     254|     45.93%
+all_modules1/sdram_controller1/initTimer|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/initTimer/n30">/n30</a>                                    |       3|      34|     15.25%
                                         |        |        |
-<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/uart_to_sdram1/n4682">all_modules1/uart_to_sdram1/n4682</a>       |       1|     212|     38.34%
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/n4546">all_modules1/sdram_controller1/n4546</a>    |       1|      33|     14.80%
                                         |        |        |
-<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/uart_to_sdram1/n4683">all_modules1/uart_to_sdram1/n4683</a>       |       1|     172|     31.10%
+all_modules1/sdram_controller1/repeat_ti|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/repeat_tim_flag">m_flag</a>                                  |       5|      33|     14.80%
                                         |        |        |
-all_modules1/sdram_controller1/arbBank/n|        |        |
-<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/arbBank/n5527">5527</a>                                    |       1|     125|     22.60%
+all_modules1/sdram_controller1/initTimer|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/initTimer/n12">/n12</a>                                    |       1|      32|     14.35%
                                         |        |        |
-all_modules1/sdram_controller1/arbBank/n|        |        |
-<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/arbBank/n5524">5524</a>                                    |       1|     124|     22.42%
+all_modules1/sdram_controller1/refreshTi|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/refreshTimer/n10">mer/n10</a>                                 |       1|      32|     14.35%
                                         |        |        |
-<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/uart_to_sdram1/n4684">all_modules1/uart_to_sdram1/n4684</a>       |       1|     119|     21.52%
+all_modules1/sdram_controller1/repeatTim|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/repeatTimer/n4216">er/n4216</a>                                |       1|      30|     13.45%
                                         |        |        |
-<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/uart_to_sdram1/n4685">all_modules1/uart_to_sdram1/n4685</a>       |       1|      61|     11.03%
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/n4836">all_modules1/sdram_controller1/n4836</a>    |       2|      28|     12.56%
+                                        |        |        |
+all_modules1/sdram_controller1/repeatTim|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/repeatTimer/n4215">er/n4215</a>                                |       1|      24|     10.76%
+                                        |        |        |
+all_modules1/sdram_controller1/SD_CLK_c_|        |        |
+<a href="bali://?app=PHYSICAL_VIEW&amp;sig=LocateNet&amp;args=all_modules1/sdram_controller1/SD_CLK_c_enable_68">enable_68</a>                               |       9|      24|     10.76%
                                         |        |        |
 ----------------------------------------------------------------------------
 
@@ -965,46 +1000,46 @@ all_modules1/sdram_controller1/arbBank/n|        |        |
 
 Found 3 clocks:
 
-Clock Domain: all_modules1/uart_to_sdram1/data_count_clk   Source: all_modules1/SLICE_207.Q0   Loads: 14
+Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1   Loads: 24
    No transfer within this clock domain is found
 
 Clock Domain: clk_c   Source: clk.PAD   Loads: 1
    No transfer within this clock domain is found
 
-Clock Domain: SD_CLK_c   Source: clk_multiply/PLLInst_0.CLKOP   Loads: 208
+Clock Domain: SD_CLK_c   Source: clk_multiply/PLLInst_0.CLKOP   Loads: 196
    Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;
 
    Data transfers from:
-   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_278.F1
-      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 3
-
-   Clock Domain: all_modules1/uart_to_sdram1/data_count_clk   Source: all_modules1/SLICE_207.Q0
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
       Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
 
-   Clock Domain: all_modules1/uart_to_sdram1/data_count_clk   Source: all_modules1/SLICE_207.Q0
-      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 15
-
-   Clock Domain: all_modules1/uart_to_sdram1/data_count_clk   Source: all_modules1/SLICE_207.Q0
-      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 4
-
-   Clock Domain: all_modules1/uart_to_sdram1/data_count_clk   Source: all_modules1/SLICE_207.Q0
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
       Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
 
-   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_278.F1
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
+
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
+
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
       Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 1
+
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
 
 
 <A name="ptwr_set_ts"></A><B><U><big>Timing summary (Setup):</big></U></B>
 ---------------
 
-Timing errors: 553  Score: 399554
-Cumulative negative slack: 399554
+Timing errors: 223  Score: 255987
+Cumulative negative slack: 255987
 
-Constraints cover 6009 paths, 2 nets, and 1853 connections (84.96% coverage)
+Constraints cover 3525 paths, 2 nets, and 1675 connections (85.81% coverage)
 
 --------------------------------------------------------------------------------
 <A name="Par_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.10.0.111.2</big></U></B>
-Thu May 30 23:02:20 2019
+Sun May 26 19:32:34 2019
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -1023,7 +1058,7 @@ Report level:    verbose report, limited to 10 items per preference
 
 <A name="ptwr_hold_ps"></A><B><U><big>Preference Summary</big></U></B>
 
-<LI><A href='#par_twr_pref_1_0' Target='right'>FREQUENCY NET "SD_CLK_c" 133.333333 MHz (0 errors)</A></LI>            4096 items scored, 0 timing errors detected.
+<LI><A href='#par_twr_pref_1_0' Target='right'>FREQUENCY NET "SD_CLK_c" 133.333333 MHz (0 errors)</A></LI>            3195 items scored, 0 timing errors detected.
 
 <LI><A href='#par_twr_pref_1_1' Target='right'>FREQUENCY NET "clk_c" 50.000000 MHz (0 errors)</A></LI>            0 items scored, 0 timing errors detected.
 
@@ -1035,439 +1070,468 @@ BLOCK RESETPATHS
 
 ================================================================================
 <A name="par_twr_pref_1_0"></A>Preference: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;
-            4096 items scored, 0 timing errors detected.
+            3195 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 0.219ns
+Passed: The following path meets requirements by 0.137ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              uart1/DATo_i0_i6  (from SD_CLK_c +)
-   Destination:    DP8KC      Port           all_modules1/fifo1/m_RAM0(ASIC)  (to SD_CLK_c +)
+   Source:         FF         Q              uart1/DATo_i0_i3  (from SD_CLK_c +)
+   Destination:    FF         Data in        all_modules1/fifo1/m_RAM1/RAM1  (to SD_CLK_c +)
+                   FF                        all_modules1/fifo1/m_RAM1/RAM1
 
-   Delay:               0.324ns  (41.0% logic, 59.0% route), 1 logic levels.
+   Delay:               0.268ns  (49.6% logic, 50.4% route), 2 logic levels.
 
  Constraint Details:
 
-      0.324ns physical path delay SLICE_105 to all_modules1/fifo1/m_RAM0 meets
-      0.051ns DATA_HLD and
+      0.268ns physical path delay SLICE_6 to all_modules1/fifo1/SLICE_56 meets
+      0.131ns WD_HLD and
       0.000ns delay constraint less
-     -0.054ns skew requirement (totaling 0.105ns) by 0.219ns
+      0.000ns skew requirement (totaling 0.131ns) by 0.137ns
 
  Physical Path Details:
 
-      Data path SLICE_105 to all_modules1/fifo1/m_RAM0:
+      Data path SLICE_6 to all_modules1/fifo1/SLICE_56:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R14C32C.CLK to     R14C32C.Q0 SLICE_105 (from SD_CLK_c)
-ROUTE         1     0.191     R14C32C.Q0 to *R_R13C30.DIA6 rx_dat_6 (to SD_CLK_c)
+REG_DEL     ---     0.133    R21C29D.CLK to     R21C29D.Q1 SLICE_6 (from SD_CLK_c)
+ROUTE         1     0.135     R21C29D.Q1 to     R22C29C.D1 rx_dat_3
+ZERO_DEL    ---     0.000     R22C29C.D1 to   R22C29C.WDO3 all_modules1/fifo1/m_RAM1/SLICE_54
+ROUTE         1     0.000   R22C29C.WDO3 to    R22C29B.WD1 all_modules1/fifo1/m_RAM1/WD3_INT (to SD_CLK_c)
                   --------
-                    0.324   (41.0% logic, 59.0% route), 1 logic levels.
+                    0.268   (49.6% logic, 50.4% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clk_multiply/PLLInst_0 to SLICE_105:
+      Source Clock Path clk_multiply/PLLInst_0 to SLICE_6:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R14C32C.CLK SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R21C29D.CLK SD_CLK_c
                   --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/m_RAM0:
+      Destination Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_56:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.761     RPLL.CLKOP to *R_R13C30.CLKA SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R22C29B.WCK SD_CLK_c
                   --------
-                    0.761   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 0.219ns
+Passed: The following path meets requirements by 0.140ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              all_modules1/fifo2/o_addr_812__i4  (from SD_CLK_c +)
-   Destination:    DP8KC      Port           all_modules1/fifo2/m_RAM0(ASIC)  (to SD_CLK_c +)
+   Source:         FF         Q              all_modules1/fifo1/i_addr_i0_i3  (from SD_CLK_c +)
+   Destination:    FF         Data in        all_modules1/fifo1/m_RAM0/RAM0  (to SD_CLK_c +)
+                   FF                        all_modules1/fifo1/m_RAM0/RAM0
 
-   Delay:               0.345ns  (38.6% logic, 61.4% route), 1 logic levels.
+   Delay:               0.271ns  (49.1% logic, 50.9% route), 2 logic levels.
 
  Constraint Details:
 
-      0.345ns physical path delay all_modules1/fifo2/SLICE_87 to all_modules1/fifo2/m_RAM0 meets
-      0.072ns ADDR_HLD and
+      0.271ns physical path delay all_modules1/fifo1/SLICE_71 to all_modules1/fifo1/SLICE_58 meets
+      0.131ns WAD_HLD and
       0.000ns delay constraint less
-     -0.054ns skew requirement (totaling 0.126ns) by 0.219ns
+      0.000ns skew requirement (totaling 0.131ns) by 0.140ns
 
  Physical Path Details:
 
-      Data path all_modules1/fifo2/SLICE_87 to all_modules1/fifo2/m_RAM0:
+      Data path all_modules1/fifo1/SLICE_71 to all_modules1/fifo1/SLICE_58:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R12C25C.CLK to     R12C25C.Q1 all_modules1/fifo2/SLICE_87 (from SD_CLK_c)
-ROUTE         4     0.212     R12C25C.Q1 to *R_R13C24.ADB7 all_modules1/fifo2/o_addr_4 (to SD_CLK_c)
+REG_DEL     ---     0.133    R24C29A.CLK to     R24C29A.Q0 all_modules1/fifo1/SLICE_71 (from SD_CLK_c)
+ROUTE         5     0.138     R24C29A.Q0 to     R23C29C.D0 all_modules1/fifo1/i_addr_3
+ZERO_DEL    ---     0.000     R23C29C.D0 to  R23C29C.WADO3 all_modules1/fifo1/m_RAM0/SLICE_57
+ROUTE         2     0.000  R23C29C.WADO3 to   R23C29A.WAD3 all_modules1/fifo1/m_RAM0/WAD3_INT (to SD_CLK_c)
                   --------
-                    0.345   (38.6% logic, 61.4% route), 1 logic levels.
+                    0.271   (49.1% logic, 50.9% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo2/SLICE_87:
+      Source Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_71:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R12C25C.CLK SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R24C29A.CLK SD_CLK_c
                   --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo2/m_RAM0:
+      Destination Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_58:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.761     RPLL.CLKOP to *R_R13C24.CLKB SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R23C29A.WCK SD_CLK_c
                   --------
-                    0.761   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 0.235ns
+Passed: The following path meets requirements by 0.140ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              uart1/DATo_i0_i7  (from SD_CLK_c +)
-   Destination:    DP8KC      Port           all_modules1/fifo1/m_RAM0(ASIC)  (to SD_CLK_c +)
+   Source:         FF         Q              all_modules1/fifo1/i_addr_i0_i3  (from SD_CLK_c +)
+   Destination:    FF         Data in        all_modules1/fifo1/m_RAM0/RAM1  (to SD_CLK_c +)
+                   FF                        all_modules1/fifo1/m_RAM0/RAM1
 
-   Delay:               0.340ns  (39.1% logic, 60.9% route), 1 logic levels.
+   Delay:               0.271ns  (49.1% logic, 50.9% route), 2 logic levels.
 
  Constraint Details:
 
-      0.340ns physical path delay SLICE_105 to all_modules1/fifo1/m_RAM0 meets
-      0.051ns DATA_HLD and
+      0.271ns physical path delay all_modules1/fifo1/SLICE_71 to all_modules1/fifo1/SLICE_59 meets
+      0.131ns WAD_HLD and
       0.000ns delay constraint less
-     -0.054ns skew requirement (totaling 0.105ns) by 0.235ns
+      0.000ns skew requirement (totaling 0.131ns) by 0.140ns
 
  Physical Path Details:
 
-      Data path SLICE_105 to all_modules1/fifo1/m_RAM0:
+      Data path all_modules1/fifo1/SLICE_71 to all_modules1/fifo1/SLICE_59:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R14C32C.CLK to     R14C32C.Q1 SLICE_105 (from SD_CLK_c)
-ROUTE         1     0.207     R14C32C.Q1 to *R_R13C30.DIA7 rx_dat_7 (to SD_CLK_c)
+REG_DEL     ---     0.133    R24C29A.CLK to     R24C29A.Q0 all_modules1/fifo1/SLICE_71 (from SD_CLK_c)
+ROUTE         5     0.138     R24C29A.Q0 to     R23C29C.D0 all_modules1/fifo1/i_addr_3
+ZERO_DEL    ---     0.000     R23C29C.D0 to  R23C29C.WADO3 all_modules1/fifo1/m_RAM0/SLICE_57
+ROUTE         2     0.000  R23C29C.WADO3 to   R23C29B.WAD3 all_modules1/fifo1/m_RAM0/WAD3_INT (to SD_CLK_c)
                   --------
-                    0.340   (39.1% logic, 60.9% route), 1 logic levels.
+                    0.271   (49.1% logic, 50.9% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clk_multiply/PLLInst_0 to SLICE_105:
+      Source Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_71:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R14C32C.CLK SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R24C29A.CLK SD_CLK_c
                   --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/m_RAM0:
+      Destination Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_59:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.761     RPLL.CLKOP to *R_R13C30.CLKA SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R23C29B.WCK SD_CLK_c
                   --------
-                    0.761   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 0.304ns
+Passed: The following path meets requirements by 0.141ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              all_modules1/uart_to_sdram1/state_FSM_i5  (from SD_CLK_c +)
-   Destination:    FF         Data in        all_modules1/uart_to_sdram1/state_FSM_i6  (to SD_CLK_c +)
+   Source:         FF         Q              all_modules1/fifo2/i_addr_i0_i3  (from SD_CLK_c +)
+   Destination:    FF         Data in        all_modules1/fifo2/m_RAM1/RAM0  (to SD_CLK_c +)
+                   FF                        all_modules1/fifo2/m_RAM1/RAM0
 
-   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+   Delay:               0.272ns  (48.9% logic, 51.1% route), 2 logic levels.
 
  Constraint Details:
 
-      0.285ns physical path delay SLICE_267 to SLICE_267 meets
-     -0.019ns M_HLD and
+      0.272ns physical path delay all_modules1/fifo2/SLICE_76 to all_modules1/fifo2/SLICE_49 meets
+      0.131ns WAD_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+      0.000ns skew requirement (totaling 0.131ns) by 0.141ns
 
  Physical Path Details:
 
-      Data path SLICE_267 to SLICE_267:
+      Data path all_modules1/fifo2/SLICE_76 to all_modules1/fifo2/SLICE_49:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R15C29D.CLK to     R15C29D.Q0 SLICE_267 (from SD_CLK_c)
-ROUTE         1     0.152     R15C29D.Q0 to     R15C29D.M1 all_modules1/uart_to_sdram1/n145 (to SD_CLK_c)
+REG_DEL     ---     0.133    R21C33C.CLK to     R21C33C.Q0 all_modules1/fifo2/SLICE_76 (from SD_CLK_c)
+ROUTE         5     0.139     R21C33C.Q0 to     R22C33C.D0 all_modules1/fifo2/i_addr_3
+ZERO_DEL    ---     0.000     R22C33C.D0 to  R22C33C.WADO3 all_modules1/fifo2/m_RAM1/SLICE_48
+ROUTE         2     0.000  R22C33C.WADO3 to   R22C33A.WAD3 all_modules1/fifo2/m_RAM1/WAD3_INT (to SD_CLK_c)
                   --------
-                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+                    0.272   (48.9% logic, 51.1% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clk_multiply/PLLInst_0 to SLICE_267:
+      Source Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo2/SLICE_76:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R15C29D.CLK SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R21C33C.CLK SD_CLK_c
                   --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clk_multiply/PLLInst_0 to SLICE_267:
+      Destination Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo2/SLICE_49:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R15C29D.CLK SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R22C33A.WCK SD_CLK_c
                   --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 0.304ns
+Passed: The following path meets requirements by 0.141ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              all_modules1/fifo1/s_stb_33  (from SD_CLK_c +)
-   Destination:    FF         Data in        all_modules1/uart_to_sdram1/state_FSM_i7  (to SD_CLK_c +)
+   Source:         FF         Q              all_modules1/fifo2/i_addr_i0_i3  (from SD_CLK_c +)
+   Destination:    FF         Data in        all_modules1/fifo2/m_RAM1/RAM1  (to SD_CLK_c +)
+                   FF                        all_modules1/fifo2/m_RAM1/RAM1
 
-   Delay:               0.280ns  (47.5% logic, 52.5% route), 1 logic levels.
-
- Constraint Details:
-
-      0.280ns physical path delay all_modules1/fifo1/SLICE_143 to all_modules1/SLICE_289 meets
-     -0.024ns CE_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.024ns) by 0.304ns
-
- Physical Path Details:
-
-      Data path all_modules1/fifo1/SLICE_143 to all_modules1/SLICE_289:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R15C30C.CLK to     R15C30C.Q0 all_modules1/fifo1/SLICE_143 (from SD_CLK_c)
-ROUTE        13     0.147     R15C30C.Q0 to     R15C30A.CE all_modules1/rx_stb1 (to SD_CLK_c)
-                  --------
-                    0.280   (47.5% logic, 52.5% route), 1 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_143:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R15C30C.CLK SD_CLK_c
-                  --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path clk_multiply/PLLInst_0 to all_modules1/SLICE_289:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R15C30A.CLK SD_CLK_c
-                  --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.304ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              uart_tx1/SMPL_61  (from SD_CLK_c +)
-   Destination:    FF         Data in        uart_tx1/FSM_FSM_i9  (to SD_CLK_c +)
-                   FF                        uart_tx1/FSM_FSM_i10
-
-   Delay:               0.280ns  (47.5% logic, 52.5% route), 1 logic levels.
+   Delay:               0.272ns  (48.9% logic, 51.1% route), 2 logic levels.
 
  Constraint Details:
 
-      0.280ns physical path delay uart_tx1/SLICE_248 to uart_tx1/SLICE_243 meets
-     -0.024ns CE_HLD and
+      0.272ns physical path delay all_modules1/fifo2/SLICE_76 to all_modules1/fifo2/SLICE_50 meets
+      0.131ns WAD_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.024ns) by 0.304ns
+      0.000ns skew requirement (totaling 0.131ns) by 0.141ns
 
  Physical Path Details:
 
-      Data path uart_tx1/SLICE_248 to uart_tx1/SLICE_243:
+      Data path all_modules1/fifo2/SLICE_76 to all_modules1/fifo2/SLICE_50:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R18C25C.CLK to     R18C25C.Q0 uart_tx1/SLICE_248 (from SD_CLK_c)
-ROUTE         7     0.147     R18C25C.Q0 to     R18C25D.CE uart_tx1/SMPL (to SD_CLK_c)
+REG_DEL     ---     0.133    R21C33C.CLK to     R21C33C.Q0 all_modules1/fifo2/SLICE_76 (from SD_CLK_c)
+ROUTE         5     0.139     R21C33C.Q0 to     R22C33C.D0 all_modules1/fifo2/i_addr_3
+ZERO_DEL    ---     0.000     R22C33C.D0 to  R22C33C.WADO3 all_modules1/fifo2/m_RAM1/SLICE_48
+ROUTE         2     0.000  R22C33C.WADO3 to   R22C33B.WAD3 all_modules1/fifo2/m_RAM1/WAD3_INT (to SD_CLK_c)
                   --------
-                    0.280   (47.5% logic, 52.5% route), 1 logic levels.
+                    0.272   (48.9% logic, 51.1% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clk_multiply/PLLInst_0 to uart_tx1/SLICE_248:
+      Source Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo2/SLICE_76:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R18C25C.CLK SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R21C33C.CLK SD_CLK_c
                   --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clk_multiply/PLLInst_0 to uart_tx1/SLICE_243:
+      Destination Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo2/SLICE_50:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R18C25D.CLK SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R22C33B.WCK SD_CLK_c
                   --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 0.305ns
+Passed: The following path meets requirements by 0.150ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         FF         Q              all_modules1/fifo1/i_addr_i0_i2  (from SD_CLK_c +)
-   Destination:    DP8KC      Port           all_modules1/fifo1/m_RAM0(ASIC)  (to SD_CLK_c +)
+   Destination:    FF         Data in        all_modules1/fifo1/m_RAM0/RAM0  (to SD_CLK_c +)
+                   FF                        all_modules1/fifo1/m_RAM0/RAM0
 
-   Delay:               0.411ns  (32.4% logic, 67.6% route), 1 logic levels.
+   Delay:               0.281ns  (47.3% logic, 52.7% route), 2 logic levels.
 
  Constraint Details:
 
-      0.411ns physical path delay all_modules1/fifo1/SLICE_102 to all_modules1/fifo1/m_RAM0 meets
-      0.052ns ADDR_HLD and
+      0.281ns physical path delay all_modules1/fifo1/SLICE_70 to all_modules1/fifo1/SLICE_58 meets
+      0.131ns WAD_HLD and
       0.000ns delay constraint less
-     -0.054ns skew requirement (totaling 0.106ns) by 0.305ns
+      0.000ns skew requirement (totaling 0.131ns) by 0.150ns
 
  Physical Path Details:
 
-      Data path all_modules1/fifo1/SLICE_102 to all_modules1/fifo1/m_RAM0:
+      Data path all_modules1/fifo1/SLICE_70 to all_modules1/fifo1/SLICE_58:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R14C33B.CLK to     R14C33B.Q1 all_modules1/fifo1/SLICE_102 (from SD_CLK_c)
-ROUTE         3     0.278     R14C33B.Q1 to *R_R13C30.ADA5 all_modules1/fifo1/i_addr_2 (to SD_CLK_c)
+REG_DEL     ---     0.133    R24C29C.CLK to     R24C29C.Q1 all_modules1/fifo1/SLICE_70 (from SD_CLK_c)
+ROUTE         7     0.148     R24C29C.Q1 to     R23C29C.C0 all_modules1/fifo1/i_addr_2
+ZERO_DEL    ---     0.000     R23C29C.C0 to  R23C29C.WADO2 all_modules1/fifo1/m_RAM0/SLICE_57
+ROUTE         2     0.000  R23C29C.WADO2 to   R23C29A.WAD2 all_modules1/fifo1/m_RAM0/WAD2_INT (to SD_CLK_c)
                   --------
-                    0.411   (32.4% logic, 67.6% route), 1 logic levels.
+                    0.281   (47.3% logic, 52.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_102:
+      Source Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_70:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R14C33B.CLK SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R24C29C.CLK SD_CLK_c
                   --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/m_RAM0:
+      Destination Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_58:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.761     RPLL.CLKOP to *R_R13C30.CLKA SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R23C29A.WCK SD_CLK_c
                   --------
-                    0.761   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 0.306ns
+Passed: The following path meets requirements by 0.150ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              uart1/FSM_FSM_i6  (from SD_CLK_c +)
-   Destination:    FF         Data in        uart1/FSM_FSM_i5  (to SD_CLK_c +)
+   Source:         FF         Q              all_modules1/fifo1/i_addr_i0_i2  (from SD_CLK_c +)
+   Destination:    FF         Data in        all_modules1/fifo1/m_RAM1/RAM0  (to SD_CLK_c +)
+                   FF                        all_modules1/fifo1/m_RAM1/RAM0
 
-   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+   Delay:               0.281ns  (47.3% logic, 52.7% route), 2 logic levels.
 
  Constraint Details:
 
-      0.287ns physical path delay SLICE_107 to SLICE_107 meets
-     -0.019ns M_HLD and
+      0.281ns physical path delay all_modules1/fifo1/SLICE_70 to all_modules1/fifo1/SLICE_55 meets
+      0.131ns WAD_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+      0.000ns skew requirement (totaling 0.131ns) by 0.150ns
 
  Physical Path Details:
 
-      Data path SLICE_107 to SLICE_107:
+      Data path all_modules1/fifo1/SLICE_70 to all_modules1/fifo1/SLICE_55:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R15C33C.CLK to     R15C33C.Q1 SLICE_107 (from SD_CLK_c)
-ROUTE         4     0.154     R15C33C.Q1 to     R15C33C.M0 uart1/FSM_7__N_55 (to SD_CLK_c)
+REG_DEL     ---     0.133    R24C29C.CLK to     R24C29C.Q1 all_modules1/fifo1/SLICE_70 (from SD_CLK_c)
+ROUTE         7     0.148     R24C29C.Q1 to     R22C29C.C0 all_modules1/fifo1/i_addr_2
+ZERO_DEL    ---     0.000     R22C29C.C0 to  R22C29C.WADO2 all_modules1/fifo1/m_RAM1/SLICE_54
+ROUTE         2     0.000  R22C29C.WADO2 to   R22C29A.WAD2 all_modules1/fifo1/m_RAM1/WAD2_INT (to SD_CLK_c)
                   --------
-                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+                    0.281   (47.3% logic, 52.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clk_multiply/PLLInst_0 to SLICE_107:
+      Source Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_70:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R15C33C.CLK SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R24C29C.CLK SD_CLK_c
                   --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clk_multiply/PLLInst_0 to SLICE_107:
+      Destination Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_55:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R15C33C.CLK SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R22C29A.WCK SD_CLK_c
                   --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 0.306ns
+Passed: The following path meets requirements by 0.150ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              uart_tx1/FSM_FSM_i8  (from SD_CLK_c +)
-   Destination:    FF         Data in        uart_tx1/FSM_FSM_i7  (to SD_CLK_c +)
+   Source:         FF         Q              all_modules1/fifo1/i_addr_i0_i2  (from SD_CLK_c +)
+   Destination:    FF         Data in        all_modules1/fifo1/m_RAM0/RAM1  (to SD_CLK_c +)
+                   FF                        all_modules1/fifo1/m_RAM0/RAM1
 
-   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+   Delay:               0.281ns  (47.3% logic, 52.7% route), 2 logic levels.
 
  Constraint Details:
 
-      0.287ns physical path delay SLICE_244 to SLICE_244 meets
-     -0.019ns M_HLD and
+      0.281ns physical path delay all_modules1/fifo1/SLICE_70 to all_modules1/fifo1/SLICE_59 meets
+      0.131ns WAD_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+      0.000ns skew requirement (totaling 0.131ns) by 0.150ns
 
  Physical Path Details:
 
-      Data path SLICE_244 to SLICE_244:
+      Data path all_modules1/fifo1/SLICE_70 to all_modules1/fifo1/SLICE_59:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R16C27C.CLK to     R16C27C.Q0 SLICE_244 (from SD_CLK_c)
-ROUTE         2     0.154     R16C27C.Q0 to     R16C27C.M1 uart_tx1/FSM_7__N_888 (to SD_CLK_c)
+REG_DEL     ---     0.133    R24C29C.CLK to     R24C29C.Q1 all_modules1/fifo1/SLICE_70 (from SD_CLK_c)
+ROUTE         7     0.148     R24C29C.Q1 to     R23C29C.C0 all_modules1/fifo1/i_addr_2
+ZERO_DEL    ---     0.000     R23C29C.C0 to  R23C29C.WADO2 all_modules1/fifo1/m_RAM0/SLICE_57
+ROUTE         2     0.000  R23C29C.WADO2 to   R23C29B.WAD2 all_modules1/fifo1/m_RAM0/WAD2_INT (to SD_CLK_c)
                   --------
-                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+                    0.281   (47.3% logic, 52.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clk_multiply/PLLInst_0 to SLICE_244:
+      Source Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_70:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R16C27C.CLK SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R24C29C.CLK SD_CLK_c
                   --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clk_multiply/PLLInst_0 to SLICE_244:
+      Destination Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_59:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R16C27C.CLK SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R23C29B.WCK SD_CLK_c
                   --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 0.306ns
+Passed: The following path meets requirements by 0.150ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              uart_tx1/FSM_FSM_i6  (from SD_CLK_c +)
-   Destination:    FF         Data in        uart_tx1/FSM_FSM_i5  (to SD_CLK_c +)
+   Source:         FF         Q              all_modules1/fifo1/i_addr_i0_i2  (from SD_CLK_c +)
+   Destination:    FF         Data in        all_modules1/fifo1/m_RAM1/RAM1  (to SD_CLK_c +)
+                   FF                        all_modules1/fifo1/m_RAM1/RAM1
 
-   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+   Delay:               0.281ns  (47.3% logic, 52.7% route), 2 logic levels.
 
  Constraint Details:
 
-      0.287ns physical path delay SLICE_245 to SLICE_245 meets
-     -0.019ns M_HLD and
+      0.281ns physical path delay all_modules1/fifo1/SLICE_70 to all_modules1/fifo1/SLICE_56 meets
+      0.131ns WAD_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+      0.000ns skew requirement (totaling 0.131ns) by 0.150ns
 
  Physical Path Details:
 
-      Data path SLICE_245 to SLICE_245:
+      Data path all_modules1/fifo1/SLICE_70 to all_modules1/fifo1/SLICE_56:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R16C30A.CLK to     R16C30A.Q0 SLICE_245 (from SD_CLK_c)
-ROUTE         3     0.154     R16C30A.Q0 to     R16C30A.M1 uart_tx1/FSM_7__N_890 (to SD_CLK_c)
+REG_DEL     ---     0.133    R24C29C.CLK to     R24C29C.Q1 all_modules1/fifo1/SLICE_70 (from SD_CLK_c)
+ROUTE         7     0.148     R24C29C.Q1 to     R22C29C.C0 all_modules1/fifo1/i_addr_2
+ZERO_DEL    ---     0.000     R22C29C.C0 to  R22C29C.WADO2 all_modules1/fifo1/m_RAM1/SLICE_54
+ROUTE         2     0.000  R22C29C.WADO2 to   R22C29B.WAD2 all_modules1/fifo1/m_RAM1/WAD2_INT (to SD_CLK_c)
                   --------
-                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+                    0.281   (47.3% logic, 52.7% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path clk_multiply/PLLInst_0 to SLICE_245:
+      Source Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_70:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R16C30A.CLK SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R24C29C.CLK SD_CLK_c
                   --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path clk_multiply/PLLInst_0 to SLICE_245:
+      Destination Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_56:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE       208     0.707     RPLL.CLKOP to    R16C30A.CLK SD_CLK_c
+ROUTE       196     0.689     RPLL.CLKOP to    R22C29B.WCK SD_CLK_c
                   --------
-                    0.707   (0.0% logic, 100.0% route), 0 logic levels.
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.213ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              uart1/DATo_i0_i0  (from SD_CLK_c +)
+   Destination:    FF         Data in        all_modules1/fifo1/m_RAM1/RAM0  (to SD_CLK_c +)
+                   FF                        all_modules1/fifo1/m_RAM1/RAM0
+
+   Delay:               0.344ns  (38.7% logic, 61.3% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.344ns physical path delay SLICE_8 to all_modules1/fifo1/SLICE_55 meets
+      0.131ns WD_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling 0.131ns) by 0.213ns
+
+ Physical Path Details:
+
+      Data path SLICE_8 to all_modules1/fifo1/SLICE_55:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R21C29C.CLK to     R21C29C.Q0 SLICE_8 (from SD_CLK_c)
+ROUTE         1     0.211     R21C29C.Q0 to     R22C29C.A1 rx_dat_0
+ZERO_DEL    ---     0.000     R22C29C.A1 to   R22C29C.WDO0 all_modules1/fifo1/m_RAM1/SLICE_54
+ROUTE         1     0.000   R22C29C.WDO0 to    R22C29A.WD0 all_modules1/fifo1/m_RAM1/WD0_INT (to SD_CLK_c)
+                  --------
+                    0.344   (38.7% logic, 61.3% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path clk_multiply/PLLInst_0 to SLICE_8:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       196     0.689     RPLL.CLKOP to    R21C29C.CLK SD_CLK_c
+                  --------
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path clk_multiply/PLLInst_0 to all_modules1/fifo1/SLICE_55:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE       196     0.689     RPLL.CLKOP to    R22C29A.WCK SD_CLK_c
+                  --------
+                    0.689   (0.0% logic, 100.0% route), 0 logic levels.
 
 
 ================================================================================
@@ -1482,7 +1546,7 @@ Preference(MIN Delays)                  |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
 FREQUENCY NET "SD_CLK_c" 133.333333 MHz |             |             |
-;                                       |     0.000 ns|     0.219 ns|   1  
+;                                       |     0.000 ns|     0.137 ns|   2  
                                         |             |             |
 FREQUENCY NET "clk_c" 50.000000 MHz ;   |            -|            -|   0  
                                         |             |             |
@@ -1495,37 +1559,34 @@ All preferences were met.
 <A name="ptwr_hold_clkda"></A><B><U><big>Clock Domains Analysis</big></U></B>
 ------------------------
 
-Found 4 clocks:
+Found 3 clocks:
 
-Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_278.F1   Loads: 24
-   No transfer within this clock domain is found
-
-Clock Domain: all_modules1/uart_to_sdram1/data_count_clk   Source: all_modules1/SLICE_207.Q0   Loads: 14
+Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1   Loads: 24
    No transfer within this clock domain is found
 
 Clock Domain: clk_c   Source: clk.PAD   Loads: 1
    No transfer within this clock domain is found
 
-Clock Domain: SD_CLK_c   Source: clk_multiply/PLLInst_0.CLKOP   Loads: 208
+Clock Domain: SD_CLK_c   Source: clk_multiply/PLLInst_0.CLKOP   Loads: 196
    Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;
 
    Data transfers from:
-   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_278.F1
-      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 15
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 1
 
-   Clock Domain: all_modules1/uart_to_sdram1/data_count_clk   Source: all_modules1/SLICE_207.Q0
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
       Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
 
-   Clock Domain: all_modules1/uart_to_sdram1/data_count_clk   Source: all_modules1/SLICE_207.Q0
-      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 3
-
-   Clock Domain: all_modules1/uart_to_sdram1/data_count_clk   Source: all_modules1/SLICE_207.Q0
-      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 3
-
-   Clock Domain: all_modules1/uart_to_sdram1/data_count_clk   Source: all_modules1/SLICE_207.Q0
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
       Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
 
-   Clock Domain: all_modules1/uart_to_sdram1/data_count_clk   Source: all_modules1/SLICE_207.Q0
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
+
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
+      Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
+
+   Clock Domain: all_modules1/sdram_controller1/delayTimer/count[2]_derived_14   Source: all_modules1/sdram_controller1/SLICE_234.F1
       Covered under: FREQUENCY NET "SD_CLK_c" 133.333333 MHz ;   Transfers: 2
 
 
@@ -1535,16 +1596,16 @@ Clock Domain: SD_CLK_c   Source: clk_multiply/PLLInst_0.CLKOP   Loads: 208
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 6009 paths, 2 nets, and 1852 connections (84.92% coverage)
+Constraints cover 3525 paths, 2 nets, and 1675 connections (85.81% coverage)
 
 
 
 <A name="ptwr_ts"></A><B><U><big>Timing summary (Setup and Hold):</big></U></B>
 ---------------
 
-Timing errors: 553 (setup), 0 (hold)
-Score: 399554 (setup), 0 (hold)
-Cumulative negative slack: 399554 (399554+0)
+Timing errors: 223 (setup), 0 (hold)
+Score: 255987 (setup), 0 (hold)
+Cumulative negative slack: 255987 (255987+0)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------

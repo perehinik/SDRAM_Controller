@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2017 Lattice Semiconductor Corporation,  All rights reserved.
-Thu May 30 23:01:55 2019
+Sun May 26 19:32:15 2019
 
 
 Command Line:  synthesis -f sdram_uart_Implementation_lattice.synproj -gui -msgset C:/lscc/sd_ram_uart/promote.xml 
@@ -113,20 +113,18 @@ INFO - synthesis: C:/lscc/diamond/3.10_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS
 INFO - synthesis: c:/lscc/sd_ram_uart/src/uart_rx.v(21): compiling module uart_rx. VERI-1018
 WARNING - synthesis: c:/lscc/sd_ram_uart/src/uart_rx.v(72): expression size 32 truncated to fit in target size 11. VERI-1209
 INFO - synthesis: c:/lscc/sd_ram_uart/src/all_modules.v(1): compiling module all_modules. VERI-1018
-INFO - synthesis: c:/lscc/sd_ram_uart/src/fifo.v(1): compiling module fifo(length=256). VERI-1018
-WARNING - synthesis: c:/lscc/sd_ram_uart/src/fifo.v(25): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: c:/lscc/sd_ram_uart/src/fifo.v(37): expression size 32 truncated to fit in target size 8. VERI-1209
-WARNING - synthesis: c:/lscc/sd_ram_uart/src/fifo.v(54): expression size 32 truncated to fit in target size 8. VERI-1209
+INFO - synthesis: c:/lscc/sd_ram_uart/src/fifo.v(1): compiling module fifo. VERI-1018
+WARNING - synthesis: c:/lscc/sd_ram_uart/src/fifo.v(25): expression size 32 truncated to fit in target size 4. VERI-1209
+WARNING - synthesis: c:/lscc/sd_ram_uart/src/fifo.v(37): expression size 32 truncated to fit in target size 4. VERI-1209
+WARNING - synthesis: c:/lscc/sd_ram_uart/src/fifo.v(54): expression size 32 truncated to fit in target size 4. VERI-1209
 INFO - synthesis: c:/lscc/sd_ram_uart/src/uart_to_sdram.v(1): compiling module uart_to_sdram. VERI-1018
-WARNING - synthesis: c:/lscc/sd_ram_uart/src/uart_to_sdram.v(63): expression size 32 truncated to fit in target size 24. VERI-1209
-INFO - synthesis: c:/lscc/sd_ram_uart/src/timer.v(33): compiling module Timer1. VERI-1018
 INFO - synthesis: c:/lscc/sd_ram_uart/src/sdram_controller.v(11): compiling module SDRAM_Controller. VERI-1018
 INFO - synthesis: c:/lscc/sd_ram_uart/src/timer.v(10): compiling module Timer. VERI-1018
 INFO - synthesis: c:/lscc/sd_ram_uart/src/timer.v(10): compiling module Timer(SIZE=24). VERI-1018
 INFO - synthesis: c:/lscc/sd_ram_uart/src/timer.v(10): compiling module Timer(SIZE=4). VERI-1018
 INFO - synthesis: c:/lscc/sd_ram_uart/src/timer.v(10): compiling module Timer(SIZE=14). VERI-1018
-INFO - synthesis: c:/lscc/sd_ram_uart/src/sdram_controller.v(353): compiling module bankArbiter. VERI-1018
-WARNING - synthesis: c:/lscc/sd_ram_uart/src/sdram_controller.v(341): expression size 32 truncated to fit in target size 14. VERI-1209
+INFO - synthesis: c:/lscc/sd_ram_uart/src/sdram_controller.v(345): compiling module bankArbiter. VERI-1018
+WARNING - synthesis: c:/lscc/sd_ram_uart/src/sdram_controller.v(333): expression size 32 truncated to fit in target size 14. VERI-1209
 INFO - synthesis: c:/lscc/sd_ram_uart/src/sdram_to_uart.v(1): compiling module sdram_to_uart. VERI-1018
 INFO - synthesis: c:/lscc/sd_ram_uart/src/uart_tx.v(1): compiling module uart_tx. VERI-1018
 WARNING - synthesis: c:/lscc/sd_ram_uart/src/uart_tx.v(44): expression size 32 truncated to fit in target size 11. VERI-1209
@@ -138,53 +136,41 @@ Loading device for application map from file 'xo2c7000.nph' in environment: C:/l
 Package Status:                     Final          Version 1.39.
 Top-level module name = sdram_uart_top.
 INFO - synthesis: Extracted state machine for register '\all_modules1/uart_to_sdram1/state' with one-hot encoding
-State machine has 11 reachable states with original encodings of:
+State machine has 8 reachable states with original encodings of:
 
- 0000 
+ 000 
 
- 0001 
+ 001 
 
- 0010 
+ 010 
 
- 0011 
+ 011 
 
- 0100 
+ 100 
 
- 0101 
+ 101 
 
- 0110 
+ 110 
 
- 0111 
-
- 1000 
-
- 1001 
-
- 1010 
+ 111 
 
 original encoding -> new encoding (one-hot encoding)
 
- 0000 -> 00000000001
+ 000 -> 00000001
 
- 0001 -> 00000000010
+ 001 -> 00000010
 
- 0010 -> 00000000100
+ 010 -> 00000100
 
- 0011 -> 00000001000
+ 011 -> 00001000
 
- 0100 -> 00000010000
+ 100 -> 00010000
 
- 0101 -> 00000100000
+ 101 -> 00100000
 
- 0110 -> 00001000000
+ 110 -> 01000000
 
- 0111 -> 00010000000
-
- 1000 -> 00100000000
-
- 1001 -> 01000000000
-
- 1010 -> 10000000000
+ 111 -> 10000000
 
 INFO - synthesis: Extracted state machine for register '\all_modules1/sdram_controller1/state' with one-hot encoding
 State machine has 13 reachable states with original encodings of:
@@ -373,18 +359,13 @@ original encoding -> new encoding (one-hot encoding)
 
 
 
-WARNING - synthesis: Bit 0 of Register \all_modules1/uart_to_sdram1/state_FSM is stuck at Zero
-WARNING - synthesis: Bit 1 of Register \all_modules1/uart_to_sdram1/state_FSM is stuck at Zero
-WARNING - synthesis: Bit 2 of Register \all_modules1/uart_to_sdram1/state_FSM is stuck at Zero
-WARNING - synthesis: Bit 3 of Register \all_modules1/uart_to_sdram1/state_FSM is stuck at Zero
-WARNING - synthesis: Bit 4 of Register \all_modules1/uart_to_sdram1/state_FSM is stuck at Zero
 WARNING - synthesis: Bit 0 of Register \all_modules1/sdram_controller1/state_FSM is stuck at Zero
 WARNING - synthesis: Bit 1 of Register \all_modules1/sdram_controller1/state_FSM is stuck at Zero
 WARNING - synthesis: Bit 2 of Register \all_modules1/sdram_controller1/state_FSM is stuck at Zero
 ######## Found 2 RTL RAMs in the design.
-######## Mapping RTL RAM \all_modules1/fifo1/m_RAM to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
+######## Mapping RTL RAM \all_modules1/fifo1/m_RAM to 2 Distributed blocks in PSEUDO_DUAL_PORT Mode
 
-######## Mapping RTL RAM \all_modules1/fifo2/m_RAM to 1 EBR blocks in PSEUDO_DUAL_PORT Mode
+######## Mapping RTL RAM \all_modules1/fifo2/m_RAM to 2 Distributed blocks in PSEUDO_DUAL_PORT Mode
 
 GSR instance connected to net nreset_c.
 Applying 200.000000 MHz constraint to all clocks
@@ -399,25 +380,23 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file sdram_uart_Implementation.ngd.
 
 ################### Begin Area Report (sdram_uart_top)######################
-Number of register bits => 373 of 7209 (5 % )
+Number of register bits => 330 of 7209 (4 % )
 BB => 16
-CCU2D => 120
-DP8KC => 2
+CCU2D => 48
+DPR16X4C => 4
 EHXPLLJ => 1
-FD1P3AX => 189
-FD1P3DX => 31
-FD1P3IX => 80
-FD1S3AX => 39
+FD1P3AX => 175
+FD1P3IX => 81
+FD1S3AX => 41
 FD1S3AY => 4
-FD1S3DX => 1
 FD1S3IX => 22
 FD1S3JX => 7
 GSR => 1
 IB => 3
 L6MUX21 => 1
-LUT4 => 240
+LUT4 => 261
 OB => 28
-PFUMX => 8
+PFUMX => 10
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -426,36 +405,35 @@ TSALL => 1
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 4
-  Net : clk_multiply/SD_CLK_c, loads : 349
-  Net : all_modules1/uart_to_sdram1/data_count_clk, loads : 21
+Number of Clocks: 3
+  Net : clk_multiply/SD_CLK_c, loads : 322
   Net : all_modules1/sdram_controller1/delayTimer/count_2_derived_14, loads : 30
   Net : clk_c, loads : 1
 Clock Enable Nets
-Number of Clock Enables: 33
+Number of Clock Enables: 29
 Top 10 highest fanout Clock Enables:
-  Net : all_modules1/sdram_controller1/SD_CLK_c_enable_213, loads : 41
-  Net : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/SD_CLK_c_enable_197, loads : 16
-  Net : all_modules1/sdram_to_uart1/SD_CLK_c_enable_146, loads : 16
-  Net : all_modules1/sdram_controller1/SD_CLK_c_enable_46, loads : 16
-  Net : all_modules1/sdram_controller1/init_done_N_558, loads : 15
-  Net : all_modules1/sdram_controller1/initTimer/SD_CLK_c_enable_125, loads : 15
-  Net : all_modules1/uart_to_sdram1/SD_CLK_c_enable_79, loads : 13
-  Net : uart1/SMPL, loads : 12
+  Net : all_modules1/sdram_controller1/SD_CLK_c_enable_202, loads : 43
+  Net : all_modules1/sdram_controller1/SD_CLK_c_enable_94, loads : 16
+  Net : all_modules1/sdram_controller1/init_done_N_443, loads : 16
+  Net : all_modules1/sdram_to_uart1/SD_CLK_c_enable_145, loads : 16
+  Net : all_modules1/sdram_controller1/initTimer/SD_CLK_c_enable_68, loads : 15
   Net : uart_tx1/SMPL, loads : 12
-  Net : all_modules1/uart_to_sdram1/SD_CLK_c_enable_63, loads : 10
+  Net : all_modules1/fifo2/SD_CLK_c_enable_127, loads : 12
+  Net : uart1/SMPL, loads : 12
+  Net : all_modules1/uart_to_sdram1/SD_CLK_c_enable_28, loads : 11
+  Net : all_modules1/fifo1/SD_CLK_c_enable_186, loads : 11
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : all_modules1/sdram_controller1/SD_CLK_c_enable_213, loads : 41
-  Net : all_modules1/uart_to_sdram1/o_stb_rd_N_367, loads : 32
+  Net : all_modules1/sdram_controller1/SD_CLK_c_enable_202, loads : 43
   Net : all_modules1/sdram_controller1/refresh_tim_reset, loads : 28
-  Net : SD_CLK_c_enable_128, loads : 25
-  Net : all_modules1/sdram_controller1/n400, loads : 24
-  Net : all_modules1/n1734, loads : 23
-  Net : all_modules1/fifo2/o_stb_N_212, loads : 20
-  Net : all_modules1/uart_to_sdram1/timout_tim_flag_I_0/SD_CLK_c_enable_197, loads : 19
-  Net : all_modules1/fifo1/o_stb_N_212, loads : 18
-  Net : all_modules1/uart_to_sdram1/data_count_clk_enable_16, loads : 17
+  Net : all_modules1/sdram_controller1/n377, loads : 26
+  Net : SD_CLK_c_enable_117, loads : 25
+  Net : all_modules1/sdram_controller1/n1671, loads : 24
+  Net : all_modules1/uart_to_sdram1/SD_CLK_c_enable_43, loads : 20
+  Net : uart_tx1/DAT_7__N_878, loads : 20
+  Net : all_modules1/sdram_controller1/arb_delay_2, loads : 19
+  Net : all_modules1/sdram_controller1/n371, loads : 17
+  Net : all_modules1/uart_to_sdram1/SD_CLK_c_enable_35, loads : 16
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -465,11 +443,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk2 [get_nets count[2]_derived_14]     |  200.000 MHz|  163.132 MHz|     8 *
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets                          |             |             |
-\all_modules1/data_count_clk]           |  200.000 MHz|  154.250 MHz|    11 *
+clk1 [get_nets count[2]_derived_14]     |  200.000 MHz|  163.132 MHz|     8 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
 clk0 [get_nets SD_CLK_c]                |  200.000 MHz|   97.666 MHz|     9 *
@@ -477,13 +451,13 @@ clk0 [get_nets SD_CLK_c]                |  200.000 MHz|   97.666 MHz|     9 *
 --------------------------------------------------------------------------------
 
 
-3 constraints not met.
+2 constraints not met.
 
 
-Peak Memory Usage: 70.184  MB
+Peak Memory Usage: 68.602  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 2.137  secs
+Elapsed CPU time for LSE flow : 1.747  secs
 --------------------------------------------------------------
 
 

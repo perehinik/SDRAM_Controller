@@ -24,7 +24,7 @@ wire              tb_nWE;
 wire              tb_nCS;
 wire              tb_SD_CLK;
  
-reg  delay_flag; 
+ 
 all_modules test_all
 (
 .CLK_133MHZ (tb_clk), 	
@@ -53,7 +53,6 @@ always begin
 	#2 tb_clk = !tb_clk;
 end
 
-
 reg state;
 
 localparam NEW_DATA = 1'b0,
@@ -61,48 +60,40 @@ localparam NEW_DATA = 1'b0,
 
 assign tb_tx_ack = tb_tx_stb; 
 
-reg [7:0] data_to_send;
+reg [4:0] data_to_send;
 
 always @(posedge tb_clk or posedge tb_rst)
 if (tb_rst) begin
 	tb_rx_stb        <= 0;
     tb_rx_dat        <= 0;
-	data_to_send     <= 8'h53;
+	data_to_send     <= 5'h45;
 	state            <= NEW_DATA;
 	end
 else begin
 case (state)
 NEW_DATA: begin
-		tb_rx_dat    <= {data_to_send};
+		tb_rx_dat    <= {3'b010,data_to_send};
 		tb_rx_stb    <= 1'b1;
 		state        <= WAIT_ACK; 
 	end
 WAIT_ACK: 
-	if (tb_rx_ack & delay_flag & data_to_send < 8'hFA) begin
+	if (tb_rx_ack) begin
 		state        <= NEW_DATA;
 		tb_rx_stb    <= 1'b0;
 		data_to_send <= data_to_send + 1;
 		end
-	else if(delay_flag & data_to_send < 8'hFA) begin
+	else begin
 		state        <= WAIT_ACK;
 		tb_rx_stb    <= 1'b1;
-	end	 
-else tb_rx_stb    <= 1'b0;
-	
+		end	
 endcase
 end
 
 initial begin
 tb_clk    = 0;
-tb_rst    = 1; 
-delay_flag = 0;
+tb_rst    = 1;
 
 #10
 tb_rst    = 0;
-#300000
-delay_flag = 1;
-#2000
-delay_flag = 0;
-
 end
 endmodule

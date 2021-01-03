@@ -20,8 +20,8 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>C:/lscc/sd_ram_uart/Implementation/sdram_uart_Implementation.jed</File>
-			<FileTime>05/30/19 23:02:26</FileTime>
-			<JedecChecksum>0x4845</JedecChecksum>
+			<FileTime>05/30/19 17:22:41</FileTime>
+			<JedecChecksum>0xD9AD</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>

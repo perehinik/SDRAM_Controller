@@ -1,124 +1,48 @@
 [ START MERGED ]
-all_modules1/uart_to_sdram1/data_count_clk_enable_16 all_modules1/uart_to_sdram1/data_tim_flag
-all_modules1/sdram_to_uart1/n3704 all_modules1/sdram_to_uart1/state_0
-all_modules1/sdram_controller1/n3006 all_modules1/sdram_controller1/n393
+all_modules1/sdram_to_uart1/n1 all_modules1/sdram_to_uart1/state_0
+all_modules1/sdram_controller1/n2725 n370
 uart1/SD_CLK_c_enable_183 uart1/FSM_7__N_59
 [ END MERGED ]
 [ START CLIPPED ]
-uart_tx1/add_596_1/S0
-uart_tx1/add_596_1/CI
-uart_tx1/add_596_11/CO
+uart_tx1/add_568_11/CO
+uart_tx1/add_568_1/S0
+uart_tx1/add_568_1/CI
 uart1/sub_7_add_2_1/S0
 uart1/sub_7_add_2_1/CI
 uart1/sub_7_add_2_11/CO
-all_modules1/fifo1/i_addr_7__I_0_8/S0
-all_modules1/fifo1/i_addr_7__I_0_8/CO
-all_modules1/fifo1/i_addr_1_7__I_0_7/S1
-all_modules1/fifo1/i_addr_1_7__I_0_7/S0
-all_modules1/fifo1/i_addr_1_7__I_0_8/S0
-all_modules1/fifo1/i_addr_1_7__I_0_8/CO
-all_modules1/fifo1/i_addr_1_7__I_0_0/S1
-all_modules1/fifo1/i_addr_1_7__I_0_0/S0
-all_modules1/fifo1/i_addr_1_7__I_0_0/CI
-all_modules1/fifo1/add_38_1/S0
-all_modules1/fifo1/add_38_1/CI
-all_modules1/fifo1/add_38_9/S1
-all_modules1/fifo1/add_38_9/CO
-all_modules1/fifo1/i_addr_7__I_0_7/S1
-all_modules1/fifo1/i_addr_7__I_0_7/S0
-all_modules1/fifo1/o_addr_811_add_4_1/S0
-all_modules1/fifo1/o_addr_811_add_4_1/CI
-all_modules1/fifo1/o_addr_811_add_4_9/S1
-all_modules1/fifo1/o_addr_811_add_4_9/CO
-all_modules1/fifo1/i_addr_7__I_0_0/S1
-all_modules1/fifo1/i_addr_7__I_0_0/S0
-all_modules1/fifo1/i_addr_7__I_0_0/CI
-all_modules1/fifo2/add_38_1/S0
-all_modules1/fifo2/add_38_1/CI
-all_modules1/fifo2/o_addr_812_add_4_1/S0
-all_modules1/fifo2/o_addr_812_add_4_1/CI
-all_modules1/fifo2/i_addr_7__I_0_8/S0
-all_modules1/fifo2/i_addr_7__I_0_8/CO
-all_modules1/fifo2/o_addr_812_add_4_9/S1
-all_modules1/fifo2/o_addr_812_add_4_9/CO
-all_modules1/fifo2/i_addr_1_7__I_0_0/S1
-all_modules1/fifo2/i_addr_1_7__I_0_0/S0
-all_modules1/fifo2/i_addr_1_7__I_0_0/CI
-all_modules1/fifo2/i_addr_1_7__I_0_7/S1
-all_modules1/fifo2/i_addr_1_7__I_0_7/S0
-all_modules1/fifo2/i_addr_7__I_0_0/S1
-all_modules1/fifo2/i_addr_7__I_0_0/S0
-all_modules1/fifo2/i_addr_7__I_0_0/CI
-all_modules1/fifo2/i_addr_1_7__I_0_8/S0
-all_modules1/fifo2/i_addr_1_7__I_0_8/CO
-all_modules1/fifo2/i_addr_7__I_0_7/S1
-all_modules1/fifo2/i_addr_7__I_0_7/S0
-all_modules1/fifo2/add_38_9/S1
-all_modules1/fifo2/add_38_9/CO
-all_modules1/sdram_controller1/initTimer/count_815_add_4_1/S0
-all_modules1/sdram_controller1/initTimer/count_815_add_4_1/CI
-all_modules1/sdram_controller1/initTimer/count_815_add_4_17/S1
-all_modules1/sdram_controller1/initTimer/count_815_add_4_17/CO
+all_modules1/sdram_controller1/initTimer/count_769_add_4_1/S0
+all_modules1/sdram_controller1/initTimer/count_769_add_4_1/CI
+all_modules1/sdram_controller1/initTimer/count_769_add_4_17/S1
+all_modules1/sdram_controller1/initTimer/count_769_add_4_17/CO
 all_modules1/sdram_controller1/refreshTimer/add_6_1/S0
 all_modules1/sdram_controller1/refreshTimer/add_6_1/CI
 all_modules1/sdram_controller1/refreshTimer/add_6_25/S1
 all_modules1/sdram_controller1/refreshTimer/add_6_25/CO
-all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_12/S0
-all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_12/CO
-all_modules1/sdram_controller1/repeatTimer/add_6_1/S0
-all_modules1/sdram_controller1/repeatTimer/add_6_1/CI
-all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_2/S1
-all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_2/S0
-all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_2/CI
-all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_4/S1
-all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_4/S0
-all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_6/S1
-all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_6/S0
-all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_8/S1
-all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_8/S0
-all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_10/S1
-all_modules1/sdram_controller1/repeatTimer/sub_643_add_2_10/S0
 all_modules1/sdram_controller1/repeatTimer/add_6_15/S1
 all_modules1/sdram_controller1/repeatTimer/add_6_15/CO
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813_add_4_1/S0
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813_add_4_1/CI
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_1/S1
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_1/S0
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_1/CI
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_3/S1
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_3/S0
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_5/S1
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_5/S0
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_7/S1
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_7/S0
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_9/S1
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_9/S0
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_11/S1
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_11/S0
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_13/S1
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_13/S0
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_15/S1
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_15/S0
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_17/S0
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/sub_642_add_2_17/CO
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813_add_4_17/S1
-all_modules1/uart_to_sdram1/data_tim_flag_I_0/count_813_add_4_17/CO
-all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814_add_4_1/S0
-all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814_add_4_1/CI
-all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814_add_4_17/S1
-all_modules1/uart_to_sdram1/timout_tim_flag_I_0/count_814_add_4_17/CO
-all_modules1/uart_to_sdram1/add_91_1/S1
-all_modules1/uart_to_sdram1/add_91_1/S0
-all_modules1/uart_to_sdram1/add_91_1/CI
-all_modules1/uart_to_sdram1/add_91_25/CO
+all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_12/S0
+all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_12/CO
+all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_6/S1
+all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_6/S0
+all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_4/S1
+all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_4/S0
+all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_8/S1
+all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_8/S0
+all_modules1/sdram_controller1/repeatTimer/add_6_1/S0
+all_modules1/sdram_controller1/repeatTimer/add_6_1/CI
+all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_10/S1
+all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_10/S0
+all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_2/S1
+all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_2/S0
+all_modules1/sdram_controller1/repeatTimer/sub_604_add_2_2/CI
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.10.0.111.2 -- WARNING: Map write only section -- Thu May 30 23:01:58 2019
+# map:  version Diamond (64-bit) 3.10.0.111.2 -- WARNING: Map write only section -- Sun May 26 19:32:18 2019
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=ENABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
-LOCATE COMP "DB[14]" SITE "99" ;
 LOCATE COMP "DB[15]" SITE "100" ;
+LOCATE COMP "DB[14]" SITE "99" ;
 LOCATE COMP "DB[13]" SITE "98" ;
 LOCATE COMP "DB[12]" SITE "97" ;
 LOCATE COMP "DB[11]" SITE "96" ;

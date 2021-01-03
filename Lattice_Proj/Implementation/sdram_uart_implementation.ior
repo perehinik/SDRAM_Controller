@@ -11,7 +11,7 @@ Performance Hardware Data Status:   Final          Version 34.4.
 // Package: TQFP144
 // ncd File: sdram_uart_implementation.ncd
 // Version: Diamond (64-bit) 3.10.0.111.2
-// Written on Thu May 30 23:02:22 2019
+// Written on Sun May 26 19:32:36 2019
 // M: Minimum Performance Grade
 // iotiming sdram_uart_Implementation.ncd sdram_uart_Implementation.prf -gui -msgset C:/lscc/sd_ram_uart/promote.xml
 
@@ -23,74 +23,68 @@ Worst Case Results across Performance Grades (M, 6):
 
 Port    Clock Edge  Setup Performance_Grade  Hold Performance_Grade
 ----------------------------------------------------------------------
-DB[0]   clk   R     1.640      6      -0.431     M
-DB[10]  clk   R     1.714      6      -0.449     M
-DB[11]  clk   R     2.056      6      -0.554     M
-DB[12]  clk   R     2.404      6      -0.700     M
-DB[13]  clk   R     2.440      6      -0.694     M
-DB[14]  clk   R     2.746      6      -0.806     M
-DB[15]  clk   R     2.746      6      -0.806     M
-DB[1]   clk   R     1.640      6      -0.431     M
-DB[2]   clk   R     1.838      6      -0.469     M
-DB[3]   clk   R     1.812      6      -0.470     M
-DB[4]   clk   R     1.621      6      -0.424     M
-DB[5]   clk   R     1.621      6      -0.424     M
-DB[6]   clk   R     2.611      6      -0.746     M
-DB[7]   clk   R     2.239      6      -0.630     M
-DB[8]   clk   R     2.288      6      -0.648     M
-DB[9]   clk   R     2.373      6      -0.641     M
-nreset  clk   R    10.579      6      -0.819     M
-uart_rx clk   R     2.548      6      -0.725     M
+DB[0]   clk   R     2.672      6      -0.788     M
+DB[10]  clk   R     2.733      6      -0.753     M
+DB[11]  clk   R     2.765      6      -0.813     M
+DB[12]  clk   R     2.541      6      -0.760     M
+DB[13]  clk   R     2.235      6      -0.649     M
+DB[14]  clk   R     3.209      6      -0.972     M
+DB[15]  clk   R     2.788      6      -0.840     M
+DB[1]   clk   R     2.323      6      -0.680     M
+DB[2]   clk   R     1.668      6      -0.446     M
+DB[3]   clk   R     1.668      6      -0.446     M
+DB[4]   clk   R     2.695      6      -0.816     M
+DB[5]   clk   R     2.743      6      -0.814     M
+DB[6]   clk   R     2.700      6      -0.803     M
+DB[7]   clk   R     1.987      6      -0.543     M
+DB[8]   clk   R     2.906      6      -0.884     M
+DB[9]   clk   R     3.103      6      -0.950     M
+nreset  clk   R     8.683      6      -1.144     M
+uart_rx clk   R     2.499      6      -0.726     M
 
 
 // Clock to Output Delay
 
 Port    Clock Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
 ------------------------------------------------------------------------
-ADR[0]  clk   R    14.621         6        3.044          M
-ADR[10] clk   R    14.163         6        2.726          M
-ADR[11] clk   R     9.552         6        2.593          M
-ADR[1]  clk   R    14.228         6        2.847          M
-ADR[2]  clk   R    15.008         6        2.926          M
-ADR[3]  clk   R    13.797         6        2.809          M
-ADR[4]  clk   R    14.423         6        2.891          M
-ADR[5]  clk   R    14.328         6        2.726          M
-ADR[6]  clk   R    14.334         6        2.688          M
-ADR[7]  clk   R    14.114         6        2.688          M
-ADR[8]  clk   R    14.563         6        2.794          M
-ADR[9]  clk   R     9.562         6        2.604          M
-BA[0]   clk   R    10.636         6        2.829          M
-BA[1]   clk   R    10.643         6        2.821          M
-DB[0]   clk   R    12.203         6        2.579          M
-DB[10]  clk   R    11.571         6        2.671          M
-DB[11]  clk   R    11.571         6        2.573          M
-DB[12]  clk   R    11.218         6        2.460          M
-DB[13]  clk   R    11.218         6        2.471          M
-DB[14]  clk   R    10.865         6        2.614          M
-DB[15]  clk   R    10.865         6        2.576          M
-DB[1]   clk   R    12.203         6        2.559          M
-DB[2]   clk   R    12.658         6        2.326          M
-DB[3]   clk   R    12.658         6        2.331          M
-DB[4]   clk   R    12.658         6        2.438          M
-DB[5]   clk   R    12.653         6        2.307          M
-DB[6]   clk   R    12.653         6        2.573          M
-DB[7]   clk   R    12.655         6        2.483          M
-DB[8]   clk   R    11.855         6        2.594          M
-DB[9]   clk   R    11.855         6        2.621          M
-DQM[0]  clk   R     9.815         6        2.924          M
-DQM[1]  clk   R    10.367         6        3.103          M
-LED[0]  clk   R     8.674         6        2.892          M
-LED[1]  clk   R     8.380         6        2.790          M
-LED[2]  clk   R     8.674         6        2.892          M
-LED[3]  clk   R     8.681         6        2.895          M
-nCAS    clk   R    10.655         6        3.069          M
-nRAS    clk   R    13.411         6        3.006          M
-nWE     clk   R    10.820         6        3.079          M
-uart_tx clk   R     8.465         6        2.784          M
-
-
-// Internal_Clock to Input
-
-Port    Internal_Clock
---------------------------------------------------------
-nreset  all_modules1/u
+ADR[0]  clk   R    16.119         6        2.885          M
+ADR[10] clk   R    16.428         6        2.915          M
+ADR[11] clk   R     9.011         6        2.551          M
+ADR[12] clk   R    10.460         6        2.685          M
+ADR[1]  clk   R    16.694         6        2.542          M
+ADR[2]  clk   R    16.938         6        2.654          M
+ADR[3]  clk   R    16.461         6        2.542          M
+ADR[4]  clk   R    17.084         6        2.646          M
+ADR[5]  clk   R    17.073         6        2.755          M
+ADR[6]  clk   R    17.089         6        2.764          M
+ADR[7]  clk   R    16.051         6        2.527          M
+ADR[8]  clk   R    16.406         6        2.561          M
+ADR[9]  clk   R     8.930         6        2.445          M
+BA[0]   clk   R    10.943         6        3.196          M
+BA[1]   clk   R    10.383         6        2.772          M
+DB[0]   clk   R    12.534         6        2.710          M
+DB[10]  clk   R    13.281         6        2.684          M
+DB[11]  clk   R    13.281         6        2.603          M
+DB[12]  clk   R    12.933         6        2.468          M
+DB[13]  clk   R    12.933         6        2.506          M
+DB[14]  clk   R    12.585         6        2.503          M
+DB[15]  clk   R    12.585         6        2.506          M
+DB[1]   clk   R    12.534         6        2.748          M
+DB[2]   clk   R    12.076         6        2.581          M
+DB[3]   clk   R    12.047         6        2.590          M
+DB[4]   clk   R    12.047         6        2.563          M
+DB[5]   clk   R    12.047         6        2.460          M
+DB[6]   clk   R    12.047         6        2.477          M
+DB[7]   clk   R    11.689         6        2.434          M
+DB[8]   clk   R    13.549         6        2.602          M
+DB[9]   clk   R    13.549         6        2.576          M
+DQM[0]  clk   R     9.606         6        3.043          M
+DQM[1]  clk   R    10.459         6        3.335          M
+LED[0]  clk   R     9.391         6        3.168          M
+LED[1]  clk   R     9.141         6        3.058          M
+LED[2]  clk   R     9.085         6        3.056          M
+LED[3]  clk   R     9.092         6        3.059          M
+nCAS    clk   R    11.444         6        2.584          M
+nRAS    clk   R    15.006         6        2.871          M
+nWE     clk   R    10.212         6        2.806          M
+uart_tx clk   R     8.071         6        2.647          M

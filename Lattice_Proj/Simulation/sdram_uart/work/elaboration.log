@@ -1,4 +1,4 @@
-Active-HDL 10.3.3558.6081  2019-05-30 22:46:57
+Active-HDL 10.3.3558.6081  2019-05-26 17:25:11
 
 Elaboration top modules:
 Verilog Module                sdram_uart_testbench
@@ -13,7 +13,6 @@ fifo                    | work    |      | 10.3.3558.6081  (Windows) | -O2 -sv2k
 uart_to_sdram           | work    |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
 SDRAM_Controller        | work    |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
 sdram_to_uart           | work    |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
-Timer1                  | work    |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
 Timer                   | work    |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
 bankArbiter             | work    |      | 10.3.3558.6081  (Windows) | -O2 -sv2k12
 -------------------------------------------------------------------------------------------
