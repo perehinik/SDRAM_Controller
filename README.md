@@ -1,5 +1,5 @@
 # SDRAM_Controller
-SDR SDRAM controller for Xilinx and Lattice FPGA  
+SDR SDRAM controller for FPGA  Xilinx and Lattice   
 Language: Verilog  
 Project tested with board Alinx AX309 based on Spartan 6 and custom board based on Lattice MachXO2  
 
